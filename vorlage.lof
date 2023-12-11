@@ -1,0 +1,38 @@
+\babel@toc {english}{}\relax 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Bi-static system of the RADAR, inspired by \cite {bistat}}}{11}{figure.2.1}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces A general principle of the simple monostatic continuous radar system \cite {jena2019}}}{12}{figure.2.2}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces PAVE PAWS phased array at Clear AFS, Alaska (left) \cite {monostat} and Changing direction of beam in phased-array radar. (Adapted from University of Wisconsin Naval ROTC, \IeC {\textquotedblleft }Naval Weapons Systems Lesson 7: Electronic Scanning and Phased Array Radars,\IeC {\textquotedblright } course files) \cite {usssn}}}{13}{figure.2.3}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Refracting and Reflector Telescope, inspired by \cite {tele}}}{14}{figure.2.4}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces The ESA Space Debris Telescope (Tenerife/Spain)\cite {spain}}}{14}{figure.2.5}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Procedure of Laser detection, inspired by \cite {paul, optical}}}{15}{figure.2.6}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces In situ detectors DEBIE (left) \cite {deb} and GORID (right) \cite {god}}}{17}{figure.2.7}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces US SSN as of February 2018, released by the 18th Space Defense Squadron of the United States Space Force (USSF) \cite {ussf}}}{18}{figure.2.8}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces \textbf {EU SST Sensor Network:} three lasers, eight radars (two surveillance, six tracking), 33 telescopes (17 surveillance, 16 tracking) \cite {esa4}}}{20}{figure.2.9}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Service provision model \cite {esa3}}}{21}{figure.2.10}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces EU SST sensor network \cite {esa3}}}{22}{figure.2.11}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Russian early warning radars \cite {povel}}}{23}{figure.2.12}%
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Radome at KSGC (left) and KSGC RADAR \cite {jaxa5}}}{24}{figure.2.13}%
+\contentsline {figure}{\numberline {2.14}{\ignorespaces The locations of KSGC, BSGC and TKSC \cite {jaxa5}}}{25}{figure.2.14}%
+\contentsline {figure}{\numberline {2.15}{\ignorespaces BSGC 1m Telescope (left) and BSGC 50cm telescope(right) \cite {jaxa2}}}{25}{figure.2.15}%
+\contentsline {figure}{\numberline {2.16}{\ignorespaces 3. The general schematics of the Non-Dominated Sorted Genetic Algorithm (NGSA-II) algorithm \cite {nsga}}}{32}{figure.2.16}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces A schematic representation of the process flow within the SNS \cite {kebschull2017simulation}}}{37}{figure.3.1}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Total number of detections based on threshold values for number of detections of object}}{42}{figure.4.1}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Total number of unique objects detected based on threshold values for number of detections of object}}{42}{figure.4.2}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Total number of detections based on threshold values for time since last detection}}{43}{figure.4.3}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Total number of detections compared with simulations without tasking, with tasking and tasking with Weightings}}{43}{figure.4.4}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Total number of objects compared with simulations without tasking, with tasking and tasking with Weightings}}{44}{figure.4.5}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Detections recorded by OGS in HCS (Without tasking)}}{44}{figure.4.6}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Detections recorded by OGS in HCS (Tasking with Weightings)}}{45}{figure.4.7}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Detections recorded by OGS in HCS combined}}{45}{figure.4.8}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Detections recorded by OGS in ECS (Without tasking)}}{46}{figure.4.9}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Detections recorded by OGS in ECS (Tasking with Weightings)}}{46}{figure.4.10}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Detections recorded by OGS in ECS (Without tasking)}}{47}{figure.4.11}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Detections recorded by OGS in ECS (Tasking with Weightings)}}{47}{figure.4.12}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

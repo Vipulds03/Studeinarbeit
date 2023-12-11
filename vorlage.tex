@@ -13,8 +13,14 @@
   ]{tubsreprt}
 
 \usepackage[utf8x]{inputenc}
-\usepackage[ngerman]{babel}
-\usepackage[authoryear]{natbib}
+\usepackage[ngerman,english]{babel}
+\usepackage[numbers]{natbib}
+\usepackage{spverbatim}
+\usepackage{fancyvrb}
+\usepackage{fvextra}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{color}
 \usepackage{graphicx}
 \usepackage{amsmath}                    % Packages für Formeln
 \usepackage{amsthm}			% -||-
@@ -35,6 +41,26 @@
 %	Hyperlinks im Dokument
 %
 %---------------------------------------
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
 
 \usepackage[
   pdftex,%
@@ -66,7 +92,10 @@
 
 
 %Makros für eine erleichterte Eingabe wiederkehrender Befehle:
-\newcommand{\abb}[1]{Abbildung~\ref{#1}}
+\addto\captionsngerman{
+  \renewcommand{\figurename}{Figure}
+}
+\newcommand{\abb}[1]{Figure~\ref{#1}}
 \newcommand{\tab}[1]{Tabelle~\ref{#1}}
 \newcommand{\glg}[1]{Gleichung~\ref{#1}}
 \newcommand{\kap}[1]{Kapitel~\ref{#1}}
@@ -101,13 +130,12 @@
 %
 %-------------------------------
 
-\title{\LARGE R XXXX X (beim Betreuer beantragen!) \newline Titel der Arbeit}
-\subtitle{Institute of Space Systems}
-\author{Max Mustermann}
+\title{\LARGE R 2336 S  \newline Analysis of Tasking Algorithms for efficiently operating Sensor Networks} \subtitle{Institute of Space Systems}
+\author{Vipul Dilip Solanke}
 
 %---------------------------------------------------------------
 
-\logo{\includegraphics{iraslogo_deutsch.png}} % ilrlogo_englisch.png
+\logo{\includegraphics{iraslogo_englisch.png}} % ilrlogo_englisch.png
 \titlepicture{doctor_pop2009.jpg}
 
 %===============================================================
@@ -148,7 +176,8 @@
   %
   %---------------------------------------------------
   \addcontentsline{toc}{chapter}{Literaturverzeichnis}
-    \bibliographystyle{elsarticle-harv}
+    %\bibliographystyle{elsarticle-harv}
+    \bibliographystyle{unsrtnat}
     \bibliography{literatur}
   
   %===================================================

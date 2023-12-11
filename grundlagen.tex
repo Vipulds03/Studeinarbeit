@@ -1,86 +1,464 @@
-\chapter{Theoretische Grundlagen}
+\chapter{Theoretical principles}
 \label{sec:grundlagen}
 
-\section{Literaturrecherche}
+This study builds upon prior research in several key areas. To facilitate comprehension, it commences with an exploration of fundamental principles in orbital mechanics. As the main focus of the thesis is upon geostationary orbit,
+it's primary uses, benefits and potential  threats are described.
+Subsequently, it provides an introduction to SSA and offers an overview of global SSA sensor networks. Lastly, it presents research findings
+ related to sensor tasking.
 
-Zu jeder guten Arbeit gehört eine umfangreiche Literaturrecherche. Während in den ersten Gesprächen mit dem Betreuer bereits einige Tipps zu empfohlener 
-Literatur erhalten werden, ist es in den meisten Fällen notwendig, selbst nach Literatur zu suchen. Dazu bietet sich zunächst die UB an, mit der man als 
-Student bereits vertraut sein sollte. Darüber hinaus ist folgendes Vorgehen zu empfehlen:
+\section{Background}
+Satellites play a crucial role in supporting a wide range of applications and services. However, the presence of uncontrolled defunct satellites, spent rocket stages, 
+and other space debris in Earth's orbital pathways poses a significant risk to operational satellites. This debris results from various factors, including explosions, 
+collisions, and even intentional practices such as leaving discarded rocket stages or releasing covers and materials after deploying a satellite into its designated orbit.\\
+
+Earth's orbital realm is neatly categorized into various types, with the most prevalent ones being Low-Earth Orbit (LEO), Medium-Earth Orbit (MEO), and the esteemed Geostationary-Earth Orbit (GEO).
+Each orbit type boasts its own unique attributes, making it the ideal choice for specific applications. Therefore, monitoring diverse domains requires distinct sensors and surveillance techniques. 
+While radar technology is effective for lower orbits, the considerably higher geostationary orbit necessitates the utilization of "deep space radars." However, the use of these radars is constrained 
+by the limited number of systems available worldwide. As a result, higher orbits demand the keen eyes of optical telescopes for observation. However, optical observations come with their own set of complexities, 
+including the absence of distance information and vulnerability to adverse viewing conditions. It is precisely these intricate challenges that drive the core motivation of this research – the 
+specialized endeavor of correlating optical observations to derive a comprehensive orbital solution.
+
+
+\section{Space Situational Awareness}
+
+With ever so increasing space activities, it is of utmost importance to ensure the safety of these space assets. As already described, there are thousands and thousands of
+space debris objects, which can prove to be potential threats to current functional satellites and future launches. SSA is the thorough understanding
+of the orbits, tracking and identifying the objects and the prediction of their future positions to ensure safe space and avoiding future collisions.
+
+
+
+
+
+\subsection{components of SSA}
 \begin{itemize}
- \item Suche nach Literatur, auf die in den Referenzen bereits erhaltener Literatur verwiesen wird.
- \item Suche bei \textit{Science Direct}, wobei zahlreiche Paper aus dem Uni-Netzwerk kostenlos heruntergeladen werden können: 
-\url{http://www.sciencedirect.com/}
- \item Suche in digitaler Bibliothek des ILR
+  \item Object Catalogs : The object catalogues are the foundation of the SSA. These object catalogues contain information about functional and non functional satellites, the residual rocket body parts and the space debris objects that are originated from the collision of RSOs. The object catalogues contain valuable information such as origin, size of the objects, orbit information and other necessary details \cite{esa6}.
+  \item Tracking Systems : To build above mentioned catalog and to monitor the objects, SSA uses the various sensor networks, such as ground-based networks (RADAR, Optical telescopes) and space-based (in-situ) sensors. The data acquired from these networks is then interpreted to calculate positions, velocities and to determine orbits of these objects \cite{esa6}.
+  \item Orbital Analysis and Predictions : This is the important aspect of SSA which takes the data from sensor networks and with the help of available orbit determination and propagation tools, predict the future positions and velocities of the space debris objects. This information helps to analyze the possible close encounters or conjunction other objects, and thereby preventing catastrophic collisions with suitable protective measures \cite{esa6}.
+  \item Conjunction alerts and notifications : The SSA systems are well equipped to provide warnings and alerts in case two objects are in close proximity and there are chances of collision. The operators are informed and alerted about such events so that protective measures can be taken in well advance \cite{esa6}.
+  \item Space Weather Monitoring : In addition to space debris monitoring, SSA systems also help in monitoring space weather conditions. The timely updates regarding cosmic radiations and solar flares can be useful in planning satellite operations and rendezvous activities \cite{esa6}.
 \end{itemize}
-Für den letzteren Punkt wird ein Account am ILR benötigt, den man beim Betreuer beantragen kann. Die Nutzung der digitalen Bibliothek funktioniert 
-folgendermaßen:
-\begin{enumerate}
-  \item Kopiere die Datei \tb{JabRef-2.10.jar} z.B. auf deinen Desktop (oder unter Linux \tb{JabRef} nach \ts{~/bin/}.). Hier ggf. den Betreuer nach dem 
-aktuellen Pfad der Datei fragen.
-  \item Durch anklicken kann JabRef jetzt gestartet werden (oder unter Linux durch den Befehl \tb{JabRef} aus der Konsole)
-  \item Oben links befindet sich der Button zum Öffnen: \ts{Öffnen einer BibTex-Database}
-  \item Öffne die Datei \ts{/home/export/biblio/e-biblio.bib} (unter Windows ggf. das Laufwerk \ts{biblio an ILR-Server (Jupiter)} einbinden)
-  \item Die elektronische Bibliothek ist geöffnet (diese wird beim nächsten Starten von JabRef automatisch wieder geladen)
-  \item Zugriff auf die Literatur:
-  \begin{itemize}
-   \item Elektronische Literatur lässt sich direkt aus JabRef öffnen
-   \item Literatur, die nur als Buch oder Kopiervorlage existiert, kann über das Feld \ts{Note} gefunden werden, in dem die entsprechende Referenznummer 
-abgelegt ist. Hier am besten den Betreuer fragen, wo im Institut sich das Dokument dann befindet (Archiv).
-  \end{itemize}
-\end{enumerate}
 
-\section{Bewertung der Arbeit}
+\subsection{Types of sensors}
 
-Alle Arbeiten am ILR werden nach einem vorgegebenen Schema bewertet, so dass vorkommen kann, dass Studenten, die eine perfekte Software als Lösung
-des Problems liefern, oder etwa eine perfekte Konstruktionslösung bieten, dennoch Abzüge in der Note erhalten können,
-wenn etwa die Dokumentation Schwächen zeigt (äußere Form, \ts{roter Faden} in der Arbeit, Unvollständigkeit, etc.).
+\subsubsection{RADAR}
 
-Die Beurteilungskriterien sind in der folgenden Tabelle aufgelistet:
-\begin{table}[h!]
- \centering
- \begin{tabular}{lr}
-  Inhalt (Einführung, Theorie, Lösungsweg, Ergebnisse, Diskussion) & 50\% \\
-  Äußere Form der Arbeit & 15\% \\
-  Arbeitsweise (Eigene Ideen, Selbständigkeit, Methodik) & 30\% \\
-  Zeiteinteilung & 5\% \\
- \end{tabular}
+Radar, an abbreviation for Radio Detection and Ranging, stands out as a valuable sensor for observational purposes and plays a crucial role in the foundation of SSA. It can be divided into primary and secondary systems. Primary systems rely solely on the reflected radiation from the observed object, while secondary systems involve an active response signal from the object. When monitoring passive objects, primary systems are typically considered. Radar finds widespread application in various observations, 
+such as spotting aircraft, enforcing speed limits for motor vehicles, and determining weather conditions. These systems can be ground-based, portable as handheld devices, or mounted on aircraft. One notable advantage of radar over telescopes is its capacity to detect objects independently of light. Additionally, radar's use of electromagnetic waves is less 
+affected by environmental factors like fog, rain, or snow compared to telescopes \cite{weeden}.\\
 
-\end{table}
+Typically comprised of at least one transmitter and receiver, radars emit radio waves at specific frequencies. The reflected waves, upon encountering a target, are measured by the receiver, enabling the calculation of the target's location in relation to the radar. Radars offer the distinct advantages of actively measuring both the range and range rate to a target, with certain types capable of concurrently tracking multiple objects. However, these merits are offset by significant drawbacks, including high costs associated with initial construction, operations, and maintenance, as well as considerations of size and complexity \cite{weeden}.\\
 
-\section{Formelzeichen}
+In the nascent stages of space exploration, two radar concepts emerged for tracking space objects. The first concept involved interferometer-based systems, also known as bi-static or multi-static systems, as seen in Figure~\ref{fig:bistatic}, where the receiver and transmitter(s) were strategically separated by a specific distance. Particularly suitable for ''fence'' applications, these bistatic radar systems emit a continuous stream of energy in a specific direction, effectively tracking any object passing through the designated "radar fence" \cite{bistat}. A typical example of such RADAR is ''Space Fence'' radar facility in Marshall Islands, USA developed by Lockheed Martin. The Space Fence, 
+currently the most sophisticated radar globally, offers unanticipated detection, tracking, and precise measurement of space objects, such as satellites and orbital debris, mainly in LEO \cite{fence}.\\
 
-Ein Symbol- und Abk\"urzungsverzeichnis sind, neben den bereits automatisch 
-durch diese Vorlage erstellten Tabellen- und Abbildungsverzeichnissen, zu erstellen.
-Dabei wird empfohlen, von dem Paket \tb{glossaries} Gebrauch zu machen, welches 
-ebenfalls in dieser Vorlage eingebunden ist. Hier ein paar Beispiele:
-\begin{itemize}
- \item Ein Symbol, welches im Symbolverzeichnis auftauchen soll: \gls{symb:J2}
- \item Eine Abk\"urzung wird beim ersten Mal ausgeschrieben: \gls{ILR} und ab dem zweiten Mal nicht mehr: \gls{ILR}
-\end{itemize}
-In Gleichungen verwendet man die Formelzeichen analog, wie an \glg{eq:beispiel} zu sehen ist:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.95\textwidth]{bistatic.png}
+	\caption{ Bi-static system of the RADAR, inspired by \cite{bistat}}\label{fig:bistatic}
+\end{figure}
+
+The second initial radar concept was the monostatic radar, the general working principle of monostatic radar as seen in Figure~\ref{fig:monostat}, featuring collocated transmitting and receiving antennas typically mounted on a rotatable and elevatable parabolic dish. Referred to as mechanical trackers, these monostatic radars excel in precision tracking of individual or a small number of objects. With sufficient power, they can extend their tracking capabilities to space objects in the GEO belt, even beyond 36,000 kilometers. In regions with adverse weather conditions, mechanical tracking radars are often housed within domes made of materials transparent to electromagnetic radiation at their operational frequency \cite{weeden}.\\
+For such RADAR, Tracking and Imaging Radar (TIRA) is 
+a perfect example. The TIRA system, featuring a 34-meter diameter antenna housed in a spherical structure, is a central experimental facility designed for the development and exploration of radar techniques in detecting and reconnoitering space objects. This versatile system, capable of a complete 360° azimuth rotation and 90° elevation movement, weighs 240 tons and achieves a rapid 24° per second rotation in azimuth, completing a full revolution in just 15 seconds. TIRA's dual functionality includes a narrowband, fully coherent, high-power tracking radar operating at L-band (1,333 GHz) and a wideband imaging radar with a transmission frequency in Ku-band (16.7 GHz) that presently features high target resolution. 
+Beyond its experimental role, TIRA plays a crucial supporting role in space missions, with space agencies worldwide leveraging the specialized capabilities of Fraunhofer scientists and their cutting-edge radar system \cite{tir}.\\
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{monostatic.png}
+	\caption{ A general principle of the simple monostatic continuous radar system \cite{jena2019}}\label{fig:monostat}
+\end{figure}
+
+
+As the space era progressed, two additional radar paradigms emerged: monostatic and bi-static radars employing phased array antennas, as seen in the Figure~\ref{fig:phased}. Phased arrays consist of small, identical antennas mounted on a fixed face, capable of varying the phases of their signals. This allows the effective radiated energy to be steered or focused in specific directions, with the potential for multiple independent beams of energy to be individually directed towards multiple targets simultaneously. While phased arrays offer enhanced capabilities, they also entail more complex supporting systems compared to mechanical radars \cite{Reed}. An illustrative example is depicted in Figure~\ref{fig:phased}, showcasing a monostatic phased array with two separate faces operated by the U.S. military.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.9\textwidth]{phase.png}
+	\caption{ PAVE PAWS phased array at Clear AFS, Alaska (left) \cite{monostat} and  Changing direction of beam in phased-array radar. (Adapted from University of Wisconsin Naval 
+  ROTC, “Naval Weapons Systems Lesson 7: Electronic Scanning and Phased Array Radars,” course files) \cite{usssn}}\label{fig:phased}
+\end{figure}
+
+\subsubsection{Optical sensors}
+
+Optical telescopes, as integral components of space object tracking systems, necessitate specific environmental conditions for optimal functionality. In contrast to radar systems, telescopes are passive optical sensors reliant on electromagnetic radiation emitted by celestial bodies. Observations of space debris using telescopes require a dark and nocturnal sky to avoid interference from sunlight during the daytime, which could hinder object detections \cite{optical}. Furthermore, an unobstructed sky, free from cloud cover, is essential for telescope operations.\\
+
+Telescopes face unique considerations concerning external illumination. Unlike lasers, telescopes do not emit their own light radiation; instead, they depend on sunlight to illuminate space objects. Consequently, objects within Earth's shadow may be challenging to detect. However, for LEO objects there is a time window after sunset and before sunrise when the sun is below the horizon, but objects are still illuminated by sunlight and observed effectively \cite{optical}. The reflective properties of an object's surface material further influence the quality of observations, introducing considerations of reflection and absorption \cite{optical}.\\
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.9\textwidth]{lens.png}
+	\caption{Refracting and Reflector Telescope, inspired by \cite{tele}}\label{fig:lensopt}
+\end{figure}
+
+The aperture, denoting the diameter of the light-collecting region, is a crucial parameter for telescopes \cite{astro}. Two primary categories of telescopes, refracting and reflecting, differ in their approaches to light collection. Refracting telescopes use a converging lens as an objective, while reflector telescopes employ a concave mirror. The choice between these types, illustrated in Figure~\ref{fig:lensopt}, is contingent on design preferences and specific application requirements \cite{astro}.\\
+
+Telescopes can be mounted and operated in two ways to compensate for the Earth's rotation: the horizontal system and equatorial mounting \cite{mount}. The former involves rotating radially around a fixed vertical axis, allowing flexible height adjustments. However, this configuration results in the observed field rotating during tracking, a challenge overcome by computer techniques or telescope rotation around its viewing axis. Equatorial mounting aligns one axis parallel to Earth's rotation and the other with the celestial pole, enabling efficient tracking of celestial objects while compensating for the Earth's rotation speed.
+
+Recording observations requires a recording system, commonly implemented with cameras or Charged-Coupled Device (CCD) sensors due to their superior detection capabilities. CCD sensors have light-sensitive pixels arranged in a line or matrix, made of silicon semiconductor material, capable of detecting a broad light spectrum \cite{ccd}. These pixels absorb photons, generating electrical charge proportional to incoming photon intensity. The pixels are electrically 
+separated and often square-shaped with dimensions of 2 to 30 µm \cite{ccd}. Optimal CCD performance requires cooling. After light exposure and charge conversion, the readout phase follows, during which pixel charges are stored in temporary memories and then passed to a readout amplifier. The amplifier reads out the image line by line and sends it to a computer system, after which the buffers are cleared, and the system becomes fully operational again \cite{ccd}.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\textwidth]{spain.png}
+	\caption{The ESA Space Debris Telescope (Tenerife/Spain)\cite{spain}}\label{fig:spa}
+\end{figure}
+
+In SSA applications, optical telescopes, such as the European Space Agency's (ESA) Space Debris Telescope in Tenerife, Spain, seen in Figure~\ref{fig:spa}, utilize the visible portion of the electromagnetic spectrum \cite{weeden}. The aperture size and field of view (FOV) characterize their capabilities, influencing light collection and the observable area. Adaptive optics (AO) systems are increasingly incorporated into optical telescopes for SSA, utilizing lasers to create guide stars and compensating for atmospheric distortions during observations \cite{weeden}.
+While optical telescopes offer a significant advantage in terms of range, rapidly searching wide areas above 5,000 km altitude, their operation is contingent on specific conditions. The need for solar illumination limits their functionality to when targets are illuminated and the telescope is in darkness, posing challenges during cloudy conditions and in the presence of light pollution. The ideal telescope locations are characterized by thin, dry air and freedom from contaminants, often found at high elevations or in remote desert areas \cite{weeden}.
+
+
+\subsubsection{Laser}
+
+LASER, which stands for Light Amplification by Stimulated Emission of Radiation, is a coherent beam of light generated through the process of stimulated emission. This process, as seen in Figure~\ref{fig:lsr} involves the stimulation of atoms or molecules to release photons in a consistent phase and direction. LASER systems produce monochromatic and collimated light, exhibiting properties of high intensity and directional focus \cite{laser}.\\
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\textwidth]{laserr.png}
+	\caption{Procedure of Laser detection, inspired by \cite{paul, optical}}\label{fig:lsr}
+\end{figure}
+The fusion of optical and RADAR techniques culminates in the creation of a sophisticated tracking system known as LIDAR (Light Detection and Ranging) \cite{lidar}. LIDAR serves as an active optical debris and satellite tracking system, leveraging the precision of optical measurements and the penetrating capabilities of RADAR.\\
+
+In the LIDAR system, a target is illuminated by a laser beam, and the range to the target is ascertained by meticulously timing the round trip of a singular laser pulse. This method obviates the dependence on sunlight, thereby enhancing the system's capability to track objects with greater efficiency. Unlike tracking stations that discern an object's orbit through multiple observations, a ranging system in LIDAR focuses on measuring the distance from the ground station to the target in a single instance \cite{optical}.\\
+
+A salient advantage of LIDAR lies in its ability to tailor the laser beam, either through collimation or focusing, for a specific range or altitude. This customization maximizes the return signal from a solitary target, contrasting with the broader beams produced by traditional radio transmitters. The accuracy of LIDAR is primarily contingent on the wavelength of the probing beam, often around 1064 nm \cite{optical}. Notably, the ranging accuracy achievable with visible or infrared laser systems can reach as low as a few centimeters, a level of precision surpassing that of RADAR systems utilizing much longer wavelengths \cite{optical}.\\
+
+This heightened accuracy in LIDAR facilitates superior orbital prediction compared to RADAR systems. The coherent and focused nature of LASER technology, when integrated into LIDAR, underscores its significance in advancing the precision and efficacy of space debris and satellite tracking systems \cite{optical}.\\
+
+
+
+\subsubsection{In-Situ}
+
+Information regarding the presence of small-sized space debris and meteoroids in space, particularly those measuring in millimeters or smaller, is primarily accessible through in-situ detectors or the examination of retrieved spacecraft hardware. Every orbiting spacecraft is inevitably exposed to encounters with these particles. The ESA has been actively engaged in this area, with a comprehensive program encompassing past, ongoing, and future activities. Following are the ESA's two major initiatives, focusing on in-situ observations spanning the particle size spectrum from sub-micron to millimeters \cite{situ}.\\
+
+A pivotal component of ESA's early endeavors was the Geostationary Orbit Impact Detector (GORID), operational in GEO from 1996 to 2002. GORID, as seen in Figure~\ref{fig:debiee} (on right), an impact ionization detector with a sensor surface of 0.1 m², recorded over 3000 impacts in the micrometer size range. Notably, GORID detected clusters of events, suggestive of debris clouds, challenging existing models by indicating larger debris fluxes in GEO than predicted \cite{gorid1,gorid2,gorid3}. Another notable in-situ detector, DEBIE-1 (Debris In orbit Evaluator), Figure~\ref{fig:debiee} (on left), launched in 2001, is positioned on the small technology satellite PROBA in a low polar orbit. Additionally, DEBIE-2, an enhanced version with three sensors, is poised for deployment on the European Technology Exposure Facility (EuTEF) carrier aboard the International Space Station (ISS). Data from GORID and DEBIE-1 contribute to the European Detector Impact Database (EDID) \cite{gorid2,gorid3,debie}.\\
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.95\textwidth]{debie.png}
+	\caption{In situ detectors DEBIE (left) \cite{deb} and GORID (right) \cite{god}}\label{fig:debiee}
+\end{figure}
+
+Furthermore, post-flight impact analyses of retrieved hardware, such as the Hubble Space Telescope (HST) solar arrays, provide detailed insights into encountered meteoroid and debris fluxes across a broader size range than active impact detectors can achieve \cite{hst1,hst2}. ESA's analyses, including those related to the EURECA mission, have contributed to understanding the dynamics of space debris and meteoroid interactions. A notable study focused on the HST solar arrays retrieved in 2002, revealing measured crater sizes ranging from approximately 1 micron to 7 mm. Detailed chemical analyses of impact residues facilitated the differentiation between space debris and natural meteoroids. Notably, space debris dominated for particle sizes smaller than 10 microns, while impacts from meteoroids prevailed in the range of 10 microns to about 1 mm \cite{situ,hst1,hst2}.
+
+\section{Global Space Sensor Network}
+
+
+\subsubsection{United States Space Surveillance Network}
+The Space Surveillance program of the Unites States of America relies on the Space Surveillance Network (SSN) as its eyes and ears. The SSN is a meticulously distributed network encompassing approximately two dozen sites globally, overseen by personnel from the US Army, Navy, and Air Force. This sophisticated network employs a trio of fundamental sensor types for vigilant monitoring of Earth's array of artificial satellites: traditional radars, phased-array radars, and a specialized optical system recognized as the Ground-Based Electro-Optical Deep Space Surveillance system, commonly referred to as GEODSS\cite{cele,GEOD}.\\
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.9\textwidth]{USSSN.png}
+	\caption{ US SSN as of February 2018, released by the 18th Space Defense Squadron of the United States Space Force (USSF) \cite{ussf}}\label{fig:USSSN}
+\end{figure}
+
+The United States Space Surveillance Network (USSN) is a system responsible for space surveillance and Space Object Identification (SOI), supporting the Joint Space Operations Center (JSpOC) at Vandenberg AFB, California, and the Alternate Space Control Center (ASCC) at Dahlgren, Virginia \cite{afspc}. The sensors in the network fall into three categories: dedicated, collateral, and contributing \cite{dia}.\\
+
+A \textbf{dedicated sensor} refers to a sensor operationally controlled by the US Strategic Command (USSTRATCOM) with its main mission focused on providing space surveillance support. Examples of such dedicated sensors encompass GEODSS systems and the Eglin AFB AN/FPS-85 phased-array radar (PAR)\cite{usssn}.\\
+
+GEODSS, operated by the 21st Space Operations Group at Peterson AFB, Colorado, comprises three detachments in Socorro, New Mexico; Diego Garcia, British Indian Ocean Territories; and Maui, Hawaii. Tasked with detecting and tracking deep-space satellites for JSpOC, GEODSS utilizes powerful telescopes, low-light television, and high-speed computers. Each site's three telescopes, primarily operating at night, can detect objects 10,000 times dimmer than the human eye can. The telescopes' synchronized movement with the stars enables the detection of human-made space objects, with computers calculating their positions for real-time updates to the JSpOC. The GEODSS system is capable of tracking objects as small as a basketball over 20,000 miles in space \cite{usssn}.\\
+
+The Moron Optical Space Surveillance (MOSS) System, deployed at Moron AB, Spain, in FY 1998, collaborates with the existing GEODSS network. It was introduced to fulfill the GEODSS requirement for an additional Mediterranean site, enhancing geosynchronous coverage. MOSS includes a high-resolution electro-optical telescope (22-inch aperture, f/2.3) and the MOSS Space Operations Center (MOSC) van. The telescope features a 1024 x 1024 MIT/LL charge-coupled device focal-plane array, supported by uninterruptible power supply and a diesel generator for power backup \cite{usssn}.\\
+
+The AN/FPS-85 PAR is situated at Eglin AFB, Florida, under the operation of AFSPC, specifically the 21st Space Wing's 20th Space Surveillance Squadron (SPSS). This system, commissioned in the mid-1960s, stands as one of the earliest phased-array radars and was officially taken under Air Force operational control on January 24, 1969. Originally established for submarine-launched ballistic missile (SLBM) warning, its mission transitioned to dedicated space surveillance in 1987 due to redundancy with the operational southeast radar at Robins AFB, Georgia, known as the Perimeter Acquisition Vehicle Entry Phased-Array Weapons System (PAVE PAWS) \cite{usssn}.\\
+
+A \textbf{collateral sensor} is a sensor operationally controlled by the USSTRATCOM with a primary mission other than space surveillance, typically focusing on providing surveillance support as its secondary mission. Examples of collateral sensors include the Maui Optical Tracking and Identification Facility (MOTIF), Maui Space Surveillance System (MSSS), Ballistic Missile Early Warning System (BMEWS), PAVE PAWS, Perimeter Acquisition Radar Attack Characterization System (PARCS), and radars in Antigua, Ascension, and Kaena Point \cite{usssn}.\\
+
+\textbf{Contributing sensors} refer to sensors owned and operated by other agencies, offering space surveillance support as requested by the JSpOC. Examples include Millstone/Haystack, the ARPA Long-Range Tracking and Identification Radar (ALTAIR), and Cobra Dane \cite{usssn}.\\
+
+The USSN employs a tracking cycle starting with a prediction sent to space surveillance sensors. The sensors use the prediction to search for and track newly launched objects. The JSpOC continuously updates predictions to correct for maneuvers and orbital perturbations. Prioritized sensor tracking, based on NORAD/USSTRATCOM regulations, optimizes limited tracking capabilities by assigning priority and data-collection instructions according to each satellite's type and orbit \cite{usssn}.\\
+
+In summary, the USSN utilizes dedicated sensors like GEODSS, MOSS, and AN/FPS-85 PAR to conduct space surveillance. The tracking cycle involves predictions, sensor detection, and continuous updates. Prioritized sensor tracking ensures efficient distribution of tracking capabilities based on satellite priority and orbit characteristics \cite{usssn}.\\
+
+Data collected by sensors, such as observations, are transmitted to the JSpOC for processing and analysis. The JSpOC maintains a database of human-made objects in Earth orbit, continuously updating information through the tracking cycle. NORAD/USSTRATCOM regulations guide the prioritization and data-collection instructions for efficient use of tracking capabilities. The entire system contributes to maintaining SSA and supporting strategic space operations \cite{usssn}.\\
+
+
+\subsubsection{Europe}
+
+Over the past decade, the orbital environment has witnessed significant challenges, marked by the expanding scale and complexity of space utilization, a surge in space objects, including large constellations and debris, and the emergence of new operational concepts and technologies. The European Union's Space Surveillance and Tracking (EU SST) initiative has played a pivotal role in addressing these challenges, fostering safety in space operations, securing space-based infrastructure, and ensuring the sustainability of the orbital environment.\\
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\textwidth]{eusst.png}
+	\caption{\textbf{EU SST Sensor Network:} three lasers, eight radars (two surveillance, six tracking), 33 telescopes (17 surveillance, 16 tracking) \cite{esa4}}\label{fig:eusst}
+\end{figure}
+
+\textbf{Germany's GSSAC:} Germany has unveiled the German Space Situational Awareness Centre (GSSAC) in Uedem, operated by the German Armed Forces Space Command and the German Aerospace Center (DLR) \cite{gss}. Managed by the Federal Ministry of Defence and the Federal Ministry for Economic Affairs and Climate Action, GSSAC focuses on observing LEO for potential collisions and manipulation warnings. It utilizes TIRA and German Experimental Surveillance and Tracking Radar (GESTRA), contributing to the national and European orbit data catalogue \cite{gss}.\\
+
+\textbf{Italy's Sapienza Space Systems and French GRAVES System:} Italy's Sapienza Space Systems operates the Sapienza Space Debris Observatory Network (SSON), comprising ten telescopes and a radar on four continents. The network, including the TIRA radar from Germany, detects space debris from LEO to GEO \cite{rome,italy}. Meanwhile, the French Aerospace Research's ''Grand Réseau Adapté à la Veille Spatiale'' (GRAVES) system, a bistatic radar-based space surveillance system designed by ONERA, the French Aerospace Lab, scans LEO with automated, moving-parts-free operation. GRAVES catalogues over 2500 objects, initially focusing on collision hazard exclusion \cite{french1,french2}.\\
+
+\textbf{EU SST and ESA's Space Debris Office:} The European Union's Space Surveillance and Tracking (EU SST) program, collaborating with non-EU countries, provides free access to data and services \cite{esa2}. Simultaneously, the European Space Agency (ESA) concentrates on space debris research through its Space Debris Office at the European Space Operations Centre (ESA/ESOC). Combining activities in space weather, planetary defense, and space debris research, ESA's catalogue integrates data from ESA members and the USA, a key ESA partner \cite{esa1}.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.95\textwidth]{service.png}
+	\caption{Service provision model \cite{esa3}}\label{fig:eusst}
+\end{figure}
+
+\textbf{Governance model:} The EU SST Consortium operates under a governance model that recognizes the dual nature of the SSA domain—balancing civil and military considerations while respecting national sovereignty. This distinctive approach allows participating member states to retain ownership and control of their national sensors, ensuring coordinated tasking without compromising security policies or bilateral agreements \cite{esa4}.\\
+
+The EU SST Consortium plays a pivotal role by providing three essential services to the European user community. Firstly, the Collision Avoidance (CA) service assesses and manages the risk of collisions, offering real-time analysis and user interaction. Secondly, the Re-Entry Analysis (RE) service focuses on evaluating and providing timely information on uncontrolled re-entries. Lastly, the Fragmentation Analysis (FG) service detects and characterizes in-orbit events, issuing reports on fragmentations, break-ups, or collisions, contributing to SSA and safety \cite{esa3}.\\
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.95\textwidth]{eunetwork.png}
+	\caption{EU SST sensor network \cite{esa3}}\label{fig:eusst}
+\end{figure}
+
+\textbf{User Community and Collaboration:} EU SST services are provided free of charge to European users, including public and private spacecraft owners and operators, EU institutions, space agencies, and entities involved in civil protection and public research. As of May 2020, the services cater to 139 users from 80 organizations across 17 EU member states. Regular collaboration with the user community helps capture needs and enhance services continually \cite{esa3}.
+
+The EU SST Consortium stands as a pioneering initiative within the EU, contributing to the long-term sustainability of European space infrastructure. Through its unique governance model, collaborative services, and future-oriented studies, the consortium underscores the importance of international cooperation in maintaining the safety and security of outer space activities. As the EU continues to advance its capabilities in space surveillance and tracking, the EU SST Consortium remains at the forefront of innovation and collaboration in the realm of SSA.
+
+\subsubsection{Russia}
+
+The Russian Space Surveillance System (RSSS), or Russian System of Space Control (SKKP), is overseen by the 821st Main Centre for Reconnaissance of Situation in Space (GTsRKO), an entity within the Russian military \cite{dia}. While specific details about the complete sensor data remain undisclosed, Russia plays a prominent role in the International Scientific Optical Network (ISON), a non-governmental organization comprising ground-based telescopes across multiple countries. The ISON project commenced its operations at the Pulkovo Observatory in 2004, and subsequently, its activities transitioned to the Keldysh Institute of Applied Mathematics. Presently, it operates under the dedicated entity Small Innovation Enterprise "ISON Ballistics-Service." During the zenith of the project's expansion, it comprised nearly 100 telescopes. However, a segment of the observatories affiliated with Roscosmos and the Vimpel Corporation underwent separation. Despite this, observatories in collaboration with ISON continue to contribute to global coverage. At present, the network encompasses over 50 telescopes distributed across 27 observatories spanning 16 countries \cite{russ}. ISON actively monitors the GEO, HEO, and MEO regions, maintaining a comprehensive database of detected space objects \cite{russ}.\\
+
+Russia operates a notable network of SSA radars, ranking second globally after the U.S. These radars, rooted in missile warning systems, are distributed across the former Soviet Union, with around half located beyond Russian borders. Bilateral agreements with host countries facilitate the continued operation of these facilities. The Russian radar network includes Daryal-type bistatic phased array radars in Pechora, Russia, and Gabala, Azerbaijan, as well as the Volga-type radar in Baranovichi, Belarus \cite{povel}. The Don-2N radar, known as Pill Box, serves as a four-face phased array within Moscow's ABM system. Additionally, older Dnestr-M/Dnepr radars are maintained at Olenegork, Balkhash (Kazakhstan), and Mishelevka. The geographic locations and coverage of the Russian early warning radar network are illustrated in Figure~\Ref{fig:pov} \cite{povel,weeden}.\\
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\textwidth]{russrad.png}
+	\caption{Russian early warning radars \cite{povel}}\label{fig:pov}
+\end{figure}
+
+The Russian government space agency, Roscosmos, is set to develop a satellite dedicated to monitoring space debris in LEO, with a projected launch date by 2027, as revealed by a senior Roscosmos official in statements to the TASS news agency on May 28, 2020 \cite{tass}. This satellite will be an integral component of the Milky Way SSA network, a comprehensive system slated to encompass 65 ground-based optical telescopes by 2025. The Milky Way network will extend its coverage through space surveillance instruments on forthcoming Sfera-class Earth observation satellites, an optical sensor stationed in the Russian segment of the International Space Station (ISS), and the upcoming surveillance satellite. Additionally, Roscosmos intends to leverage Artificial Intelligence (AI) or machine learning within the Milky Way SSA initiative, enhancing its capability to accurately and promptly identify potential debris and collision threats in space\cite{tass}.\\
+
+
+\subsubsection{JAPAN}
+
+JAXA, the Japan Aerospace Exploration Agency, has been actively involved in space debris observation since 2000, utilizing telescopes and radar systems. The optical observations are conducted using data from the Bisei Spaceguard Center (BSGC) in Okayama prefecture, employing 1m and 50cm telescopes. Additionally, JAXA operates a radar system located at KSGC (Kagoshima Spaceguard Center), which has been exclusively dedicated to space debris observation since April 2004. The Tsukuba Space Center (TKSC) manages the data processing capabilities, facilitating communication with KSGC for requirements transmission and the reception of observation data \cite{jaxa1}.\\
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.9\textwidth]{jaxaradar.png}
+	\caption{Radome at KSGC (left) and KSGC RADAR \cite{jaxa5}}\label{fig:jaxrad}
+\end{figure}
+
+The radar system deployed at KSGC incorporates a flat active phased array (APA) as a pilot system, featuring a 10m square and 4m high radome and a 3m x 3m radar unit, as seen in Figure~\ref{fig:jaxrad} \cite{jaxa3}. With 1395 transceiver modules (TRM) and a peak transmission capacity of 70kW, the radar maintains a fixed elevation of 45 degrees, observing from 15 to 75 degrees through electrical scanning. Azimuth scanning covers 270 degrees mechanically and ±45 degrees electrically. The system achieves impressive measurement accuracy, with azimuth and elevation angles measured at less than 0.18 degrees and 0.28 degrees, respectively. It effectively detects 1m-across spheres at a slant range of 577km, focusing on low-Earth orbital debris. The radar at KSGC has the ability to track up to ten space debris objects simultaneously \cite{jaxa2}.\\
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\textwidth]{location.png}
+	\caption{The locations of KSGC, BSGC and TKSC \cite{jaxa5}}\label{fig:jaxa}
+\end{figure}
+
+At TKSC, observation data processing for orbit determination and prediction is conducted. The system excels in automatic orbit determination for multiple objects tracked from KSGC, employing data from three passes observed continuously for five days. The Plan Position Indicator (PPI) at TKSC offers real-time monitoring of tracking status, displaying trajectories of space debris in different colors. The Real-time trajectory Estimation Program for Space Debris (REPS) \cite{reps}, adopted in 2005, allows real-time reentry prediction and displays predicted orbits, errors, and the current position of tracked space debris \cite{jaxa2}.\\
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\textwidth]{jaxaopt.png}
+	\caption{ BSGC 1m Telescope (left) and BSGC 50cm telescope(right) \cite{jaxa2}}\label{fig:jaxopt}
+\end{figure}
+
+The observational setup at BSGC for geostationary objects relies on 1m and 50cm telescopes, as seen in Figure~\ref{fig:jaxopt} both Cassegrain telescopes with equatorial mounts. The 1m telescope, rotating at over 2.5[deg/sec] in both right ascension and celestial declination, is equipped with a cryogenically cooled CCD camera with ten 2k x 4k pixel CCD mosaics. The 50cm telescope, rotating at more than 5[deg/sec] in both directions, features a CCD camera with a 2k x 4k pixel CCD. Capable of detecting magnitudes ranging from 16.5 to 18, both telescopes contribute significantly to the observation capabilities of the BSGC system \cite{jaxa2,jaxa4}.\\
+
+
+\pagebreak
+
+\section{Sensor Tasking}
+In the realm of SSA, sensor tasking plays a pivotal role in keeping a vigilant eye on the ever-evolving 
+celestial landscape above us. It involves the systematic deployment and utilization of various sensor systems to collect data about 
+space objects, including satellites, space debris, and other celestial bodies. This information is crucial for enhancing our understanding 
+of the orbital environment, tracking objects, and ensuring the safety and sustainability of activities in space. Achieving a robust and sustained 
+SSA hinges on the strategic coordination of sensors engaged in observations and searches. This coordination serves to eliminate redundant efforts and optimize the extraction of valuable information from resulting data products. The primary objectives of optimizing sensor tasking are: 1) enhancing the custody maintenance of objects of interest, 2) swift detection of object changes, 3) timely response to events, and 4) maximizing the identification and tracking of new, uncorrelated objects. It is imperative to strike a balance among these objectives for comprehensive SSA efficacy \cite{sensor}.\\
+
+Achieving the goals mentioned requires smartly using both ground-based and space-based sensors. Each type of sensor has its strengths and weaknesses, along with specific operational limits. By carefully combining both types, we can create a very effective overall system. This thoughtful blending ensures a thorough and well-rounded approach to SSA, making our SSA operations work better overall.\\
+
+The traditional distinction of sensor tasking comprises two key facets: Survey and Tracking. Survey efforts are geared toward scanning unknown or untracked objects, collecting multiple observations to generate initial orbits, and iteratively refining orbit information until reliable tracking is achieved. Surveys typically leverage known objects as reference points, aiming to identify unknown objects, such as debris fragments, in proximate orbits. Conversely, tracking involves obtaining new observations for objects with known (cataloged) orbits, ensuring the sustained accuracy of orbit estimation. Although survey and tracking represent distinct methods, both are integral components of robust sensor tasking strategies \cite{nsga}.\\
+
+\subsection{Surveying :}
+
+One of the principal objectives inherent in the process of sensor tasking is the aspect of surveying. Within this specific context, surveying entails a systematic and thorough examination of the night sky, aimed at identifying novel celestial objects or enhancing the precision of orbital parameters for those already cataloged. This proactive methodology is instrumental in maintaining a proactive stance in the identification of potential threats, such as space debris or near-Earth objects, which may pose risks to operational satellites or upcoming space missions. The continuous surveying of the celestial expanse by sensor systems serves as a pivotal component in the establishment of an early warning system, strategically positioned to detect and communicate potential hazardous encounters promptly. This, in turn, facilitates timely and effective mitigation efforts in response to identified risks \cite{survey}.\\
+ 
+Diverse strategies are typically employed for objects occupying distinct orbital paths. Radar systems are commonly utilized for objects in LEO due to their proximity. In contrast, optical sensors prove more effective for observing objects at higher altitudes, where relative velocities are lower, and objects spend extended periods within the sensor's field of view. Particularly for objects in proximity to the GEO, sidereal tracking is applied to generate observations conducive to the formulation of initial orbit calculations. Sidereal tracking involves an optical sensor recording the apparent movement of an object relative to the stars, rather than focusing on its movement relative to the Earth. This approach is advantageous because the predictable movement of stars, owing to Earth's rotation, can serve as a precise reference to make accurate observations of slowly moving space objects. By employing sidereal tracking, optical sensors can be precisely aligned with objects in higher orbits. The precision of these observations enables the creation of a reliable initial orbit calculation, crucial for subsequent monitoring and management of the object in space \cite{survey}.\\
+
+To optimize the observation process, in \textbf{one-stripe strategy} an initial right ascension and declination are selected, maintaining a fixed right ascension while adjusting the pointing direction's center to a declination slightly higher than the previous one. To prevent missing objects near the field of view's edge, a small overlap is used, determining the new declination based on the field of view width and the previous declination. This cycle continues through changes in declination and exposures until the first declination is revisited. The cycle time, encompassing exposure time, readout time, and repositioning time, plays a crucial role, ensuring efficient coverage of the sky \cite{fruh1}.\\
+
+\textbf{A two-stripe strategy} is implemented for successful orbit determination, involving the scanning of two stripes with significant anomalies. The telescope moves from the last declination of the first stripe to observe a second stripe with a different right ascension. After completing the second stripe, the telescope returns to the first stripe's initial declination. This approach enhances the observational cycle, considering exposure times, declination directions, and repositioning times. The selection of two stripes is based on objectives such as spacing them by one hour in right ascension or ensuring optimal object detection near the Earth shadow. The latter involves observing the first stripe until the second one rises and simultaneously observing both until the first one sets, optimizing illumination conditions. It's crucial to note that the optimal phase angle provides ideal illumination only for specific satellite configurations. Overall, these strategies aim to maximize coverage and ensure thorough observations of space objects \cite{fruh1}.\\
+
+In the previous study thesis work done by Menglu Gao at TU Braunschweig, the Greedy algorithm was implemented for the Sensor-Tasking problem \cite{gao}. The Greedy algorithm, known for making locally optimal choices at each step, aims to achieve a globally optimal solution. Its simplicity, ease of implementation, and low time complexity make it suitable for this task. The chosen cost function aligns with the problem requirements, and despite its approximate nature, the Greedy algorithm proves computationally efficient within the project's time and complexity constraints. In this work, the further weighting schemes are implemented in the cost functions and the performance is analysed.\\
+
+\subsection{Follow-Up Observations and Catalog Maintenance :}
+
+In addition to its pivotal role in surveying, another critical aspect of sensor tasking is the execution of follow-up observations and the continuous maintenance of space object catalogs. Once a space object is initially discovered during the surveying phase, follow-up observations become indispensable for refining the object's orbital data. These subsequent observations play a crucial role in enhancing the precision of predicting the object's future positions and movements. Notably, this iterative process contributes to an evolving understanding of the object's trajectory, reducing uncertainties and improving overall tracking accuracy \cite{nsga}.\\
+
+The optimization of follow-up observations in space debris monitoring involves determining secure orbits for GEO objects through four observation sequences, followed by scheduling a subsequent observation within a week. Scheduling considers various factors such as target orbit, observatories, priority, and visibility constraints. A genetic algorithm is proposed for optimization. Concurrently, an advanced information-theoretic sensor tasking scheme, employing the Shannon Information gain, maximizes information for catalog maintenance. This integrated approach, detailed in research-paper ''Optimal Scheduling for Geosynchronous Space Object Follow-up Observations Using a
+Genetic Algorithm'' by A. Hinze \cite{hinze1}, enhances the effectiveness of space object tracking and situational awareness in space debris monitoring.
+
+\section{Information Content}
+
+To effectively maintain and update catalogs of space objects, an innovative approach known as an information-theoretic sensor tasking scheme comes into play. This advanced strategy aims to maximize the information 
+gain for each assigned task, ensuring that the collected data is as informative as possible. Various information gain functions, including the Shannon Information gain, the Kullback-Leibler divergence, Rényi divergence, and Cauchy-Schwarz divergence, 
+are utilized to calculate and determine the optimal tasking commands \cite{nsga}. In this study, as proposed in ''Inverse Methods of Atmospheric Sounding, Theory and Practice'' by C. D. Rodgers \cite{IC,hinze1} the Shannon Information gain is introduced, emphasizing its significance in enhancing the quality of measurements and consequently, 
+the maintenance of space object catalogs \cite{hinze1}.\\
+
+\subsection{Shannon Information Content (SIC) Theory:}
+Shannon Information Gain Theory, a cornerstone of information theory developed by Claude Shannon, plays a pivotal role in the realm of SSA, particularly in the context of follow-up observations. 
+This theory offers a rigorous mathematical framework to quantify and assess the information derived from observational data, a crucial aspect of optimizing the allocation of resources for tracking and monitoring space objects. 
+This comprehensive explanation delves into the intricacies of Shannon Information Gain Theory and its application to follow-up observations within SSA \cite{hinze1}.\\
+
+\subsubsection{Fundamental Concepts:}
+Shannon's Information Gain Theory revolves around the quantification of the reduction in uncertainty, or equivalently, the increase in information, achieved when a specific observation is conducted. In the context of SSA, follow-up observations aim 
+to mitigate uncertainty regarding the state, position, trajectory, and behavior of space objects, making this theory an indispensable analytical tool \cite{IC,hinze1}.
+
+\subsubsection{Entropy as a Measure:}
+At the core of Shannon's theory lies the concept of entropy, serving as a measure of uncertainty or randomness within a system. In SSA, entropy corresponds to the degree of uncertainty associated with the properties and behavior of space objects. 
+Notably, higher entropy implies a greater lack of knowledge concerning their positions and motions \cite{IC,hinze1}.
+
+\subsubsection{The Information Gain Formula:}
+Information gain (IG) is quantified by contrasting the initial entropy ($H_{initial}$) with the entropy following an observation ($H_{final}$). The formula for information gain is expressed as \cite{IC,hinze1}:
 \begin{equation}
- \gls{symb:E} = \gls{symb:m}\cdot \gls{symb:c}^2 \label{eq:beispiel}
+  IG = H_{initial} - H_{final}
 \end{equation}
 
-Zunächst werden die als Formelzeichen benutzten lateinischen bzw. deutschen Buchstaben in alphabetischer Reihenfolge geordnet, wobei
-jeweils die großen Buchstaben den kleinen voranzustellen sind. Dann in gleicher
-Reihenfolge die dem griechischen Alphabet entnommenen Symbole. Am Schluss
-sind die häufig benutzten Indizes in alphabetischer Reihenfolge anzugeben. Beinhaltet
-die Arbeit die Erstellung eines Programms oder von Teilen hierzu, so sollen die im
-Programm verwendeten Bezeichnungen den Formelzeichen zugeordnet werden. Es
-sind ausschließlich SI-Einheiten zu verwenden.
+This quantification of information content is intricately tied to the reduction of entropy, a fundamental concept in information theory. To elucidate, $S_{before}$ denotes the entropy of the 
+knowledge represented by $P(X)$ before the inclusion of an additional follow-up tracklet. $P(X)$ characterizes the initial state of knowledge or entropy related to variable X. It provides the probability distribution of different possible states or values of X before any new information is considered. On the other hand, $S_{after}$ signifies the entropy of the knowledge of $P(X, Y )$ considering this supplementary tracklet. 
+$P(X, Y)$ captures the joint probability distribution of variables X and Y, reflecting the updated state of knowledge or entropy considering the additional information provided by the follow-up tracklet. This joint probability distribution represents the combined uncertainty about both X and Y. The SIC, encapsulating this reduction in entropy, is mathematically defined as follows \cite{IC,hinze1}:
+\begin{equation}
+  SIC=S_{before}-S_{after}
+\end{equation}
+\begin{equation}
+  SIC=S[P(X)]-S[P(X,Y)]
+\end{equation}
 
-Die Sortierung kann ebenfalls automatisch vorgenommen werden, indem im Symbolverzeichnis (Datei: \ts{symbolverzeichnis.tex}) jedem Eintrag der entsprechende 
-\tb{sort}-Schlüssel gegeben wird, z.B.:
+When applying covariance matrix approach, as mentioned in \cite{hinze1}, the SIC mathematically expressed as:
+
+\begin{equation}
+  SIC=\frac{1}{2}\ln(|P^-_{Pos}|)-\frac{1}{2}\ln(|P^+_{Pos}|)
+\end{equation}
+\begin{equation}
+  SIC=\frac{1}{2}\ln(|P^-_{Pos}\cdot(P^+_{Pos})^{-1}|)
+\end{equation}
+
+In these equations, $|P^-_{Pos}|$ signifies the determinant of the position covariance matrix before the observation, 
+while $|P^+_{Pos}|$ denotes the determinant of the position covariance matrix after the observation \cite{hinze1}. This method provides 
+a unique perspective on evaluating the information content in the context of follow-up observations.
+
+In the context of follow-up observations, the primary objective is to conduct observations that yield a significant reduction in uncertainty, thereby leading to higher information gain.
+
+\subsubsection{Application in SSA}
+Shannon Information Gain Theory is applied within the SSA domain to prioritize follow-up observations based on the entropy of space objects. Space objects exhibiting higher entropy levels 
+demand more attention, as their observation results in more substantial information gain. This heightened information assists in critical areas, including collision avoidance, rendezvous planning, 
+and conjunction assessments, all of which are pivotal for the security of satellites and the sustainable utilization of space \cite{hinze1}.
+
+\section{Sensor Tasking Algorithms}
+Sensor task assignment algorithms are mathematical techniques designed to optimize the allocation and scheduling of space surveillance sensors to monitor and control objects in Earth orbit. These algorithms aim to increase the performance and efficiency of sensor networks with appropriate sensors that it controls the identification of specific areas of the sky. In the following section two sensor tasking algorithms are introduced. First one is Genetic Algorithm (GA) for catalogue-maintenance and second one is Greedy Algorithm for surveying purpose.
+Further, various weighting schemes for the cost function are discussed and implemented in the available greedy algorithm, which was implemented by Menglu Gao \cite{gao} based on Frueh et.al \cite{fruh1}.
+
+\subsection{Genetic Algorithm}
+
+Given the NP-class nature of scheduling problems, heuristics, particularly genetic algorithms (GAs), prove to be a practical approach. GAs, inspired by natural evolution, exhibit significant advantages in their ability to address diverse and complex optimization challenges. Their effectiveness arises from parallel searches for solutions in each iteration. However, the risk of converging to a suboptimal solution exists without a well-defined GA development procedure. Rigorous testing and simulations are essential to validate algorithm capabilities \cite{nsga,hinze1}.\\
+
+A systematic approach to GA development involves the creation of a population of individuals, where each individual represents a candidate solution to an optimization problem. Selection of individuals based on fitness and the application of key operators lead to the generation of improved solutions. Preserving the solution with the highest fitness from the previous generation can prevent degradation. Termination criteria, such as the number of generations or the highest fitness value, are essential components to conclude the algorithm effectively \cite{hinze1}.\\
+
+\subsubsection{Fitness Function} 
+
+The fitness function signifies whether an optimization problem should be minimized or maximized. Each individual represents a valid schedule for all telescopes, ensuring that each object is observed only once and is visible at the scheduled time. Visibility constraints, such as maximum phase angle, minimum distance to the Moon, and avoidance of the Earth's shadow, are in place. An observation of an object, denoted as j, carries an expected information content (SICj) at the given time according to Eq. (2.5). According to A. Hinze \cite{hinze1}, the fitness value (Fi) for each individual is the sum of all scheduled SICj values,
+\begin{equation}
+	F_i=\sum_{j=1}^{N} SIC_j
+\end{equation} 
+
+Now, the optimization problem is given by:
+
+\begin{equation}
+	max F_i= max \sum_{j=1}^{N} SIC_j
+\end{equation}
+
+\subsubsection{Initial population}
+
+In the GA initiation, a diverse population aligns with the number of selected objects. Prioritizing objects by position error ensures optimal coverage. The first object is scheduled at the highest error's optimal time, and subsequent observations follow priority and proximity. This process repeats, adjusting priorities until all objects are scheduled optimally. The remaining individuals are randomly generated for enhanced diversity \cite{hinze1}.\\
+
+\subsubsection{Selection Process}
+
+Utilizing Eq. (2.7), individual fitness drives selection for key GA operations. Three common selection methods—fitness proportionate, rank-based, and competition—are considered. Simulations favor rank-based selection, preventing early convergence by sorting individuals based on fitness. Higher-ranked individuals have greater selection probability, ensuring a thorough search for the global optimum. Elitism secures the fittest individual's inclusion in the next generation, maintaining progress \cite{hinze1}.\\
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\textwidth]{nsga.png}
+	\caption{3. The general schematics of the Non-Dominated Sorted Genetic Algorithm (NGSA-II) algorithm \cite{nsga}}\label{fig:nsg}
+\end{figure}
+
+
+\subsubsection{Genetic operators}
+
+\textbf{Crossover:} The primary crossover operator facilitates substantial jumps within the search space. Two chosen individuals undergo interchange at a designated point, resulting in two new individuals inheriting properties from both parents. The algorithm randomly selects a point within a chosen individual, ensuring that each object is scheduled only once. Interchanging two objects between selected individuals can yield valid schedules, exempt from visibility constraints. Acceptance criteria for new individuals include a fitness value surpassing the average of the current population, ensuring progression. The population size of the next generation aligns with the previous one\cite{hinze1}.\\
+
+\textbf{Mutation:} As the secondary GA operator, mutation induces small jumps in the search area, striking a balance with crossover. A random subset of individuals undergoes mutation, involving random alterations in observations. If these changes, adhering to visibility constraints, result in improved fitness (SICj+SICj+1), the mutation is accepted. The debate over the utility of mutation versus crossover underscores the need for a well-calibrated balance \cite{hinze1}.\\
+
+
+Above mentioned algorithm can be used for optimized scheduling for follow-up observations of space objects, focusing on reducing position error covariance. The algorithm, utilizing GA, aims to schedule observations effectively by considering factors like observatory, observation time, and object covariance i.e covariance matrices. Unlike simpler schemes, this approach minimizes the necessary follow-up observations for catalog maintenance. The GA converges after certain number of generations $n$ to the optimum or until termination criteria is reached, ensuring all required observations are scheduled.
+
+\subsection{Greedy Algorithm}
+
+As discussed earlier, in this thesis, we're using the Greedy algorithm to handle the sensor tasking problem. The Greedy algorithm works by making the best local choice at each step, hoping to find the overall best solution eventually. What's unique about Greedy is that it doesn't reconsider past decisions but sticks to the current local best option, aiming to reach the global best solution through a continuous greedy selection process. This method is suitable for problems where the best solution can be achieved by a series of local optimal decisions \cite{fruh2,gao}.
+
+Compared to other methods, Greedy is simpler to implement, doesn't require advanced math or algorithmic knowledge, and is computationally efficient due to its low time complexity. It can be applied to various problems, providing solutions that closely match the overall best solution\cite{fruh2}.
+
+\subsubsection{Cost function}\label{sec:cost}
+To develop a sensor tasking algorithm, establishing a cost function is crucial for formulating this algorithm. The cost function serves as a guiding metric, influencing decisions to optimize sensor tasking. The importance of the cost function lies in its ability to quantify various factors and guide the algorithm in making informed decisions during the sensor tasking process. In this section, a comprehensive discussion of the formulation of the cost function is provided which was implemented by Gao \cite{gao}. Later, the cost function is updated using various weighting schemes.
+
+As presented by C. Frueh \cite{fruh3}, following cost function is approximated to allow computationally faster formulation of the optimization problem which leads to a solution through optima:
+
+\begin{equation}
+	\max\widetilde{A} = \sum_{h=1}^{r_g} \sum_{f=1}^{m_g} \left[ \sum_{i=1}^{n} u \cdot \mu_{\text{past}} \cdot p \cdot d + k \right] \quad	\\
+\end{equation}
+
+\begin{equation}
+	\alpha_{f, g} = \{\alpha_1, \alpha_2, \ldots, \alpha_m\}, \quad m \in \mathbb{N} \quad 
+\end{equation}
+\begin{equation}
+	\delta_{f, g} = \{\delta_1, \delta_2, \ldots, \delta_m\}, \quad m \in \mathbb{N} \quad\\
+\end{equation}
+
+\begin{equation}
+	\alpha_{f, g} - \frac{1}{2} \text{FOV} - \alpha_i \leq 0 \quad
+\end{equation}
+\begin{equation}
+	-\alpha_{f, g} - \frac{1}{2} \text{FOV} + \alpha_i \leq 0 \quad
+\end{equation}
+\begin{equation}
+	\delta_{f, g} - \frac{1}{2} \text{FOV} - \delta_i \leq 0 \quad
+\end{equation}
+\begin{equation}
+	-\delta_{f, g} - \frac{1}{2} \text{FOV} + \delta_i \leq 0 \quad
+\end{equation}
+\begin{equation}
+	R - \sigma \leq 0 \quad
+\end{equation}
+
+
+Following is the breakdown of the key elements present in the cost function.
+
 \begin{itemize}
- \item Das Symbol \tb{c} soll im Symbolverzeichnis auftauchen. Es handelt sich um einen lateinischen Buchstaben, 
-       der Schlüssel zum Sortieren wird mit \ts{sort=xc} vergeben (Präfix \ts{x}, der gleich ersichtlich wird - s.u.).
- \item Das Symbol \tb{$\alpha$} ist ein griechischer Buchstabe und soll erst nach den lateinischen Buchstaben kommen. 
-       Entsprechend stellt man den Schlüssel auf \ts{sort=yalpha} (Präfix \ts{y}, sodass griechische Buchstaben immer
-       nach den lateinischen Buchstaben erscheinen werden.
+	\item \textbf{Cardinality (A):} A represents the cardinality of weighted viewing direction areas. It is the quantity aimed to be maximized \cite{fruh3}.
+	\item \textbf{Sum Over Time Intervals ($r_g$) for a Specific Sensor (g):} The second sum is over single time intervals ($r_g$) for a given sensor (g) within the optimization interval $t_{obs,g,h}$. This considers scenarios where a sensor might not be available for the entire observation interval \cite{fruh3}.
+	\item \textbf{Sum Over All Viewing Directions (mg) for a Given Sensor:} The third sum is over all viewing directions ($m_g$) possible to fit into a specified observation interval for a given sensor. $m_g$ is determined by $m_g = int(t_{obs,g}/t_{frame,g})$, considering time requirements for frames with exposure, readout, and repositioning times \cite{fruh3}.
+	\item \textbf{Key Time Parameters $(j_g, t_{frame}, t_{frames,g})$:}  $j_g$ represents the fixed number of frames for a specific sensor. $t_{frame} = t_{repos} + j · t_{exp} + (j − 1)· t_{read}$ represents the time for a sensor to complete a fixed number of frames. $t_{frames,g}$ is the time it takes for a specific sensor to complete frames with exposure time $t_{exp}$, readout time $t_{read}$, and repositioning time $t_{repos}$. Repositioning and readout can occur simultaneously for the last frame in a series \cite{fruh3}.
+	\item \textbf{Optimization Scheme:}  The optimization scheme is compartmentalized into single time steps, $t_{f,g}$, corresponding to each of the $j_g$ exposures. Time discretization may vary for each sensor based on the start of observations as soon as the sensor becomes available in continuous time \cite{fruh3}.
+	\item \textbf{$\mu_{past}$ - Orbit Quality Function:} $\mu_{past} ∈ [0, 1]$ is the orbit quality function, acting as a probability function applied as a weighting factor. It evaluates the history of individual objects, assigning a weight of 1 if observations are made without considering prior history. Otherwise, $\mu_{past}$ becomes a periodic function, influenced by the orbital period of the object \cite{fruh3}.
+	\item \textbf{$p$ - Probability of Detection:} The function $p$ represents the probability of detecting a single object at a specific right ascension and declination $(\alpha_i, \delta_i)$ during a given time $(t_{g,f})$. This probability is influenced by various parameters, including astrometric position, distance to the observer and the sun, object characteristics, and more \cite{fruh3}.
+	\item \textbf{$d$ - Sensor to Object Association:}  The function $d$ determines the association between a sensor (g) and an object (i) at a particular time (tg,f) based on specified boundary conditions. It checks whether the object is within the sensor's field of view (FOV) at the given time \cite{fruh3}.
+	\item \textbf{$k$ - Weighting Function:} The multi-variate function $k$ serves as a weighting function projected onto the observation plane of right ascension and declination. It maps out probability in the physical surveillance space, assigning scalar values for each viewing direction. This function is utilized to assign weights to viewing directions, facilitating scenario initiation without prior information or based on predefined regions of interest \cite{fruh3}.
+
+
 \end{itemize}
 
-Existieren benötigte Herleitungen bereits in der Literatur, so ist auf diese zu verweisen. Nur zum unmittelbaren Verständnis notwendige Gleichungen sollten
-dargestellt werden. Es ist darauf zu achten, dass sonstige theoretische Herleitungen schlüssig sind (kontrollieren, ob jede Größe eindeutig definiert ist
-und keine Gedankensprünge vorhanden sind). Herleitungen soweit wie möglich mit allgemeinen Bezeichnungen durchführen, Zahlenwerte erst im Ergebnisteil (ab 
-\kap{sec:hauptteil}) einsetzen.
+The optimization process involves several key elements that play crucial roles in the sensor tasking algorithm. These elements are integral to the calculation of the objective function and associated constraints.
+
+
+\subsection{Weighting schemes}
+
+
+Weighting schemes constitute a crucial facet in the domain of space object tracking and sensor tasking, serving as instrumental frameworks for resource allocation optimization and the prioritization of objects for observation. It's like setting rules for how we­ use our resources. We­ give a "weight" or score to diffe­rent objects based on ce­rtain things. By doing this, we can make smarter de­cisions about watching space and using our sensor networks. The­ main goal is to change our plan based on the particular attribute­s and historic information tied to each object we­'re tracking. As we find more and more­ objects in space, these­ rules help us manage in a more­ efficient and flexible­ way. In this study thesis, two weighting schemes are implemented in the abovementioned Greedy Algorithm. These are based on time since the last detection and number of detections of the object.\\
+
+\subsubsection{Weightings based on the time since last detection ($w_t$)}
+
+This weighting scheme aims to influence the prioritization of objects in space tracking based on the time elapsed since their last detection. The primary objective is to assign weights that reflect the urgency of observing objects, emphasizing those with more recent detections. The scheme incorporates a time threshold, beyond which the weight assigned to an object diminishes, indicating reduced priority for observation.\\
+
+\subsubsection{Weightings based on the number of detections ($w_d$)}
+This weighting scheme aims to assign weights to space objects based on the number of detections they have undergone. The primary objectives include prioritizing objects with fewer detections by assigning them higher weights, indicating a higher urgency for observation. The scheme defines thresholds to categorize objects based on the number of detections, ensuring adaptability to various detection histories.\\
+
+
+\subsection{Updated cost function with added weightings}
+In the earlier subsection \ref{sec:cost}, the optimized cost function for the Greedy algorithm was discussed. Following is an updated version of this cost function that includes new weighting schemes:\\
+
+\begin{equation}
+	\max\widetilde{A} = \sum_{h=1}^{r_g} \sum_{f=1}^{m_g} \left[ \sum_{i=1}^{n} w_t \cdot w_d \cdot u \cdot \mu_{\text{past}} \cdot p \cdot d + k \right] \quad	\\
+\end{equation}

@@ -1,66 +1,89 @@
-\chapter{Ergebnisse}
+\chapter{Results}
 \label{sec:ergebnisse}
+This chapter explores the results obtained from simulations using greedy algorithms, considering scenarios with and without tasking. It also looks into the effects of various weighting schemes discussed in earlier chapters. The simulations produce output files named detections, tracklets, and ephemerides, 
+containing essential details like detection ID, fabricated NORAD ID, epoch, Signal-to-Noise Ratio (SNR), orbital elements, and other relevant information. The figures and findings presented in this chapter are based on the data extracted from these output files, providing a detailed analysis of algorithmic 
+performance, the impact of tasking, and the influence of different weighting schemes.\\
 
-\section{Grafiken und Text}
-
-Im Ergebnis-Teil sollen die Ergebnisse vorgestellt werden, für das Beispiel einer Software-Entwicklung also die mit der entwickelten Software erzielbaren 
-Ergebnisse. Im Falle einer Simulationsentwicklung könnte man hier verschiedene Simulationsszenarien definieren und unter verschiedenen Randbedingungen 
-vorstellen.
-
-Es ist dabei darauf zu achten, dass ein ausgewogenes Verhältnis von Bild und Text besteht. Alle in den Plots vorkommenden Linien sind zu erklären. Jeder Plot 
-benötigt eine vollständige Achsenbeschriftung und ggf. eine Legende. Eine Grafik muss immer selbsterklärend sein, d.h. man muss mit Grafik und Bildunterschrift 
-allein in der Lage sein, das Gezeigte zu verstehen.
-
-Auch bei den Ergebnissen soll weiterhin auf den roten Faden geachtet werden. Der Leser soll Stärken und Schwächen des Tools / der Simulation / der Konstruktion 
-kennenlernen.
-
-Um Plots zu erstellen, lässt sich ebenfalls TikZ nutzen (wie auch für WBS, Zeitplan, etc.). Der Vorteil ist, dass alle Beschriftungen einer Grafik auch 
-dieselbe Schrift und -größe tragen, wie auch der Haupttext. Darüber hinaus sind TikZ-Grafiken auch Vektorgrafiken, sodass Qualitätsverluste nicht zu erwarten 
-sind, wie das etwa bei PNG oder JPG der Fall wäre.
-
-Beispiel für das Plotten von zwei verschiedenen Kurven aus Datenfiles, welches das Paket \tb{pgfplots} nutzt (siehe auch sehr ausführliche Dokumentation mit 
-zahlreichen Beispielen online!):
+\section{Comparison}
 
 \begin{figure}[h!]
- \centering
- \input{tikz/costPerKgMTM}
- \caption{Vergleich der Kosten pro kg entfernten Schrotts für hohe und mittlere Objektmassen.\label{abb:vergleich}}
+	\centering
+	\includegraphics[width=0.8\textwidth]{Totdet_det.png}
+	\caption{Total number of detections based on threshold values for number of detections of object}\label{fig:}
 \end{figure}
-
-Auch das Plotten von Funktionen ist sehr einfach, wie \abb{abb:x2} für das simple Beispiel einer quadratischen Funktion zeigt.
 
 \begin{figure}[h!]
-  \centering
-  \begin{tikzpicture}
-    \begin{axis}[
-       xlabel = x,
-       ylabel = y
-    ]
-    
-      \addplot {x^2};
-  
-    \end{axis}
-  \end{tikzpicture}
-  \caption{Die Funktion $y=x^2$.\label{abb:x2}}
+	\centering
+	\includegraphics[width=0.8\textwidth]{UniqueObj_det.png}
+	\caption{Total number of unique objects detected based on threshold values for number of detections of object}\label{fig:}
 \end{figure}
 
-Sollte nicht TikZ verwendet werden, ist auch \tb{Gnuplot} zu empfehlen. Allerdings ist dann darauf zu achten, dass sämtliche Beschriftungen gut lesbar sind und 
-auch die Grafiken in der entsprechenden Auflösung, ohne Artefakte, etc. im Dokument erscheinen.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Totdet_time.png}
+	\caption{Total number of detections based on threshold values for time since last detection}\label{fig:}
+\end{figure}
 
-\section{Erstellen dieses Dokuments}
 
-Um das vorliegende Dokument zu erstellen, muss die Datei \ts{vorlage.tex} mit \tb{pdflatex} kompiliert werden. Alle üblichen Entwicklungsumgebungen für Latex 
-stellen diese Funktion zur Verfügung (z.B. Kile unter Linux, MikTeX unter Windows, oder TeXShop auf dem Mac).
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\textwidth]{numbofdet.png}
+	\caption{Total number of detections compared with simulations without tasking, with tasking and tasking with Weightings}\label{fig:}
+\end{figure}
 
-Dazu wird die Dokumentenklasse \tb{tubsreprt} benötigt, welche das Corporate Design der TU Braunschweig umsetzt. Diese findet man, samt Installationsanleitung 
-unter \url{http://www.enricojoerns.de/tubslatex/} (aktueller Release: 1.0.3).
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\textwidth]{numbofobj.png}
+	\caption{Total number of objects compared with simulations without tasking, with tasking and tasking with Weightings}\label{fig:}
+\end{figure}
 
-Wichtig, damit auch das Symbol- und Abkürzungverzeichnis funktionieren, ist die Ausführung des Befehls \tb{makeglossaries} ebenfalls auf die Datei 
-\ts{vorlage.tex} angewandt. Die Erstellung des Dokuments verläuft also in mehreren Schritten:
-\begin{itemize}
- \item pdflatex auf \ts{vorlage.tex} (erzeugt die für makeglossaries benötigten Dateien!)
- \item makeglossaries auf \ts{vorlage.tex} (erstellt das Abkürzungs- und Symbolverzeichnis)
- \item pdflatex auf \ts{vorlage.tex} (ggf. mehrmals!) erstellt nun das Dokument mit allen Referenzen
-\end{itemize}
-Der Befehl makeglossaries muss in der Regel manuell in der Entwicklungsumgebung eingestellt werden, was für die verschiedenen Typen unterschiedlich ist. Daher 
-am besten Google befragen (z.B. ``Kile makeglossaries'').
+
+\newpage
+\section{Detections recorded in Horizontal coordinate system}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{AltvsAzHCS_1.png}
+	\caption{Detections recorded by OGS in HCS (Without tasking)}\label{fig:}
+\end{figure}
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{AltvsAzHCS_8.png}
+	\caption{Detections recorded by OGS in HCS (Tasking with Weightings)}\label{fig:}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{AltvsAzHCS_comb.png}
+	\caption{Detections recorded by OGS in HCS combined}\label{fig:}
+\end{figure}
+
+
+\newpage
+\section{Detections recorded in Equatorial coordinate system}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.9\textwidth]{DecvsRAECS_1.png}
+	\caption{Detections recorded by OGS in ECS (Without tasking)}\label{fig:}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.9\textwidth]{DecvsRAECS_3.png}
+	\caption{Detections recorded by OGS in ECS (Tasking with Weightings)}\label{fig:}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.9\textwidth]{DecvsRAvsTiECS_1.png}
+	\caption{Detections recorded by OGS in ECS (Without tasking)}\label{fig:}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.9\textwidth]{DecvsRAvsTiECS_3.png}
+	\caption{Detections recorded by OGS in ECS (Tasking with Weightings)}\label{fig:}
+\end{figure}

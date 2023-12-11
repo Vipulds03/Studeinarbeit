@@ -1,0 +1,469 @@
+\begin{thebibliography}{64}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[SatNow(2023)]{dev}
+Editorial~Team SatNow.
+\newblock The influence of space debris on military satellites, 2023.
+\newblock URL
+  \url{https://www.satnow.com/community/what-is-space-situational-awareness-ssa}.
+\newblock Accessed on 20.10.2023.
+
+\bibitem[Agency()]{esa5}
+European~Space Agency.
+\newblock About space debris.
+\newblock \emph{Space Safety}.
+\newblock URL
+  \url{https://www.esa.int/Space_Safety/Space_Debris/About_space_debris}.
+
+\bibitem[Forum(October, 2023)]{esa6}
+Skyteer~Space Forum.
+\newblock What is space situational awareness?, October, 2023.
+\newblock URL
+  \url{https://skysteer.com/the-influence-of-space-debris-on-military-satellites/}.
+\newblock Accessed on 23.11.2023.
+
+\bibitem[Weeden et~al.(2010)Weeden, Cefola, and Sankaran]{weeden}
+Brian Weeden, Paul Cefola, and Jaganath Sankaran.
+\newblock Global space situational awareness sensors.
+\newblock In \emph{AMOS Conference}, 2010.
+
+\bibitem[Skolnik(1961)]{bistat}
+Merill~I. Skolnik.
+\newblock An analysis of bistatic radar.
+\newblock \emph{IRE Transactions on Aerospace and Navigational Electronics},
+  ANE-8\penalty0 (1):\penalty0 19--27, 1961.
+\newblock \doi{10.1109/TANE3.1961.4201772}.
+
+\bibitem[Fraunhofer()]{fence}
+Fraunhofer.
+\newblock The world’s most advanced radar.
+\newblock URL
+  \url{https://www.fhr.fraunhofer.de/en/the-institute/technical-equipment/Space-observation-radar-TIRA.html}.
+\newblock Accessed on 23.11.2023.
+
+\bibitem[Martin(2020)]{tir}
+Lockheed Martin.
+\newblock Space observation radar tira, 2020.
+\newblock URL
+  \url{https://www.lockheedmartin.com/en-us/products/space-fence.html}.
+\newblock Accessed on 23.11.2023.
+
+\bibitem[Jena et~al.(2019)Jena, Gupta, Pippara, Pal, and Adit]{jena2019}
+Sudarsana Jena, Ankur Gupta, Rohit~Kumar Pippara, Pramod Pal, and Adit.
+\newblock \emph{Wireless Sensing Systems: A Review}, pages 143--192.
+\newblock Springer Singapore, Singapore, 2019.
+\newblock ISBN 978-981-13-3290-6.
+\newblock \doi{10.1007/978-981-13-3290-6_9}.
+\newblock URL \url{https://doi.org/10.1007/978-981-13-3290-6_9}.
+
+\bibitem[Reed(1969)]{Reed}
+J.E. Reed.
+\newblock The an/fps-85 radar system.
+\newblock \emph{Proceedings of the IEEE}, 57\penalty0 (3):\penalty0 324--335,
+  1969.
+\newblock \doi{10.1109/PROC.1969.6963}.
+
+\bibitem[Abd et~al.(2022)Abd, Al-Suhail, Tahir, Ali, Abdulkareem, Dashtipour,
+  Jamal, and Ahmad]{monostat}
+Mariam Abd, Ghaida Al-Suhail, Fadhil Tahir, Ahmed Ali, Hamzah Abdulkareem, Kia
+  Dashtipour, Sajjad~Shaukat Jamal, and Jawad Ahmad.
+\newblock Synchronization of monostatic radar using a time-delayed chaos-based
+  fm waveform.
+\newblock \emph{Remote Sensing}, 14, 04 2022.
+\newblock \doi{10.3390/rs14091984}.
+
+\bibitem[Chatters et~al.(2009{\natexlab{a}})Chatters, Crothers, Command,
+  College, and Seminars]{usssn}
+Edward~P. Chatters, Brian~J. Crothers, Air Command, Staff College, and Space
+  Research~Electives Seminars.
+\newblock Au-18 space primer.
+\newblock Technical report, Air University Press, 2009{\natexlab{a}}.
+\newblock URL \url{http://www.jstor.org/stable/resrep13939.26}.
+
+\bibitem[Bennet et~al.(2014)Bennet, D’Orgeville, Gao, Gardhouse, Paulin,
+  Price, Rigaut, Ritchie, Smith, Uhlendorf, and Wang]{optical}
+Francis Bennet, Celine D’Orgeville, Yue Gao, William Gardhouse, Nicolas
+  Paulin, Ian Price, Francois Rigaut, Ian~T. Ritchie, Craig~H. Smith, Kristina
+  Uhlendorf, and Yanjie Wang.
+\newblock Adaptive optics for space debris tracking.
+\newblock In Enrico Marchetti, Laird~M. Close, and Jean-Pierre V{\'e}ran,
+  editors, \emph{Adaptive Optics Systems IV}, volume 9148, page 91481F.
+  International Society for Optics and Photonics, SPIE, 2014.
+\newblock \doi{10.1117/12.2055560}.
+\newblock URL \url{https://doi.org/10.1117/12.2055560}.
+
+\bibitem[{2006 Merriam Webster, Inc }(2006)]{tele}
+{2006 Merriam Webster, Inc }.
+\newblock Refracting and reflecting telescope.
+\newblock Pinterest, 2006.
+\newblock https://in.pinterest.com/pin/318840848599928483/.
+
+\bibitem[Weigert et~al.(2012)Weigert, Wendker, and Wisotzki]{astro}
+Alfred Weigert, Heinrich~J Wendker, and Lutz Wisotzki.
+\newblock \emph{Astronomie und Astrophysik: Ein Grundkurs}.
+\newblock John Wiley and Sons, 2012.
+
+\bibitem[Weisheit(2009)]{mount}
+Bernd Weisheit.
+\newblock \emph{Telescope Mountings, Drives, and Electrical Equipment}, pages
+  95--131.
+\newblock Springer Berlin Heidelberg, Berlin, Heidelberg, 2009.
+\newblock ISBN 978-3-540-76379-6.
+\newblock \doi{10.1007/978-3-540-76379-6_5}.
+\newblock URL \url{https://doi.org/10.1007/978-3-540-76379-6_5}.
+
+\bibitem[Naumann et~al.()Naumann, Schröder, and Löffler-Mang]{ccd}
+Helmut Naumann, Gottfried Schröder, and Martin Löffler-Mang.
+\newblock \emph{Handbuch Bauelemente der Optik}, pages I--XXI.
+\newblock \doi{10.3139/9783446441156.fm}.
+\newblock URL
+  \url{https://www.hanser-elibrary.com/doi/abs/10.3139/9783446441156.fm}.
+
+\bibitem[Jehn(2010)]{spain}
+Rudiger Jehn.
+\newblock Debris detection and observation systems.
+\newblock In \emph{PowerPoint presented at the International Interdisciplinary
+  Congress on Space Debris, McGill University, Montreal}, pages 7--9, 2010.
+
+\bibitem[Goldman(1967)]{laser}
+L.~Goldman.
+\newblock Laser history and theory.
+\newblock pages 1--8, 1967.
+\newblock \doi{10.1007/978-3-642-85797-3_1}.
+
+\bibitem[Mittelstaedt(2023)]{paul}
+Paul Simon Nepomuk Carl~Corvin Mittelstaedt.
+\newblock Analysis of sensor networks and the potential of different
+  configurations regarding ssa.
+\newblock Master's thesis, TU Braunschweig, Braunschweig, February 2023.
+
+\bibitem[Argall and Sica(2004)]{lidar}
+P.~Argall and R.~Sica.
+\newblock Lidar (laser radar).
+\newblock 2004.
+\newblock \doi{10.1002/3527600434.EAP629}.
+
+\bibitem[Drolshagen(2006{\natexlab{a}})]{situ}
+Gerhard Drolshagen.
+\newblock In-situ observations of space debris at esa.
+\newblock In \emph{The Advanced Maui Optical and Space Surveillance
+  Technologies Conference}, page E68, 2006{\natexlab{a}}.
+
+\bibitem[Drolshagen et~al.(2001)Drolshagen, Svedhem, Gr{\"u}n, and
+  Bunte]{gorid1}
+G~Drolshagen, H~Svedhem, E~Gr{\"u}n, and KD~Bunte.
+\newblock Measurements of cosmic dust and micro-debris in geo.
+\newblock \emph{Advances in Space Research}, 28\penalty0 (9):\penalty0
+  1325--1333, 2001.
+
+\bibitem[Drolshagen(2006{\natexlab{b}})]{gorid2}
+Gerhard Drolshagen.
+\newblock In-situ observations of space debris at esa.
+\newblock In \emph{The Advanced Maui Optical and Space Surveillance
+  Technologies Conference}, page E68, 2006{\natexlab{b}}.
+
+\bibitem[Bunte and Drolshagen(2005)]{gorid3}
+KD~Bunte and G~Drolshagen.
+\newblock Detection and simulation of debris cloud impacts.
+\newblock In \emph{4th European Conference on Space Debris}, volume 587, page
+  201, 2005.
+
+\bibitem[Kuitunen et~al.(2001)Kuitunen, Drolshagen, McDonnell, Svedhem, Leese,
+  Mannermaa, Kaipiainen, and Sipinen]{debie}
+J~Kuitunen, G~Drolshagen, JAM McDonnell, H~Svedhem, M~Leese, H~Mannermaa,
+  M~Kaipiainen, and V~Sipinen.
+\newblock Debie-first standard in-situ debris monitoring instrument.
+\newblock \emph{EUROPEAN SPACE AGENCY-PUBLICATIONS-ESA SP}, 473:\penalty0
+  185--190, 2001.
+
+\bibitem[ESA(2023{\natexlab{a}})]{deb}
+ESA.
+\newblock Debie, 2023{\natexlab{a}}.
+\newblock URL
+  \url{https://space-env.esa.int/wp-content/uploads/2019/09/debie-artistic.png}.
+\newblock Accessed on 23.11.2023.
+
+\bibitem[ESA(2023{\natexlab{b}})]{god}
+ESA.
+\newblock Gorid, 2023{\natexlab{b}}.
+\newblock URL
+  \url{https://space-env.esa.int/wp-content/uploads/2019/09/Gorid-501x400.jpg}.
+\newblock Accessed on 23.11.2023.
+
+\bibitem[McDonnell(2005)]{hst1}
+JAM McDonnell.
+\newblock Post-flight impact analysis of hst solar arrays-2002 retrieval.
+\newblock \emph{Final Report of ESA contract 16283/NL/LvH}, 2005.
+
+\bibitem[Moussi et~al.(2005)Moussi, Drolshagen, McDonnell, Mandeville,
+  Kearsley, and Ludwig]{hst2}
+A~Moussi, G~Drolshagen, JAM McDonnell, J-C Mandeville, AT~Kearsley, and
+  H~Ludwig.
+\newblock Hypervelocity impacts on hst solar arrays and the debris and
+  meteoroids population.
+\newblock \emph{Advances in Space Research}, 35\penalty0 (7):\penalty0
+  1243--1253, 2005.
+
+\bibitem[Kelso(2023)]{cele}
+Dr.~T.S. Kelso.
+\newblock Space surveillance.
+\newblock \emph{Satellite Times}, 2023.
+\newblock URL \url{https://celestrak.org/columns/v04n01/}.
+\newblock Accessed on 23.11.2023.
+
+\bibitem[Chatters et~al.(2009{\natexlab{b}})Chatters, Crothers, Command,
+  College, and Seminars]{GEOD}
+Edward~P. Chatters, Brian~J. Crothers, Air Command, Staff College, and Space
+  Research~Electives Seminars.
+\newblock Au-18 space primer.
+\newblock Technical report, Air University Press, 2009{\natexlab{b}}.
+\newblock URL \url{http://www.jstor.org/stable/resrep13939.26}.
+
+\bibitem[Shepherd and Command(2006)]{ussf}
+Lt~Col~Glen Shepherd and Air Force~Space Command.
+\newblock Space surveillance network.
+\newblock In \emph{Shared Space Situational Awareness Conference, Colorado
+  Sprincs, CO}, 2006.
+
+\bibitem[Sturdevant(2008)]{afspc}
+Rick~W Sturdevant.
+\newblock From satellite tracking to space situational awareness: the usaf and
+  space surveillance, 1957-2007.
+\newblock \emph{Air Power History}, 55\penalty0 (4):\penalty0 4--23, 2008.
+
+\bibitem[Agency(March 2022)]{dia}
+Defense~Intelligence Agency.
+\newblock Challenges to security in space space reliance in an era of
+  competition and expansion.
+\newblock \emph{DIA}, March 2022.
+
+\bibitem[Peldszus and Faucher(2022)]{esa4}
+Regina Peldszus and Pascal Faucher.
+\newblock European union space surveillance and tracking (eu sst): State of
+  play and perspectives.
+\newblock \emph{Space Policy}, 62:\penalty0 101503, 2022.
+\newblock ISSN 0265-9646.
+\newblock \doi{https://doi.org/10.1016/j.spacepol.2022.101503}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/S0265964622000297}.
+
+\bibitem[Wirt(2022)]{gss}
+Uwe Wirt.
+\newblock Space situational awareness centre.
+\newblock \emph{German Aerospace Center, DLR}, 2022.
+
+\bibitem[Sciré et~al.(2017)Sciré, Piergentili, and Santoni]{rome}
+Gioacchino Sciré, Fabrizio Piergentili, and Fabio Santoni.
+\newblock Spacecraft recognition in co-located satellites cluster through
+  optical measures.
+\newblock \emph{IEEE Transactions on Aerospace and Electronic Systems},
+  53\penalty0 (4):\penalty0 1699--1708, 2017.
+\newblock \doi{10.1109/TAES.2017.2671619}.
+
+\bibitem[{Hadji Hossein} et~al.(2020){Hadji Hossein}, Acernese, Cardona,
+  Cialone, Curianò, Mariani, Marini, Marzioli, Parisi, Piergentili, and
+  Santoni]{italy}
+Shariar {Hadji Hossein}, Marco Acernese, Tommaso Cardona, Giammarco Cialone,
+  Federico Curianò, Lorenzo Mariani, Veronica Marini, Paolo Marzioli, Leonardo
+  Parisi, Fabrizio Piergentili, and Fabio Santoni.
+\newblock Sapienza space debris observatory network (sson): A high coverage
+  infrastructure for space debris monitoring.
+\newblock \emph{Journal of Space Safety Engineering}, 7\penalty0 (1):\penalty0
+  30--37, 2020.
+\newblock ISSN 2468-8967.
+\newblock \doi{https://doi.org/10.1016/j.jsse.2019.11.001}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/S2468896719301429}.
+
+\bibitem[Th et~al.(2005)Th, Eglizeaud, and Bouchard]{french1}
+Michal Th, J~Eglizeaud, and J~Bouchard.
+\newblock Graves: the new french system for space surveillance.
+\newblock In \emph{Proc. 4th European Conf. on Space Debris. ESA/ESOC.
+  Darmstadt, Germany}, 2005.
+
+\bibitem[Muller(2017)]{french2}
+Florent Muller.
+\newblock Graves space surveillance system: Life extension and upgrade program.
+\newblock In \emph{Proc. 7th European Conference on Space Debris}, 2017.
+
+\bibitem[ESA(2022)]{esa2}
+ESA.
+\newblock What is eu sst?
+\newblock \emph{Eu space surveillance and tracking}, 2022.
+\newblock URL \url{https://www.eusst.eu}.
+
+\bibitem[Becker and Faucher(2021)]{esa1}
+Marc Becker and Pascal Faucher.
+\newblock Recent developments in the implementation of european space
+  surveillance and tracking (eu sst) security and data policy.
+\newblock \emph{Journal of Space Safety Engineering}, 8\penalty0 (2):\penalty0
+  178--181, 2021.
+\newblock ISSN 2468-8967.
+\newblock \doi{https://doi.org/10.1016/j.jsse.2021.04.003}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/S2468896721000355}.
+
+\bibitem[Faucher et~al.(2020)Faucher, Peldszus, and Gravier]{esa3}
+Pascal Faucher, Regina Peldszus, and Amélie Gravier.
+\newblock Operational space surveillance and tracking in europe.
+\newblock \emph{Journal of Space Safety Engineering}, 7\penalty0 (3):\penalty0
+  420--425, 2020.
+\newblock ISSN 2468-8967.
+\newblock \doi{https://doi.org/10.1016/j.jsse.2020.07.005}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/S2468896720300690}.
+\newblock Space Debris: The State of Art.
+
+\bibitem[Molotov(2022)]{russ}
+Igor Molotov.
+\newblock New status of the ison project and results of space debris optical
+  monitoring.
+\newblock \emph{44th COSPAR Scientific Assembly. Held 16-24 July}, 44:\penalty0
+  3143, 2022.
+
+\bibitem[Podvig(2006)]{povel}
+Pavel Podvig.
+\newblock Reducing the risk of an accidental launch.
+\newblock \emph{Science and Global Security}, 14\penalty0 (2-3):\penalty0
+  75--115, 2006.
+
+\bibitem[Agency(2023)]{tass}
+TASS~News Agency.
+\newblock Russia to develop space surveillance satellite to monitor space
+  debris as part of milky way ssa network.
+\newblock \emph{SpaceWatch.global}, 2023.
+
+\bibitem[Obara et~al.(2012)Obara, Matsumoto, and Koga]{jaxa1}
+Takahiro Obara, Haruhisa Matsumoto, and Kiyokazu Koga.
+\newblock Space environment measurements by jaxa satellites and iss/jem.
+\newblock \emph{Acta Astronautica}, 71:\penalty0 1--10, 2012.
+\newblock ISSN 0094-5765.
+\newblock \doi{https://doi.org/10.1016/j.actaastro.2011.08.009}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/S0094576511002700}.
+
+\bibitem[Taromaru et~al.(2005)Taromaru, Hirose, Mori, Horii, Yamamoto, Aoki,
+  and Isobe]{jaxa5}
+Yoshitaka Taromaru, Chikako Hirose, Shigehiro Mori, Michiaki Horii, Yosuke
+  Yamamoto, Sadao Aoki, and Syuzo Isobe.
+\newblock Observation of space debris by the kamisaibara radar system.
+\newblock In \emph{Proceedings of the 4th European Conference on Space Debris},
+  pages 18--20, 2005.
+
+\bibitem[Ono et~al.(2001)Ono, Tajima, Mizutani, Taromaru, Isobe, Takano, and
+  Sato]{jaxa3}
+Katsuhiro Ono, Toru Tajima, Akio Mizutani, Yoshitaka Taromaru, Shuzo Isobe,
+  Tadashi Takano, and Toru Sato.
+\newblock Development of the first japanese space debris observation radar.
+\newblock In \emph{Space Debris}, volume 473, pages 73--78, 2001.
+
+\bibitem[Hirose et~al.(2006)Hirose, Taromaru, Kameyama, Aoki, and Isobe]{jaxa2}
+Chikako Hirose, Yoshitaka Taromaru, Masaya Kameyama, Sadao Aoki, and Syuzo
+  Isobe.
+\newblock Overview of jaxa space debris surveillance operations.
+\newblock In \emph{SpaceOps 2006 Conference}, page 5817, 2006.
+
+\bibitem[{Hirose} et~al.(2005){Hirose}, {Taromaru}, {Mori}, {Horii},
+  {Yamamoto}, {Aoki}, and {Isobe}]{reps}
+C.~{Hirose}, Y.~{Taromaru}, S.~{Mori}, M.~{Horii}, Y.~{Yamamoto}, S.~{Aoki},
+  and S.~{Isobe}.
+\newblock {Observation of Space Debris by the Kamisaibara Radar System}.
+\newblock In D.~{Danesy}, editor, \emph{4th European Conference on Space
+  Debris}, volume 587 of \emph{ESA Special Publication}, page~73, August 2005.
+
+\bibitem[Okumura et~al.()Okumura, Isobe, and Team]{jaxa4}
+Shin-ichiro Okumura, Syuzo Isobe, and JSGA Team.
+\newblock Systematic survey observations of space debris during these 5 years.
+\newblock In \emph{56th International Astronautical Congress of the
+  International Astronautical Federation, the International Academy of
+  Astronautics, and the International Institute of Space Law}, pages B6--1.
+
+\bibitem[Herz et~al.(2013)Herz, Stoner, Hall, and Fisher]{sensor}
+Alexander~F Herz, Frank Stoner, Robert Hall, and William Fisher.
+\newblock Ssa sensor tasking approach for improved orbit determination
+  accuracies and more efficient use of ground assets.
+\newblock \emph{The}, pages 1--10, 2013.
+
+\bibitem[Cai et~al.(2020)Cai, Yang, Gehly, He, and Jah]{nsga}
+Han Cai, Yang Yang, Steve Gehly, Changyong He, and Moriba Jah.
+\newblock Sensor tasking for search and catalog maintenance of geosynchronous
+  space objects.
+\newblock \emph{Acta Astronautica}, 175, 06 2020.
+\newblock \doi{10.1016/j.actaastro.2020.05.063}.
+
+\bibitem[Schildknecht et~al.(1999)Schildknecht, Hugentobler, and
+  Ploner]{survey}
+T.~Schildknecht, U.~Hugentobler, and M.~Ploner.
+\newblock Optical surveys of space debris in geo.
+\newblock \emph{Advances in Space Research}, 23\penalty0 (1):\penalty0 45--54,
+  1999.
+\newblock ISSN 0273-1177.
+\newblock \doi{https://doi.org/10.1016/S0273-1177(98)00229-4}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/S0273117798002294}.
+
+\bibitem[Center(2016)]{fruh1}
+German Space~Operations Center.
+\newblock Realistic sensor tasking strategies carolin frueh school of
+  aeronautics and astronautics, purdue university, west-lafayette, in, usa
+  hauke fiedler, johannes herzog deutsches zentrum f{\"u}r luft-und raumfahrt
+  (dlr, german aerospace center).
+\newblock 2016.
+
+\bibitem[Gao(2023)]{gao}
+Menglu Gao.
+\newblock Analyse von existierenden sensornetzwerken und potenzielle
+  verbesserungen dieser durch optimiertes sensor-tasking im hinblick auf ssa.
+\newblock Master's thesis, IRAS, TU Braunschweig, Braunschweig, Germany, 2023.
+
+\bibitem[Hinze et~al.(2016)Hinze, Fiedler, and Schildknecht]{hinze1}
+Andreas Hinze, Hauke Fiedler, and Thomas Schildknecht.
+\newblock Optimal scheduling for geosynchronous space object follow-up
+  observations using a genetic algorithm.
+\newblock In \emph{Advanced Maui Optical and Space Surveillance Technologies
+  Conference (AMOS)}. Maui Economic Development Board Maui, HW, 2016.
+
+\bibitem[Rodgers(2000)]{IC}
+Clive~D Rodgers.
+\newblock \emph{Inverse methods for atmospheric sounding: theory and practice},
+  volume~2.
+\newblock World scientific, 2000.
+
+\bibitem[Little and Frueh(2018)]{fruh2}
+Bryan~D Little and Carolin Frueh.
+\newblock Ssa sensor tasking: comparison of machine learning with classical
+  optimization methods.
+\newblock In \emph{Proceedings of the Advanced Maui Optical and Space
+  Surveillance Technologies Conference}, pages 1--17, 2018.
+
+\bibitem[Frueh(2017)]{fruh3}
+Carolin Frueh.
+\newblock Sensor tasking for multi-sensor space object surveillance.
+\newblock In \emph{Seventh European Conference on Space Debris, ESOC,
+  Darmstadt, Germany}, pages 18--21, 2017.
+
+\bibitem[Kebschull et~al.(2017)Kebschull, Reichstein, and
+  Stoll]{kebschull2017simulation}
+Christopher Kebschull, Lorenz Reichstein, and Enrico Stoll.
+\newblock A simulation environment to determine the performance of ssa systems.
+\newblock In \emph{Advanced Maui Optical and Space Surveillance (AMOS)
+  Technologies Conference}, page~95, 2017.
+
+\bibitem[Schubert and Kebschull(2023)]{schubert2023enhancing}
+Manuel Schubert and Christopher Kebschull.
+\newblock Enhancing the radar system simulator tool suite to allow the
+  simulation of sensor networks.
+\newblock \emph{Advances in Space Research}, 2023.
+
+\bibitem[Schubert(2023)]{ams}
+Manuel Schubert.
+\newblock Applicability of the sensor network simulator tool suite for
+  proximity operations.
+\newblock In \emph{Advanced Maui Optical and Space Surveillance (AMOS)
+  Technologies Conference}, 2023.
+
+\end{thebibliography}

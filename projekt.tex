@@ -1,193 +1,963 @@
-\chapter{Projektmanagement}
+\chapter{Project Management}
 \label{cha:projekt}
 
 \section{Work Breakdown Structure}
 \label{sec:wbs}
 
 \begin{landscape}
-\begin{tikzpicture}[
-  basic/.style   = {draw, text width=2.7cm, align=left, drop shadow, rectangle},
-  root/.style    = {basic, text width=12cm, rounded corners=2pt, thin, align=center, fill=gray90},
-  level 2/.style = {basic, rounded corners=2pt, thin, fill=gray80},
-  level 3/.style = {basic, thin, fill=gray90, text width=2.6cm},
-  level 1/.style={sibling distance=38mm}, edge from parent fork down, 
-  edge from parent/.style={->,draw}, level distance=2.5cm,  >=latex]
+  \begin{tikzpicture}[
+      basic/.style   = {draw, text width=3cm, align=left, drop shadow, rectangle},
+      root/.style    = {basic, text width=12cm, rounded corners=2pt, thin, align=center, fill=gray90},
+      level 2/.style = {basic, rounded corners=2pt, thin, fill=gray80},
+      level 3/.style = {basic, thin, fill=gray90, text width=2.75cm},
+      level 1/.style={sibling distance=38mm}, edge from parent fork down,
+      edge from parent/.style={->,draw}, level distance=3cm,  >=latex]
 
-% root of the the initial tree, level 1
-\node[root] {\tb{Genauigkeit der Bahnbestimmung von Space Debris-Objekten mittels weltraumgest\"utzter optischer Sensoren}}
-% The first level, as children of the initial tree
-  child {node[level 2] (c1) {\tb{AP~1000} \\ Literatur-recherche}}
-  child {node[level 2] (c2) {\tb{AP~2000} \\ Algorithmus-erstellung}}
-  child {node[level 2] (c3) {\tb{AP~3000} \\ Implementie-rung \& Test}}
-  child {node[level 2] (c4) {\tb{AP~4000} \\ Algorithmus-optimierung}}
-  child {node[level 2] (c5) {\tb{AP~5000} \\ Simulation \\ $~~$}}
-  child {node[level 2] (c6) {\tb{AP~6000} \\ Dokumentation \\ $~~$}};
+    % root of the the initial tree, level 1
+    \node[root] {\tb{ Analysis of Tasking Algorithms for \\ Efficiently Operating Sensor Networks}}
+    % The first level, as children of the initial tree
+    child {node[level 2] (c1) {\tb{WP~1000} \\ Research and Familiarization}}
+    child {node[level 2] (c2) {\tb{WP~2000} \\ Tasking Method Selection}}
+    child {node[level 2] (c3) {\tb{WP~3000} \\ Sensor \\ Selection}}
+    child {node[level 2] (c4) {\tb{WP~4000} \\ Tasking Method Implementation}}
+    child {node[level 2] (c5) {\tb{WP~5000} \\ Evaluation of Tasking Method}}
+    child {node[level 2] (c6) {\tb{WP~6000} \\ Documentation \\ $~~$}};
 
-% The second level, relatively positioned nodes
-\begin{scope}[every node/.style={level 3}, node distance=6pt]
-\node [below=of c1, xshift=10pt] (c11) {\tb{AP~1100} \\ Weltraumm\"ull-problematik};
-\node [below=of c11] (c12) {\tb{AP~1200} \\ Beobachtung von Weltraum-m\"ull};
-\node [below=of c12] (c13) {\tb{AP~1300} \\ Bahnbestim-mung mit optischen Sensoren};
+    % The second level, relatively positioned nodes
+    \begin{scope}[every node/.style={level 3}, node distance=6pt]
+      \node [below=of c1, xshift=10pt] (c11) {\tb{WP~1100} \\ Basics of observation of objects in earth orbit};
+      \node [below=of c11] (c12) {\tb{WP~1200} \\ Sensor networks and catalogue of space objects};
+      \node [below=of c12] (c13) {\tb{WP~1300} \\ Sensor Tasking Algorithms};
+      \node [below=of c13] (c14) {\tb{WP~1400} \\ Software familiarization};
 
-\node [below=of c2, xshift=10pt] (c21) {\tb{AP~2100} \\ Aufbereitung von CCD-Daten in Winkelmessungen};
-\node [below=of c21] (c22) {\tb{AP~2200} \\ Berechnung von Bahnparametern aus optischen Messungen};
-\node [below=of c22] (c23) {\tb{AP~2300} \\ Hilfsalgorith-men};
+      \node [below=of c2, xshift=10pt] (c21) {\tb{WP~2100} \\ Analysis of Tasking Algorithms};
+      \node [below=of c21] (c22) {\tb{WP~2200} \\ Selection criteria and rationale};
 
-\node [below=of c3, xshift=10pt] (c31) {\tb{AP~3100} \\ Einarbeitung in PROOF-Schnittstellen};
-\node [below=of c31] (c32) {\tb{AP~3200} \\ Einbinden des Algorithmus als Unterroutine zu PROOF};
-\node [below=of c32] (c33) {\tb{AP~3300} \\ Gesamttest};
+      \node [below=of c3, xshift=10pt] (c31) {\tb{WP~3100} \\ Identification of relevant sensors};
+      \node [below=of c31] (c32) {\tb{WP~3200} \\ Criteria for sensor selection};
 
-\node [below=of c4, xshift=10pt] (c41) {\tb{AP~4100} \\ Verfeinerung der Aufarbeitung der CCD-Daten durch Subpixelinterpolation};
-\node [below=of c41] (c42) {\tb{AP~4200} \\ Verbesserung der Bahnbestimmung durch Erh\"ohung der Anzahl von Objektsignalen};
+      \node [below=of c4, xshift=10pt] (c41) {\tb{WP~4100} \\ Integration with the Sensor Network Simulator};
+      \node [below=of c41] (c42) {\tb{WP~4200} \\ Validation and verification};
 
-\node [below=of c5, xshift=10pt] (c51) {\tb{AP~5100} \\ Simulation der Bahnbestimmung mit PROOF unter verschiedenen Randbedingungen};
-\node [below=of c51] (c52) {\tb{AP~5200} \\ Feststellen der erzielbaren Genauigkeit der Bahnbestimmung};
+      \node [below=of c5, xshift=10pt] (c51) {\tb{WP~5100} \\ Simulation setup without tasking};
+      \node [below=of c51] (c52) {\tb{WP~5200} \\ Simulation setupt with tasking};
+      \node [below=of c52] (c53) {\tb{WP~5300} \\ Performance evaluation and analysis};
 
-\end{scope}
+    \end{scope}
 
-% lines from each level 1 node to every one of its "children"
-\foreach \value in {1,2,3}
-  \draw[->] (c1.212) |- (c1\value.west);
+    % lines from each level 1 node to every one of its "children"
+    \foreach \value in {1,2,3}
+    \draw[->] (c1.212) |- (c1\value.west);
 
-\foreach \value in {1,2,3}
-  \draw[->] (c2.212) |- (c2\value.west);
+    \foreach \value in {1,2}
+    \draw[->] (c2.212) |- (c2\value.west);
 
-\foreach \value in {1,2,3}
-  \draw[->] (c3.212) |- (c3\value.west);
+    \foreach \value in {1,2}
+    \draw[->] (c3.212) |- (c3\value.west);
 
-\foreach \value in {1,2}
-  \draw[->] (c4.212) |- (c4\value.west);
+    \foreach \value in {1,2}
+    \draw[->] (c4.212) |- (c4\value.west);
 
-\foreach \value in {1,2}
-  \draw[->] (c5.212) |- (c5\value.west);
-  
-\end{tikzpicture}
+    \foreach \value in {1,2}
+    \draw[->] (c5.212) |- (c5\value.west);
+
+  \end{tikzpicture}
 \end{landscape}
 
-\section{Zeitplan}
-\label{sec:zeitplan}
+\section{Time Schedule}
+\label{sec:Zeitplan}
 
 \begin{landscape}
-%\noindent\resizebox{\textwidth}{!}{	% Einfügen, falls zu groß
-\begin{ganttchart}[hgrid,
-                   time slot format = isodate, 
-                   x unit=0.28cm,	% Zum komprimieren des Charts in x-Richtung
-                   %y unit chart=0.7cm,
-                   %compress calendar,	% Komprimiert den Chart in der Breite
-                   calendar week text = {Woche~\currentweek},
-                   chart element start border = right,
-                   bar/.append style={fill=blue!40, rounded corners=2pt},
-                   bar incomplete/.append style={fill=blue!10},
-                   bar label node/.append style={align=left, text width=7cm},
-                   group label node/.append style={align=left, text width=8cm},
-                   milestone label node/.append style={align=left, text width=8cm},
-                   bar progress label node/.style={right=2mm},
-                   progress label text = {\pgfmathprintnumber[precision=0, verbatim]{#1}\%},
-                  ]{2013-01-01}{2013-02-23}
-  \gantttitlecalendar{year, month=shortname, week}\\
-  %\gantttitle{2013}{59}\\
-  \ganttgroup{AP 1000: Literaturrecherche}{2013-01-01}{2013-02-01}\\
-  \ganttbar[progress=50]  {AP 1100: Weltraummüllproblematik}{2013-01-01}{2013-01-08}\\
-  \ganttlinkedbar {AP 1200: Beobachtung von Weltraummüll}{2013-01-09}{2013-01-17}\\
-  \ganttlinkedbar {AP 1300: Bahnbestimmung mit optischen Sensoren}{2013-01-17}{2013-02-01}\\
-  %\ganttbar[progress=100]{AP 1300: TEXT}{2013-01-01}{2013-01-30}\\	% Beispiel für Fortschrittsbalken!
-  
-  \ganttgroup{AP 2000: Algorithmuserstellung}{2013-02-02}{2013-02-23}\\
-  \ganttbar  {AP 2100: ...}{2013-02-02}{2013-02-09}\\
-  \ganttbar  {AP 2200: ...}{2013-02-10}{2013-02-19}\\
-  
-  \ganttmilestone{Meilenstein}{2013-02-20}\\
-  
- \end{ganttchart}
-%}
+  \noindent
+  \resizebox{1.5\textwidth}{!}{
+  \begin{ganttchart}[hgrid,
+      time slot format = isodate,
+      x unit=0.25cm,	% Zum komprimieren des Charts in x-Richtung
+      %y unit chart=0.7cm,
+      %compress calendar,	% Komprimiert den Chart in der Breite
+      calendar week text = {Woche~\currentweek},
+      chart element start border = right,
+      bar/.append style={fill=blue!40, rounded corners=2pt},
+      bar incomplete/.append style={fill=blue!10},
+      bar label node/.append style={align=left, text width=7cm},
+      group label node/.append style={align=left, text width=8cm},
+      milestone label node/.append style={align=left, text width=8cm},
+      bar progress label node/.style={right=2mm},
+      progress label text = {\pgfmathprintnumber[precision=0, verbatim]{#1}\%},
+    ]{2023-07-03}{2023-10-28}
+    \gantttitlecalendar{year, month=shortname, week}\\
+    %\gantttitle{2023}{59}\\
+    \ganttgroup{AP 1000: Research and Familiarization}{2023-07-03}{2023-07-20}\\
+    \ganttbar  {WP 1100: Basics of observation of \\ objects in earth orbit}{2023-07-03}{2023-07-05}\\
+    %\ganttbar[progress=50]  {WP 1100: Basics of observation of \\ objects in earth orbit}{2023-07-03}{2023-07-05}\\
+    \ganttlinkedbar {WP 1200: Sensor networks and \\ catalogues of space objects}{2023-07-06}{2023-07-10}\\
+    \ganttlinkedbar {WP 1300: Sensor tasking algorithms}{2023-07-11}{2023-07-15}\\
+    \ganttlinkedbar {WP 1400: Software familiarization}{2023-07-16}{2023-07-20}\\
+    %\ganttbar[progress=100]{AP 1300: TEXT}{2023-01-01}{2023-01-30}\\	% Beispiel für Fortschrittsbalken!
+
+    \ganttgroup{WP 2000: Selection of Tasking Method}{2023-07-21}{2023-08-12}\\
+    \ganttbar{WP 2100: Analysis of tasking \\ algorithms}{2023-07-21}{2023-07-28}\\
+    \ganttlinkedbar[progress=50]  {WP 2200: Selection criteria and \\ rationale}{2023-07-29}{2023-08-12}\\
+    %\ganttbar[progress=5]0{WP 2100: Analysis of tasking \\ algorithms}{2023-07-21}{2023-07-28}\\
+
+    \ganttgroup{WP 3000: Selection of Sensors for Simulation}{2023-08-01}{2023-08-21}\\
+    \ganttbar  {WP 3100: Identification of relevant sensors}{2023-08-01}{2023-08-10}\\
+    \ganttlinkedbar  {WP 3200: Criteria for sensor selection}{2023-08-11}{2023-08-21}\\
+
+    \ganttgroup{WP 4000: Implementation of Tasking Method}{2023-08-21}{2023-09-15}\\
+    \ganttbar  {WP 4100: Integration with the Sensor Network Simulator}{2023-08-21}{2023-08-30}\\
+    \ganttlinkedbar  {WP 4200: Validation and verification}{2023-08-31}{2023-09-15}\\
+
+    \ganttgroup{WP 5000: Evaluation of Tasking Method}{2023-09-15}{2023-10-15}\\
+    \ganttbar  {WP 5100: Simulation setup without tasking}{2023-09-15}{2023-09-25}\\
+    \ganttlinkedbar  {WP 5200: Simulation setup with tasking}{2023-09-26}{2023-10-05}\\
+    \ganttlinkedbar  {WP 5300: Performance Evaluation and Analysis}{2023-10-06}{2023-10-15}\\
+
+    \ganttgroup{WP 6000: Documentation}{2023-10-16}{2023-10-28}\\
+    \ganttbar  {WP 6100: Final submission report}{2023-10-16}{2023-10-28}\\
+
+
+    \ganttmilestone{Meilenstein}{2023-08-18}\\
+
+  \end{ganttchart}
+  }
 \end{landscape}
+
+
+
+
+
+
+
 
 \section{Work Package Description}
 \label{sec:wpd}
 
 \begin{table}[!h]
- \begin{center}
-  \begin{tabular}{|p{35mm}||p{55mm}|p{50mm}||p{40mm}|}
-   \hline
-   \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{}\\
-   \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{\textbf{AP 1100}}\\
-   \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{}\\
-   \hline\hline
-   \textbf{Titel} & \multicolumn{2}{p{7cm}||}{\textbf{Genauigkeit der Bahnbestimmung von Space Debris-Objekten mittels weltraumgestützter optischer Sensoren}} 
-& \textbf{Seite:} 1 von 1\\
-   \hline
-   \textbf{Verantwortlicher} & \multicolumn{2}{l||}{Sebastian Stabroth} & \textbf{Version:} 1.0\\
-   \hline
-   \multicolumn{3}{|l||}{} & \textbf{Datum:} 25.06.2003\\
-   \hline\hline
-   \textbf{Beginn} & \multicolumn{2}{l||}{T$_0$} & \\
-   \hline
-   \textbf{Ende} & \multicolumn{2}{l||}{T$_0$+1 Woche} & \textbf{Dauer}: 1 Woche\\
-   \hline\hline
-   \textbf{Bearbeiter} & \multicolumn{3}{l|}{Sebastian Stabroth}\\
-   \hline\hline
-   \multicolumn{4}{|p{150mm}|}{\textbf{Ziele:}}\\
-   \multicolumn{4}{|p{150mm}|}{$\bullet$ Kenntnis über die Weltraummüllumgebung, Bahnbereiche von Space Debris-Populationen, Objektanzahlen und -größen}\\
-   \multicolumn{4}{|p{150mm}|}{}\\
-   \multicolumn{4}{|p{150mm}|}{\textbf{Input:}}\\
-   \multicolumn{4}{|p{150mm}|}{$\bullet$ Literatur zum Thema Weltraummüll}\\
-   \multicolumn{4}{|p{150mm}|}{}\\
-   \multicolumn{4}{|p{150mm}|}{\textbf{Schnittstellen zu anderen APs:}}\\
-   \multicolumn{4}{|p{150mm}|}{$\bullet$ \textbf{AP~5100} zur Simulation der Bahnbestimmung von Weltraummüll}\\
-   \multicolumn{4}{|p{150mm}|}{}\\
-   \multicolumn{4}{|p{150mm}|}{\textbf{Aufgaben:}}\\
-   \multicolumn{4}{|p{150mm}|}{$\bullet$ Einlesen in die Thematik Weltraummüll}\\
-   \multicolumn{4}{|p{150mm}|}{}\\
-   \multicolumn{4}{|p{150mm}|}{\textbf{Ergebnisse:}}\\
-   \multicolumn{4}{|p{150mm}|}{$\bullet$ Verständnis der Weltraummüllproblematik}\\
-   \hline
-  \end{tabular}
- \end{center}
+  \begin{center}
+    \begin{tabular}{|p{35mm}||p{55mm}|p{50mm}||p{40mm}|}
+      \hline
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{}                                                                                                                                                \\
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{\textbf{WP 1000}}                                                                                                                                \\
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{}                                                                                                                                                \\
+      \hline\hline
+      \textbf{Title}                   & \multicolumn{2}{p{7cm}||}{\textbf{Research and Familiarization}}
+                                       & \textbf{Page:} 1 of 19                                                                                                                                              \\
+      \hline
+      \textbf{Person Responsible}        & \multicolumn{2}{l||}{Vipul Dilip Solanke}                                                                                                   & \textbf{Version:} 1.0   \\
+      \hline
+      \multicolumn{3}{|l||}{}          & \textbf{Date:} 01.07.2023                                                                                                                                          \\
+      \hline\hline
+      \textbf{Begin}                  & \multicolumn{2}{l||}{T$_0$}                                                                                                                &                         \\
+      \hline
+      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 3 Weeks}                                                                                                        & \textbf{Duration}: 3 Weeks \\
+      \hline\hline
+      \textbf{Editor}              & \multicolumn{3}{l|}{Vipul Dilip Solanke}                                                                                                                              \\
+      \hline\hline
+      \multicolumn{4}{|p{150mm}|}{\textbf{Aim:}}                                                                                                                                                            \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Gain a thorough understanding of observation of objects in Earth orbit, sensor networks, catalogs of space objects, and sensor tasking algorithms.}                                                   \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Input:}}                                                                                                                                                            \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Study materials, research papers, and existing documentation.}                                                                                                                                 \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Interfaces to other WPs:}}                                                                                                                                    \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ This work package serves as a foundation for all subsequent work packages.}                                                                                              \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{To Do's:}}                                                                                                                                                         \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Conduct a literature review on object observation, sensor networks, and tasking algorithms.}\\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ To familiarize with existing sensor network simulators and their capabilities.} \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Result:}}                                                                                                                                                       \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ A comprehensive understanding of the fundamentals related to the research topic.}                                                                                                                          \\
+      \hline
+    \end{tabular}
+  \end{center}
 \end{table}
 
 \clearpage
 
 \begin{table}[!h]
- \begin{center}
-  \begin{tabular}{|p{35mm}||p{55mm}|p{50mm}||p{40mm}|}
-   \hline
-   \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{}\\
-   \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{\textbf{AP 1200}}\\
-   \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{}\\
-   \hline\hline
-   \textbf{Titel} & \multicolumn{2}{p{7cm}||}{\textbf{Titel des Arbeitspakets}} & \textbf{Seite:} X von Y\\
-   \hline
-   \textbf{Verantwortlicher} & \multicolumn{2}{l||}{Dein Name} & \textbf{Version:} 1.1\\
-   \hline
-   \multicolumn{3}{|l||}{} & \textbf{Datum:} DD.MM.YYYY\\
-   \hline\hline
-   \textbf{Beginn} & \multicolumn{2}{l||}{T$_0$} & \\
-   \hline
-   \textbf{Ende} & \multicolumn{2}{l||}{T$_0$+X Wochen} & \textbf{Dauer}: X Wochen\\
-   \hline\hline
-   \textbf{Bearbeiter} & \multicolumn{3}{l|}{Dein Name}\\
-   \hline\hline
-   \multicolumn{4}{|p{150mm}|}{\textbf{Ziele:}}\\
-   \multicolumn{4}{|p{150mm}|}{$\bullet$ Ziel 1}\\
-   \multicolumn{4}{|p{150mm}|}{$\bullet$ Ziel 2}\\
-   \multicolumn{4}{|p{150mm}|}{$\bullet$ ...}\\
-   \multicolumn{4}{|p{150mm}|}{}\\
-   \multicolumn{4}{|p{150mm}|}{\textbf{Input:}}\\
-   \multicolumn{4}{|p{150mm}|}{$\bullet$ Input 1}\\
-   \multicolumn{4}{|p{150mm}|}{$\bullet$ ...}\\
-   \multicolumn{4}{|p{150mm}|}{}\\
-   \multicolumn{4}{|p{150mm}|}{\textbf{Schnittstellen zu anderen APs:}}\\
-   \multicolumn{4}{|p{150mm}|}{$\bullet$ \textbf{AP XXXX} Beschreibung}\\
-   \multicolumn{4}{|p{150mm}|}{$\bullet$ \textbf{AP ....} ...}\\
-   \multicolumn{4}{|p{150mm}|}{}\\
-   \multicolumn{4}{|p{150mm}|}{\textbf{Aufgaben:}}\\
-   \multicolumn{4}{|p{150mm}|}{$\bullet$ Aufgabe 1}\\
-   \multicolumn{4}{|p{150mm}|}{$\bullet$ ...}\\
-   \multicolumn{4}{|p{150mm}|}{}\\
-   \multicolumn{4}{|p{150mm}|}{\textbf{Ergebnisse:}}\\
-   \multicolumn{4}{|p{150mm}|}{$\bullet$ Ergebnis 1}\\
-   \multicolumn{4}{|p{150mm}|}{$\bullet$ ...}\\
-   \hline
-  \end{tabular}
- \end{center}
+  \begin{center}
+    \begin{tabular}{|p{35mm}||p{55mm}|p{50mm}||p{40mm}|}
+      \hline
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{}                                                                                                                                                \\
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{\textbf{WP 1100}}                                                                                                                                \\
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{}                                                                                                                                                \\
+      \hline\hline
+      \textbf{Title}                   & \multicolumn{2}{p{7cm}||}{\textbf{Basics of observation of objects in earth orbit}}
+                                       & \textbf{Page:} 2 of 19                                                                                                                                             \\
+      \hline
+      \textbf{Person Responsible}        & \multicolumn{2}{l||}{Vipul Dilip Solanke}                                                                                                   & \textbf{Version:} 1.0   \\
+      \hline
+      \multicolumn{3}{|l||}{}          & \textbf{Date:} 01.07.2023                                                                                                                                          \\
+      \hline\hline
+      \textbf{Begin}                  & \multicolumn{2}{l||}{T$_0$}                                                                                                                &                         \\
+      \hline
+      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 1 Weeks}                                                                                                        & \textbf{Duration}: 1 Week \\
+      \hline\hline
+      \textbf{Editor}              & \multicolumn{3}{l|}{Vipul Dilip Solanke}                                                                                                                              \\
+      \hline\hline
+      \multicolumn{4}{|p{150mm}|}{\textbf{Aim:}}                                                                                                                                                            \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Gain a thorough understanding of observation of objects in Earth orbit, sensor networks, catalogs of space objects, and sensor tasking algorithms.}                                                   \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Input:}}                                                                                                                                                            \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Study materials, research papers, and existing documentation.}                                                                                                                                 \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Interfaces to other WPs:}}                                                                                                                                    \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ This work package serves as a foundation for all subsequent work packages.}                                                                                              \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{To Do's:}}                                                                                                                                                         \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Conduct research on the principles and techniques involved in tracking and observing objects in Earth Orbit.}\\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Study challenges and constraints associated with object observation.} \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Result:}}                                                                                                                                                       \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ A comprehensive knowledge of object observation in Earth orbit.}                                                                                                                          \\
+      \hline
+    \end{tabular}
+  \end{center}
 \end{table}
+
+\clearpage
+
+\begin{table}[!h]
+  \begin{center}
+    \begin{tabular}{|p{35mm}||p{55mm}|p{50mm}||p{40mm}|}
+      \hline
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{}                                                                                                                                                \\
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{\textbf{WP 1200}}                                                                                                                                \\
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{}                                                                                                                                                \\
+      \hline\hline
+      \textbf{Title}                   & \multicolumn{2}{p{7cm}||}{\textbf{Sensor networks and catalogue of space objects}}
+                                       & \textbf{Page:} 3 of 19                                                                                                                                             \\
+      \hline
+      \textbf{Person Responsible}        & \multicolumn{2}{l||}{Vipul Dilip Solanke}                                                                                                   & \textbf{Version:} 1.0   \\
+      \hline
+      \multicolumn{3}{|l||}{}          & \textbf{Date:} 06.07.2023                                                                                                                                          \\
+      \hline\hline
+      \textbf{Begin}                  & \multicolumn{2}{l||}{T$_0$ + 1 Week}                                                                                                                &                         \\
+      \hline
+      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 2 Weeks}                                                                                                        & \textbf{Duration}: 1 Week \\
+      \hline\hline
+      \textbf{Editor}              & \multicolumn{3}{l|}{Vipul Dilip Solanke}                                                                                                                              \\
+      \hline\hline
+      \multicolumn{4}{|p{150mm}|}{\textbf{Aim:}}                                                                                                                                                            \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Familiarization with sensor networks and space object catalogue.}                                                   \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Input:}}                                                                                                                                                            \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Study materials, documentation onn sensor network, catalogs of space objects}                                                                                                                                 \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Interfaces to other WPs:}}                                                                                                                                    \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ This work package serves as a foundation for all subsequent work packages.}                                                                                              \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{To Do's:}}                                                                                                                                                         \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Understand the concept of sensor networks and their role in SSA.}\\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Familiarization with different types of sensors used in such networks.} \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Result:}}                                                                                                                                                       \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Familiarity with senosr networks, knowledge of various sensors and an understanding of space object catalogue.}                                                                                                                          \\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\clearpage
+
+\begin{table}[!h]
+  \begin{center}
+    \begin{tabular}{|p{35mm}||p{55mm}|p{50mm}||p{40mm}|}
+      \hline
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{}                                                                                                                                                \\
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{\textbf{WP 1300}}                                                                                                                                \\
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{}                                                                                                                                                \\
+      \hline\hline
+      \textbf{Title}                   & \multicolumn{2}{p{7cm}||}{\textbf{Sensor Tasking Algorithms}}
+                                       & \textbf{Page:} 4 of 19                                                                                                                                             \\
+      \hline
+      \textbf{Person Responsible}        & \multicolumn{2}{l||}{Vipul Dilip Solanke}                                                                                                   & \textbf{Version:} 1.0   \\
+      \hline
+      \multicolumn{3}{|l||}{}          & \textbf{Date:} 11.07.2023                                                                                                                                          \\
+      \hline\hline
+      \textbf{Begin}                  & \multicolumn{2}{l||}{T$_0$7+ 2 Weeks}                                                                                                                &                         \\
+      \hline
+      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 3 Weeks}                                                                                                        & \textbf{Duration}: 1 Week \\
+      \hline\hline
+      \textbf{Editor}              & \multicolumn{3}{l|}{Vipul Dilip Solanke}                                                                                                                              \\
+      \hline\hline
+      \multicolumn{4}{|p{150mm}|}{\textbf{Aim:}}                                                                                                                                                            \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Investigate sensor tasking algorithms and their potential for enhancing sensor network performance.}                                                   \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Input:}}                                                                                                                                                            \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Existing sensor tasking algorithms, research papers and literature on optimization factors.}                                                                                                                                 \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Interfaces to other WPs:}}                                                                                                                                    \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ This work package serves as a foundation for all subsequent work packages.}                                                                                              \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{To Do's:}}                                                                                                                                                         \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Investigate existing sensor tasking algorithms used in space situational awareness.}\\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Study the optimization factors considered by tasking algorithms, such as object visibility, priority, and operational constraints.} \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Result:}}                                                                                                                                                       \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Knowledge of sensor tasking algorithms, understanding of optimization factors and insight into their potential for improving sensor network performance.}                                                                                                                          \\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\clearpage
+
+\begin{table}[!h]
+  \begin{center}
+    \begin{tabular}{|p{35mm}||p{55mm}|p{50mm}||p{40mm}|}
+      \hline
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{}                                                                                                                                                \\
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{\textbf{WP 1400}}                                                                                                                                \\
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{}                                                                                                                                                \\
+      \hline\hline
+      \textbf{Title}                   & \multicolumn{2}{p{7cm}||}{\textbf{Software familiarization}}
+                                       & \textbf{Page:} 5 of 19                                                                                                                                              \\
+      \hline
+      \textbf{Person Responsible}        & \multicolumn{2}{l||}{Vipul Dilip Solanke}                                                                                                   & \textbf{Version:} 1.0   \\
+      \hline
+      \multicolumn{3}{|l||}{}          & \textbf{Date:} 16.07.2023                                                                                                                                          \\
+      \hline\hline
+      \textbf{Begin}                  & \multicolumn{2}{l||}{T$_0$+ 2 Weeks}                                                                                                                &                         \\
+      \hline
+      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 3 Weeks}                                                                                                        & \textbf{Duration}: 1 Week \\
+      \hline\hline
+      \textbf{Editor}              & \multicolumn{3}{l|}{Vipul Dilip Solanke}                                                                                                                              \\
+      \hline\hline
+      \multicolumn{4}{|p{150mm}|}{\textbf{Aim:}}                                                                                                                                                            \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Familiarization with the sensor network simulator tool.}                                                   \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Input:}}                                                                                                                                                            \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Software available at Insititute.}                                                                                                                                 \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Interfaces to other WPs:}}                                                                                                                                    \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ This work package serves as a foundation for all subsequent work packages.}                                                                                              \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{To Do's:}}                                                                                                                                                         \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Understand the basic working principles senor simulation and operation of the simulator tool.}\\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Hands on experience on the software, familiarization with the needful packages.} \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Result:}}                                                                                                                                                       \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ A comprehensive understanding of the fundamentals and operation of the sensor network simulator tool.}                                                                                                                          \\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\clearpage
+
+
+\begin{table}[!h]
+  \begin{center}
+    \begin{tabular}{|p{35mm}||p{55mm}|p{50mm}||p{40mm}|}
+      \hline
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{}                                                                                                                                                \\
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{\textbf{WP 2000}}                                                                                                                                \\
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{}                                                                                                                                                \\
+      \hline\hline
+      \textbf{Title}                   & \multicolumn{2}{p{7cm}||}{\textbf{Selection of Tasking Method}}
+                                       & \textbf{Page:} 6 of 19                                                                                                                                             \\
+      \hline
+      \textbf{Person Responsible}        & \multicolumn{2}{l||}{Vipul Dilip Solanke}                                                                                                   & \textbf{Version:} 1.0   \\
+      \hline
+      \multicolumn{3}{|l||}{}          & \textbf{Date:} 21.07.2023                                                                                                                                          \\
+      \hline\hline
+      \textbf{Begin}                  & \multicolumn{2}{l||}{T$_0$+ 3 Weeks}                                                                                                                &                         \\
+      \hline
+      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 6 Weeks}                                                                                                        & \textbf{Duration}: 3 Weeks \\
+      \hline\hline
+      \textbf{Editor}              & \multicolumn{3}{l|}{Vipul Dilip Solanke}                                                                                                                              \\
+      \hline\hline
+      \multicolumn{4}{|p{150mm}|}{\textbf{Aim:}}                                                                                                                                                            \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Identify and select a suitable tasking method to be implemented within the Sensor Network Simulator tool suite.}                                                   \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Input:}}                                                                                                                                                            \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Findings from the research and familiarization work package.}                                                                                                                                 \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Interfaces to other WPs:}}                                                                                                                                    \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Work Package 1 - Research and familiarization, Work Package 4 - Implementation of Tasking method}                                                                                              \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{To Do's:}}                                                                                                                                                         \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Evaluate different tasking algorithms and methods based on their effectiveness and applicability to the research objectives.}\\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Select at least one tasking method that aligns with the goals of the study.} \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Result:}}                                                                                                                                                       \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Documentation outlining the selected tasking method and its rationale.}                                                                                                                          \\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\clearpage
+
+
+\begin{table}[!h]
+  \begin{center}
+    \begin{tabular}{|p{35mm}||p{55mm}|p{50mm}||p{40mm}|}
+      \hline
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{}                                                                                                                                                \\
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{\textbf{WP 2100}}                                                                                                                                \\
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{}                                                                                                                                                \\
+      \hline\hline
+      \textbf{Title}                   & \multicolumn{2}{p{7cm}||}{\textbf{Analysis of tasking Algorithms}}
+                                       & \textbf{Page:} 7 of 19                                                                                                                                             \\
+      \hline
+      \textbf{Person Responsible}        & \multicolumn{2}{l||}{Vipul Dilip Solanke}                                                                                                   & \textbf{Version:} 1.0   \\
+      \hline
+      \multicolumn{3}{|l||}{}          & \textbf{Date:} 21.07.2023                                                                                                                                          \\
+      \hline\hline
+      \textbf{Begin}                  & \multicolumn{2}{l||}{T$_0$+ 3 Weeks}                                                                                                                &                         \\
+      \hline
+      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 4 Weeks}                                                                                                        & \textbf{Duration}: 1 Week \\
+      \hline\hline
+      \textbf{Editor}              & \multicolumn{3}{l|}{Vipul Dilip Solanke}                                                                                                                              \\
+      \hline\hline
+      \multicolumn{4}{|p{150mm}|}{\textbf{Aim:}}                                                                                                                                                            \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Research and evaluate various tasking algorithms for their effectiveness and applicability.}                                                   \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Input:}}                                                                                                                                                            \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$  Tasking algorithms, evaluation criteria, research objectives.}                                                                                                                                 \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Interfaces to other WPs:}}                                                                                                                                    \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Work Package 1 - Research and familiarization (Sub-Work Package 3 - Sensor Tasking Algorithms).}                                                                                              \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{To Do's:}}                                                                                                                                                         \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Research and evaluate different tasking algorithms based on their effectiveness and applicability to research objectives.}\\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Consider factors such as algorithm complexity, computational efficiency, and adaptability to different sensor networks.} \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Result:}}                                                                                                                                                       \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Evaluation of various tasking algorithms, including their strengths, weaknesses, and applicability to the research objectives.}                                                                                                                          \\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\clearpage
+
+
+\begin{table}[!h]
+  \begin{center}
+    \begin{tabular}{|p{35mm}||p{55mm}|p{50mm}||p{40mm}|}
+      \hline
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{}                                                                                                                                                \\
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{\textbf{WP 2200}}                                                                                                                                \\
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{}                                                                                                                                                \\
+      \hline\hline
+      \textbf{Title}                   & \multicolumn{2}{p{7cm}||}{\textbf{Selection criteria and rationale}}
+                                       & \textbf{Page:} 8 of 19                                                                                                                                             \\
+      \hline
+      \textbf{Person Responsible}        & \multicolumn{2}{l||}{Vipul Dilip Solanke}                                                                                                   & \textbf{Version:} 1.0   \\
+      \hline
+      \multicolumn{3}{|l||}{}          & \textbf{Date:} 29.07.2023                                                                                                                                          \\
+      \hline\hline
+      \textbf{Begin}                  & \multicolumn{2}{l||}{T$_0$+ 4 Weeks}                                                                                                                &                         \\
+      \hline
+      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 6 Weeks}                                                                                                        & \textbf{Duration}: 2 Weeks \\
+      \hline\hline
+      \textbf{Editor}              & \multicolumn{3}{l|}{Vipul Dilip Solanke}                                                                                                                              \\
+      \hline\hline
+      \multicolumn{4}{|p{150mm}|}{\textbf{Aim:}}                                                                                                                                                            \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Define criteria for selecting a tasking method.}                                                   \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Input:}}                                                                                                                                                            \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$  Research goals, available data, and simulator capabilities.}                                                                                                                                 \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Interfaces to other WPs:}}                                                                                                                                    \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Work Package 1 - Research and familiarization (Sub-Work Package 3 - Sensor Tasking Algorithms), Work Package 4 - Implementation of Tasking Method (Sub-Work Package 1 - Integration with sensors network simulator).}                                                                                              \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{To Do's:}}                                                                                                                                                         \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Define criteria for selecting a tasking method, considering research goals, available data, and simulator capabilities.}\\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Determine specific requirements and features that the selected method should possess.} \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Result:}}                                                                                                                                                       \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Well-defined criteria for selecting a tasking method based on research goals, available data, and simulator capabilities.}                                                                                                                          \\                                                                                                                                                             
+      \hline                                                                                                                                                                          
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\clearpage
+
+
+
+\clearpage
+
+\begin{table}[!h]
+  \begin{center}
+    \begin{tabular}{|p{35mm}||p{55mm}|p{50mm}||p{40mm}|}
+      \hline
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{}                                                                                                                                                \\
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{\textbf{WP 3000}}                                                                                                                                \\
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{}                                                                                                                                                \\
+      \hline\hline
+      \textbf{Title}                   & \multicolumn{2}{p{7cm}||}{\textbf{Sensor Selection}}
+                                       & \textbf{Page:} 09 of 19                                                                                                                                             \\
+      \hline
+      \textbf{Person Responsible}        & \multicolumn{2}{l||}{Vipul Dilip Solanke}                                                                                                   & \textbf{Version:} 1.0   \\
+      \hline
+      \multicolumn{3}{|l||}{}          & \textbf{Date:} 01.08.2023                                                                                                                                          \\
+      \hline\hline
+      \textbf{Begin}                  & \multicolumn{2}{l||}{T$_0$ + 4 Weeks}                                                                                                                &                         \\
+      \hline
+      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 7 Weeks}                                                                                                        & \textbf{Duration}: 3 Weeks \\
+      \hline\hline
+      \textbf{Editor}              & \multicolumn{3}{l|}{Vipul Dilip Solanke}                                                                                                                              \\
+      \hline\hline
+      \multicolumn{4}{|p{150mm}|}{\textbf{Aim:}}                                                                                                                                                            \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Choose suitable sensors to perform comparative simulations without tasking and with tasking using the selected tasking method.}                                                   \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Input:}}                                                                                                                                                            \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Findings from the research and familiarization work package.}                                                                                                                                 \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Interfaces to other WPs:}}                                                                                                                                    \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Work package 4 - Implementation of Tasking Method, Work Package 5 - Evaluation of Tasking Method}                                                                                              \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{To Do's:}}                                                                                                                                                         \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Identify relevant sensors used in space situational awareness for object observation.}\\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Determine the criteria for selecting sensors for simulation.} \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Choose sensors that can be simulated within the Sensor Network Simulator tool suite.} \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Result:}}                                                                                                                                                       \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Documentation specifying the chosen sensors and their characteristics.}                                                                                                                          \\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\clearpage
+
+\begin{table}[!h]
+  \begin{center}
+    \begin{tabular}{|p{35mm}||p{55mm}|p{50mm}||p{40mm}|}
+      \hline
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{}                                                                                                                                                \\
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{\textbf{WP 3100}}                                                                                                                                \\
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{}                                                                                                                                                \\
+      \hline\hline
+      \textbf{Title}                   & \multicolumn{2}{p{7cm}||}{\textbf{Identification of relevant sensors}}
+                                       & \textbf{Page:} 10 of 19                                                                                                                                            \\
+      \hline
+      \textbf{Person Responsible}        & \multicolumn{2}{l||}{Vipul Dilip Solanke}                                                                                                   & \textbf{Version:} 1.0   \\
+      \hline
+      \multicolumn{3}{|l||}{}          & \textbf{Date:} 01.08.2023                                                                                                                                          \\
+      \hline\hline
+      \textbf{Begin}                  & \multicolumn{2}{l||}{T$_0$ + 4 Weeks}                                                                                                                &                         \\
+      \hline
+      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 5 Weeks}                                                                                                        & \textbf{Duration}: 1 Week \\
+      \hline\hline
+      \textbf{Editor}              & \multicolumn{3}{l|}{Vipul Dilip Solanke}                                                                                                                              \\
+      \hline\hline
+      \multicolumn{4}{|p{150mm}|}{\textbf{Aim:}}                                                                                                                                                            \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Identify relevant sensors used in space situational awareness.}                                                   \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Input:}}                                                                                                                                                            \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Sensor characteristics, coverage, and data collection capabilities.}                                                                                                                                 \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Interfaces to other WPs:}}                                                                                                                                    \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Work package 4 - Implementation of Tasking Method, Work Package 5 - Evaluation of Tasking Method}                                                                                              \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{To Do's:}}                                                                                                                                                         \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Identify relevant sensors used in space situational awareness for object observation.}\\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Consider different sensor types, such as radars, telescopes, and on-orbit sensors, and their capabilities and limitations.} \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Result:}}                                                                                                                                                       \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$  Identification of relevant sensors used in space situational awareness and understanding of their capabilities.}                                                                                                                          \\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\clearpage
+
+\begin{table}[!h]
+  \begin{center}
+    \begin{tabular}{|p{35mm}||p{55mm}|p{50mm}||p{40mm}|}
+      \hline
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{}                                                                                                                                                \\
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{\textbf{WP 3200}}                                                                                                                                \\
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{}                                                                                                                                                \\
+      \hline\hline
+      \textbf{Title}                   & \multicolumn{2}{p{7cm}||}{\textbf{Criteria for sensors selection}}
+                                       & \textbf{Page:} 11 of 19                                                                                                                                            \\
+      \hline
+      \textbf{Person Responsible}        & \multicolumn{2}{l||}{Vipul Dilip Solanke}                                                                                                   & \textbf{Version:} 1.0   \\
+      \hline
+      \multicolumn{3}{|l||}{}          & \textbf{Date:} 08.08.2023                                                                                                                                          \\
+      \hline\hline
+      \textbf{Begin}                  & \multicolumn{2}{l||}{T$_0$ + 5 Weeks}                                                                                                                &                         \\
+      \hline
+      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 7 Weeks}                                                                                                        & \textbf{Duration}: 2 Weeks 5 \\
+      \hline\hline
+      \textbf{Editor}              & \multicolumn{3}{l|}{Vipul Dilip Solanke}                                                                                                                              \\
+      \hline\hline
+      \multicolumn{4}{|p{150mm}|}{\textbf{Aim:}}                                                                                                                                                            \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Define criteria for selecting sensors for simulation.}                                                   \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Input:}}                                                                                                                                                            \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Sensor characteristics, coverage, and data collection capabilities.}                                                                                                                                 \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Interfaces to other WPs:}}                                                                                                                                    \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Work Package 4 - Implementation of Tasking Method}                                                                                              \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{To Do's:}}                                                                                                                                                         \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Define criteria for selecting sensors for simulation, considering factors such as sensor characteristics, coverage, and data collection capabilities.}\\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Determine metrics to measure and compare the performance of the sensors during the simulations.} \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Result:}}                                                                                                                                                       \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$  Defined criteria for sensor selection in simulations and identified metrics for performance comparison.}                                                                                                                          \\
+      \hline                                                                                                                                                                      
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\clearpage
+
+\clearpage
+
+\begin{table}[!h]
+  \begin{center}
+    \begin{tabular}{|p{35mm}||p{55mm}|p{50mm}||p{40mm}|}
+      \hline
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{}                                                                                                                                                \\
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{\textbf{WP 4000}}                                                                                                                                \\
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{}                                                                                                                                                \\
+      \hline\hline
+      \textbf{Title}                   & \multicolumn{2}{p{7cm}||}{\textbf{Implementation of Tasking Method}}
+                                       & \textbf{Page:} 12 of 19                                                                                                                                             \\
+      \hline
+      \textbf{Person Responsible}        & \multicolumn{2}{l||}{Vipul Dilip Solanke}                                                                                                   & \textbf{Version:} 1.0   \\
+      \hline
+      \multicolumn{3}{|l||}{}          & \textbf{Date:} 21.08.2023                                                                                                                                          \\
+      \hline\hline
+      \textbf{Begin}                  & \multicolumn{2}{l||}{T$_0$ + 7 Weeks}                                                                                                                &                         \\
+      \hline
+      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 10 Weeks}                                                                                                        & \textbf{Duration}: 3 Weeks \\
+      \hline\hline
+      \textbf{Editor}              & \multicolumn{3}{l|}{Vipul Dilip Solanke}                                                                                                                              \\
+      \hline\hline
+      \multicolumn{4}{|p{150mm}|}{\textbf{Aim:}}                                                                                                                                                            \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Implement the selected tasking method within the existing framework of the Sensor Network Simulator.}                                                   \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Input:}}                                                                                                                                                            \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Selected tasking method and the chosen sensors for simulation.}                                                                                                                                 \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Interfaces to other WPs:}}                                                                                                                                    \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Work Package 2 - Selection of tasking method (Sub-Work Package 2 - Selection criteria and rationale), Work Package 3 - Sensor selection (Sub-Work Package 2 - Criteria for sensors selection)}                                                                                              \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{To Do's:}}                                                                                                                                                         \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Develop the necessary code or configuration to incorporate the tasking method into the Simulator tool suite.}\\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Ensure compatibility and integration with the existing simulator components.} \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Result:}}                                                                                                                                                       \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ An updated version of the Sensor Network Simulator tool suite with the implemented tasking method.}                                                                                                                          \\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\clearpage
+
+\begin{table}[!h]
+  \begin{center}
+    \begin{tabular}{|p{35mm}||p{55mm}|p{50mm}||p{40mm}|}
+      \hline
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{}                                                                                                                                                \\
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{\textbf{WP 4100}}                                                                                                                                \\
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{}                                                                                                                                                \\
+      \hline\hline
+      \textbf{Title}                   & \multicolumn{2}{p{7cm}||}{\textbf{Integration with the sensor Network Simulator}}
+                                       & \textbf{Page:} 13 of 19                                                                                                                                             \\
+      \hline
+      \textbf{Person Responsible}        & \multicolumn{2}{l||}{Vipul Dilip Solanke}                                                                                                   & \textbf{Version:} 1.0   \\
+      \hline
+      \multicolumn{3}{|l||}{}          & \textbf{Date:} 21.08.2023                                                                                                                                          \\
+      \hline\hline
+      \textbf{Begin}                  & \multicolumn{2}{l||}{T$_0$ + 7 Weeks}                                                                                                                &                         \\
+      \hline
+      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 9 Weeks}                                                                                                        & \textbf{Duration}: 2 Weeks \\
+      \hline\hline
+      \textbf{Editor}              & \multicolumn{3}{l|}{Vipul Dilip Solanke}                                                                                                                              \\
+      \hline\hline
+      \multicolumn{4}{|p{150mm}|}{\textbf{Aim:}}                                                                                                                                                            \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Assess the existing framework and plan for integrating the tasking method and develop and integrate the selected tasking method into the Simulator tool suite. }                                                   \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Input:}}                                                                                                                                                            \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Existing framework of the sensor network simulator, chosen tasking method, Simulator tool suite.}                                                                                                                                 \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Interfaces to other WPs:}}                                                                                                                                    \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Work Package 2 - Selection of tasking method (Sub-Work Package 2 - Selection criteria and rationale), Work Package 3 - Sensor selection (Sub-Work Package 2 - Criteria for sensors selection)}                                                                                              \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{To Do's:}}                                                                                                                                                         \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Assess the existing framework of the Sensor Network Simulator and identify necessary modifications or additions required for implementing the tasking method.}\\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Develop the code or configuration to incorporate the selected tasking method into the Simulator tool suite.} \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Ensure compatibility and integration with the existing simulator components.} \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Result:}}                                                                                                                                                       \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Implemented tasking method integrated into the Simulator tool suite with proper functionality.}                                                                                                                          \\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\clearpage
+
+\begin{table}[!h]
+  \begin{center}
+    \begin{tabular}{|p{35mm}||p{55mm}|p{50mm}||p{40mm}|}
+      \hline
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{}                                                                                                                                                \\
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{\textbf{WP 4200}}                                                                                                                                \\
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{}                                                                                                                                                \\
+      \hline\hline
+      \textbf{Title}                   & \multicolumn{2}{p{7cm}||}{\textbf{Validation and verification}}
+                                       & \textbf{Page:} 14 of 19                                                                                                                                             \\
+      \hline
+      \textbf{Person Responsible}        & \multicolumn{2}{l||}{Vipul Dilip Solanke}                                                                                                   & \textbf{Version:} 1.0   \\
+      \hline
+      \multicolumn{3}{|l||}{}          & \textbf{Date:} 31.08.2023                                                                                                                                          \\
+      \hline\hline
+      \textbf{Begin}                  & \multicolumn{2}{l||}{T$_0$ + 9 Weeks}                                                                                                                &                         \\
+      \hline
+      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 10 Weeks}                                                                                                        & \textbf{Duration}: 1 Weeks \\
+      \hline\hline
+      \textbf{Editor}              & \multicolumn{3}{l|}{Vipul Dilip Solanke}                                                                                                                              \\
+      \hline\hline
+      \multicolumn{4}{|p{150mm}|}{\textbf{Aim:}}                                                                                                                                                            \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Test and validate the implemented tasking method for correctness, reliability, and efficiency.}                                                   \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Input:}}                                                                                                                                                            \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$  Implemented tasking method, validation criteria.}                                                                                                                                 \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Interfaces to other WPs:}}                                                                                                                                    \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Work Package 4 - Implementation of tasking method (Sub-Work Package 1 - Integration with the sensors network simulator)}                                                                                              \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{To Do's:}}                                                                                                                                                         \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Conduct extensive testing and validation of the implemented tasking method to ensure its correctness, reliability, and efficiency.}\\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Verify that the tasking method produces the desired results and effectively enhances the performance of the simulated sensor network.} \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Result:}}                                                                                                                                                       \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Test report confirming the correctness, reliability, and efficiency of the implemented tasking method.}                                                                                                                          \\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\clearpage
+
+\begin{table}[!h]
+  \begin{center}
+    \begin{tabular}{|p{35mm}||p{55mm}|p{50mm}||p{40mm}|}
+      \hline
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{}                                                                                                                                                \\
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{\textbf{WP 5000}}                                                                                                                                \\
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{}                                                                                                                                                \\
+      \hline\hline
+      \textbf{Title}                   & \multicolumn{2}{p{7cm}||}{\textbf{Evaluation of Tasking Method}}
+                                       & \textbf{Page:} 15 of 19                                                                                                                                              \\
+      \hline
+      \textbf{Person Responsible}        & \multicolumn{2}{l||}{Vipul Dilip Solanke}                                                                                                   & \textbf{Version:} 1.0   \\
+      \hline
+      \multicolumn{3}{|l||}{}          & \textbf{Date:} 15.09.2023                                                                                                                                          \\
+      \hline\hline
+      \textbf{Begin}                  & \multicolumn{2}{l||}{T$_0$ + 10 Weeks}                                                                                                                &                         \\
+      \hline
+      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 14 Weeks}                                                                                                        & \textbf{Duration}: 4 Weeks \\
+      \hline\hline
+      \textbf{Editor}              & \multicolumn{3}{l|}{Vipul Dilip Solanke}                                                                                                                              \\
+      \hline\hline
+      \multicolumn{4}{|p{150mm}|}{\textbf{Aim:}}                                                                                                                                                            \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Assess the effectiveness of the selected tasking method in enhancing the performance of the sensor network.}                                                   \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Input:}}                                                                                                                                                            \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Implemented tasking method, simulated sensors, and observations generated by the simulator.}                                                                                                                                 \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Interfaces to other WPs:}}                                                                                                                                    \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Work Package 3 - Sensor selection (Sub-Work Package 2 - Criteria for sensor selection), Work Package 4 - Implementation of Tasking Method (Sub-Work Package 2 - Validation and verification)}                                                                                              \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{To Do's:}}                                                                                                                                                         \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Perform simulations without tasking using the chosen sensors.}\\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Perform simulations with tasking using the implemented tasking method.} \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Analyze and compare the results to evaluate the impact of the tasking method on sensor network performance.} \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Result:}}                                                                                                                                                       \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Evaluation report summarizing the effectiveness of the tasking method and its impact on the sensor network's performance.}                                                                                                                          \\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\clearpage
+
+\begin{table}[!h]
+  \begin{center}
+    \begin{tabular}{|p{35mm}||p{55mm}|p{50mm}||p{40mm}|}
+      \hline
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{}                                                                                                                                                \\
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{\textbf{WP 5100}}                                                                                                                                \\
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{}                                                                                                                                                \\
+      \hline\hline
+      \textbf{Title}                   & \multicolumn{2}{p{7cm}||}{\textbf{Simulation setup without tasking}}
+                                       & \textbf{Page:} 16 of 19                                                                                                                                             \\
+      \hline
+      \textbf{Person Responsible}        & \multicolumn{2}{l||}{Vipul Dilip Solanke}                                                                                                   & \textbf{Version:} 1.0   \\
+      \hline
+      \multicolumn{3}{|l||}{}          & \textbf{Date:} 15.09.2023                                                                                                                                          \\
+      \hline\hline
+      \textbf{Begin}                  & \multicolumn{2}{l||}{T$_0$ + 10 Weeks}                                                                                                                &                         \\
+      \hline
+      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 11 Weeks}                                                                                                        & \textbf{Duration}: 1 Week \\
+      \hline\hline
+      \textbf{Editor}              & \multicolumn{3}{l|}{Vipul Dilip Solanke}                                                                                                                              \\
+      \hline\hline
+      \multicolumn{4}{|p{150mm}|}{\textbf{Aim:}}                                                                                                                                                            \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Perform simulations without tasking using selected sensors.}                                                   \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Input:}}                                                                                                                                                            \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Chosen sensors, implemented tasking method.}                                                                                                                                 \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Interfaces to other WPs:}}                                                                                                                                    \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Work Package 3 - Sensor selection (Sub-Work Package 2 - Criteria for sensor selection), Work Package 4 - Implementation of Tasking Method (Sub-Work Package 2 - Validation and verification)}                                                                                              \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{To Do's:}}                                                                                                                                                         \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Perform simulations without tasking using the chosen sensors.}\\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Generate data and observations to evaluate the impact of the tasking method on sensor network performance.} \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Result:}}                                                                                                                                                       \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Data and observations from simulations to evaluate tasking method impact.}                                                                                                                          \\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\clearpage
+
+\begin{table}[!h]
+  \begin{center}
+    \begin{tabular}{|p{35mm}||p{55mm}|p{50mm}||p{40mm}|}
+      \hline
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{}                                                                                                                                                \\
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{\textbf{WP 5200}}                                                                                                                                \\
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{}                                                                                                                                                \\
+      \hline\hline
+      \textbf{Title}                   & \multicolumn{2}{p{7cm}||}{\textbf{Simulation setup with tasking}}
+                                       & \textbf{Page:} 17 of 19                                                                                                                                              \\
+      \hline
+      \textbf{Person Responsible}        & \multicolumn{2}{l||}{Vipul Dilip Solanke}                                                                                                   & \textbf{Version:} 1.0   \\
+      \hline
+      \multicolumn{3}{|l||}{}          & \textbf{Date:} 26.09.2023                                                                                                                                          \\
+      \hline\hline
+      \textbf{Begin}                  & \multicolumn{2}{l||}{T$_0$ + 11 Weeks}                                                                                                                &                         \\
+      \hline
+      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 12 Weeks}                                                                                                        & \textbf{Duration}: 1 Week \\
+      \hline\hline
+      \textbf{Editor}              & \multicolumn{3}{l|}{Vipul Dilip Solanke}                                                                                                                              \\
+      \hline\hline
+      \multicolumn{4}{|p{150mm}|}{\textbf{Aim:}}                                                                                                                                                            \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Perform simulations with tasking using selected sensors.}                                                   \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Input:}}                                                                                                                                                            \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Chosen sensors, tasking method.}                                                                                                                                 \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Interfaces to other WPs:}}                                                                                                                                    \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Work Package 3 - Sensor selection (Sub-Work Package 2 - Criteria for sensor selection), Work Package 4 - Implementation of Tasking Method (Sub-Work Package 2 - Validation and verification)}                                                                                              \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{To Do's:}}                                                                                                                                                         \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Perform simulations with tasking using the chosen sensors.}\\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Analyze and compare the results to evaluate the impact of the tasking method on sensor network performance.} \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Result:}}                                                                                                                                                       \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$  Data and observations from simulations to evaluate tasking method impact.}                                                                                                                          \\
+      \hline                                                                                                                                                                      
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\clearpage
+
+\begin{table}[!h]
+  \begin{center}
+    \begin{tabular}{|p{35mm}||p{55mm}|p{50mm}||p{40mm}|}
+      \hline
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{}                                                                                                                                                \\
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{\textbf{WP 5300}}                                                                                                                                \\
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{}                                                                                                                                                \\
+      \hline\hline
+      \textbf{Title}                   & \multicolumn{2}{p{7cm}||}{\textbf{Performance evaluation and analysis}}
+                                       & \textbf{Page:} 28 of 19                                                                                                                                            \\
+      \hline
+      \textbf{Person Responsible}        & \multicolumn{2}{l||}{Vipul Dilip Solanke}                                                                                                   & \textbf{Version:} 1.0   \\
+      \hline
+      \multicolumn{3}{|l||}{}          & \textbf{Date:} 06.10.2023                                                                                                                                          \\
+      \hline\hline
+      \textbf{Begin}                  & \multicolumn{2}{l||}{T$_0$ + 12 Weeks}                                                                                                                &                         \\
+      \hline
+      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 14 Weeks}                                                                                                        & \textbf{Duration}: 2 Weeks \\
+      \hline\hline
+      \textbf{Editor}              & \multicolumn{3}{l|}{Vipul Dilip Solanke}                                                                                                                              \\
+      \hline\hline
+      \multicolumn{4}{|p{150mm}|}{\textbf{Aim:}}                                                                                                                                                            \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$  Analyze and compare the results obtained from simulations without tasking and with tasking.}                                                   \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Input:}}                                                                                                                                                            \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Simulation data, evaluation metrics.}                                                                                                                                 \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Interfaces to other WPs:}}                                                                                                                                 \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Work Package 5 - Evaluation of tasking method (Sub-Work Package 1 - Simulation setup without tasking), (Sub-Work Package 2 - Simulation Setup with tasking).  }                                                                                              \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{To Do's:}}                                                                                                                                                         \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Analyze and compare the results obtained from simulations without tasking and with tasking using evaluation metrics.}\\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Evaluate metrics such as object catalog accuracy, sensor utilization, and response time to assess the effectiveness of the tasking method.} \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Analyze and compare the results to evaluate the impact of the tasking method on sensor network performance.} \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Result:}}                                                                                                                                                       \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Analysis report comparing the performance of simulations without tasking and with tasking using evaluation metrics.}                                                                                                                          \\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\clearpage
+
+\begin{table}[!h]
+  \begin{center}
+    \begin{tabular}{|p{35mm}||p{55mm}|p{50mm}||p{40mm}|}
+      \hline
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{}                                                                                                                                                \\
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{\textbf{WP 6000}}                                                                                                                                \\
+      \multicolumn{3}{|l||}{\textbf{}} & \multicolumn{1}{c|}{}                                                                                                                                                \\
+      \hline\hline
+      \textbf{Title}                   & \multicolumn{2}{p{7cm}||}{\textbf{Documentation}}
+                                       & \textbf{Page:} 19 of 19                                                                                                                                             \\
+      \hline
+      \textbf{Person Responsible}        & \multicolumn{2}{l||}{Vipul Dilip Solanke}                                                                                                   & \textbf{Version:} 1.0   \\
+      \hline
+      \multicolumn{3}{|l||}{}          & \textbf{Date:} 16.10.2023                                                                                                                                          \\
+      \hline\hline
+      \textbf{Begin}                  & \multicolumn{2}{l||}{T$_0$ + 14 Weeks}                                                                                                                &                         \\
+      \hline
+      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 16 Weeks}                                                                                                        & \textbf{Duration}: 2 Weeks \\
+      \hline\hline
+      \textbf{Editor}              & \multicolumn{3}{l|}{Vipul Dilip Solanke}                                                                                                                              \\
+      \hline\hline
+      \multicolumn{4}{|p{150mm}|}{\textbf{Aim:}}                                                                                                                                                            \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Documentation of final study thesis for submission}                                                   \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Input:}}                                                                                                                                                            \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Implemented tasking method, simulated sensors, and observations generated by the simulator.}                                                                                                                                 \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Interfaces to other WPs:}}                                                                                                                                    \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Work Package 1 - Work Package 5}                                                                                              \\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{To Do's:}}                                                                                                                                                         \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Write a detailed report on the performed study thesis.}\\
+      \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
+      \multicolumn{4}{|p{150mm}|}{\textbf{Result:}}                                                                                                                                                       \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Final submission report on the effectiveness of new implemented sensor tasking method}                                                                                                                          \\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\clearpage

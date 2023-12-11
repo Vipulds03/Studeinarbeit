@@ -1,14 +1,31 @@
-\chapter{Einleitung}
+\chapter{Introduction}
 
-Die Einleitung soll einen Überblick über den Stand der Technik geben, das zu unter-
-suchende System beschreiben und die Aufgabenstellung mit eigenen Worten näher
-erläutern.
+Space debris, also known as space junk, encompasses defunct satellites, discarded rocket stages,
+ and various fragments left in various orbits around Earth. This accumulated space debris has evolved
+  into a critical concern over the years. As these objects orbit our planet, they pose a substantial 
+  threat to operational satellites, crewed spacecraft, and the overall safety of space activities. 
+  The proliferation of space debris in various Earth orbits has reached alarming levels, with millions of 
+  pieces of debris, both large and small, orbiting the planet at tremendous speeds.\\
 
-\section{Ziele der Arbeit}
+Space debris can range in size from massive defunct satellites and rocket stages to small paint flecks. 
+The larger objects are tracked closely due to their potential to cause significant damage in the event of 
+a collision. However, smaller debris, while less immediately hazardous, presents an issue due to their sheer 
+numbers. Even paint flecks and tiny metal fragments can cause substantial damage when traveling at high 
+velocities in space \cite{dev}.\\
 
-\section{Vorgehensweise}
+As of January 2022, the Earth's orbital environment was cluttered with over 25,000 objects exceeding 10 cm in size. 
+Additionally, there were approximately 500,000 particles ranging from 1 to 10 cm in diameter and a staggering 100 million 
+or more particles larger than 1 mm. In total, the mass of material in Earth's orbit surpassed a significant 9,300 tonnes \cite{esa5}.These objects continuously orbit the Earth, posing a threat to operational satellites, space stations, 
+and future space missions. Therefore, there is a pressing need for improved monitoring and management of space debris, 
+particularly in high-value orbits like geosynchronous space, where satellites crucial for telecommunications and weather monitoring reside.\\ 
 
-Hier wiedergeben, wie die zuvor definierten Ziele in den folgenden Kapiteln umgesetzt werden, etwa:
+In the context of this study thesis, the focus is on addressing the challenges of optimizing the scheduling of follow-up observations for space debris objects in the geosynchronous region, where efficient monitoring is essential to ensure the safety and functionality of vital space assets. The next sections will delve into the specific aims and procedures for this study thesis.
 
-In \kap{sec:grundlagen} werden die theoretischen Grundlagen behandelt, wonach dann in \kap{sec:hauptteil} die Software-Architektur festgelegt und 
-beschrieben wird.
+\section{Scope of the work}
+
+The central objective of this study is to explore diverse global sensor networks and subsequently incorporate different weighting schemes into the cost function of the existing Greedy algorithm for survey purposes. Additionally, the thesis introduces a genetic algorithm designed to optimize the scheduling of follow-up observations within a telescope network, emphasizing catalog maintenance. 
+The key optimization parameter is the information content associated with the orbit. While the genetic algorithm is introduced, its implementation is limited due to the unavailability of covariance matrices. The thesis concludes with the implementation of weighting schemes and a comprehensive performance analysis conducted through simulations.
+
+\section{Procedure}
+This study begins by examining global sensor networks and delving into the Greedy algorithm used for surveying. The research incorporates various weighting schemes into the Greedy algorithm's cost function. 
+To facilitate simulations, a single telescope is chosen, and extensive simulations are conducted. Subsequently, the obtained results are plotted and subjected to thorough analysis.

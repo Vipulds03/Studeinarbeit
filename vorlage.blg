@@ -1,0 +1,98 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: vorlage.aux
+Reallocating 'name_of_file' (item size: 1) to 21 items.
+A level-1 auxiliary file: aufgabenstellung.aux
+Reallocating 'name_of_file' (item size: 1) to 8 items.
+A level-1 auxiliary file: eid.aux
+Reallocating 'name_of_file' (item size: 1) to 13 items.
+A level-1 auxiliary file: abstract.aux
+Reallocating 'name_of_file' (item size: 1) to 22 items.
+A level-1 auxiliary file: symbolverzeichnis.aux
+Reallocating 'name_of_file' (item size: 1) to 19 items.
+A level-1 auxiliary file: abkverzeichnis.aux
+Reallocating 'name_of_file' (item size: 1) to 15 items.
+A level-1 auxiliary file: einleitung.aux
+Reallocating 'name_of_file' (item size: 1) to 15 items.
+A level-1 auxiliary file: grundlagen.aux
+Reallocating 'name_of_file' (item size: 1) to 14 items.
+A level-1 auxiliary file: hauptteil.aux
+Reallocating 'name_of_file' (item size: 1) to 15 items.
+A level-1 auxiliary file: ergebnisse.aux
+Reallocating 'name_of_file' (item size: 1) to 20 items.
+A level-1 auxiliary file: zusammenfassung.aux
+Reallocating 'name_of_file' (item size: 1) to 13 items.
+A level-1 auxiliary file: ausblick.aux
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+The style file: unsrtnat.bst
+Reallocating 'name_of_file' (item size: 1) to 10 items.
+Reallocating 'name_of_file' (item size: 1) to 12 items.
+A level-1 auxiliary file: projekt.aux
+Database file #1: literatur.bib
+Warning--entry type for "esa6" isn't style-file defined
+--line 39 of file literatur.bib
+Warning--entry type for "dev" isn't style-file defined
+--line 55 of file literatur.bib
+Warning--entry type for "fence" isn't style-file defined
+--line 71 of file literatur.bib
+Warning--entry type for "tir" isn't style-file defined
+--line 85 of file literatur.bib
+Warning--entry type for "deb" isn't style-file defined
+--line 609 of file literatur.bib
+Warning--entry type for "god" isn't style-file defined
+--line 625 of file literatur.bib
+Warning--empty year in esa5
+Warning--empty year in esa5
+Warning--empty year in fence
+Warning--can't use both author and editor fields in jena2019
+Warning--can't use both author and editor fields in mount
+Warning--empty publisher in ccd
+Warning--empty year in ccd
+Warning--empty year in ccd
+Warning--empty journal in laser
+Warning--empty journal in lidar
+Warning--empty year in jaxa4
+Warning--empty year in jaxa4
+Warning--empty journal in fruh1
+You've used 64 entries,
+            2481 wiz_defined-function locations,
+            941 strings with 16093 characters,
+and the built_in function-call counts, 24342 in all, are:
+= -- 2024
+> -- 1201
+< -- 61
++ -- 487
+- -- 356
+* -- 1724
+:= -- 3881
+add.period$ -- 242
+call.type$ -- 64
+change.case$ -- 126
+chr.to.int$ -- 61
+cite$ -- 77
+duplicate$ -- 1332
+empty$ -- 2260
+format.name$ -- 434
+if$ -- 5268
+int.to.chr$ -- 4
+int.to.str$ -- 65
+missing$ -- 58
+newline$ -- 376
+num.names$ -- 196
+pop$ -- 608
+preamble$ -- 1
+purify$ -- 64
+quote$ -- 0
+skip$ -- 813
+stack$ -- 0
+substring$ -- 708
+swap$ -- 280
+text.length$ -- 23
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 433
+warning$ -- 13
+while$ -- 187
+width$ -- 0
+write$ -- 915
+(There were 19 warnings)

@@ -1,0 +1,66 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{\numberline {1}Introduction}{7}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Scope of the work}{7}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Procedure}{8}{section.1.2}%
+\contentsline {chapter}{\numberline {2}Theoretical principles}{9}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Background}{9}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Space Situational Awareness}{9}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}components of SSA}{10}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Types of sensors}{10}{subsection.2.2.2}%
+\contentsline {subsubsection}{\nonumberline RADAR}{10}{subsubsection*.6}%
+\contentsline {subsubsection}{\nonumberline Optical sensors}{12}{subsubsection*.8}%
+\contentsline {subsubsection}{\nonumberline Laser}{15}{subsubsection*.10}%
+\contentsline {subsubsection}{\nonumberline In-Situ}{16}{subsubsection*.12}%
+\contentsline {section}{\numberline {2.3}Global Space Sensor Network}{17}{section.2.3}%
+\contentsline {subsubsection}{\nonumberline United States Space Surveillance Network}{17}{subsubsection*.14}%
+\contentsline {subsubsection}{\nonumberline Europe}{19}{subsubsection*.16}%
+\contentsline {subsubsection}{\nonumberline Russia}{22}{subsubsection*.18}%
+\contentsline {subsubsection}{\nonumberline JAPAN}{23}{subsubsection*.20}%
+\contentsline {section}{\numberline {2.4}Sensor Tasking}{26}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Surveying :}{26}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Follow-Up Observations and Catalog Maintenance :}{28}{subsection.2.4.2}%
+\contentsline {section}{\numberline {2.5}Information Content}{28}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Shannon Information Content (SIC) Theory:}{28}{subsection.2.5.1}%
+\contentsline {subsubsection}{\nonumberline Fundamental Concepts:}{29}{subsubsection*.22}%
+\contentsline {subsubsection}{\nonumberline Entropy as a Measure:}{29}{subsubsection*.24}%
+\contentsline {subsubsection}{\nonumberline The Information Gain Formula:}{29}{subsubsection*.26}%
+\contentsline {subsubsection}{\nonumberline Application in SSA}{30}{subsubsection*.28}%
+\contentsline {section}{\numberline {2.6}Sensor Tasking Algorithms}{30}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Genetic Algorithm}{30}{subsection.2.6.1}%
+\contentsline {subsubsection}{\nonumberline Fitness Function}{31}{subsubsection*.30}%
+\contentsline {subsubsection}{\nonumberline Initial population}{31}{subsubsection*.32}%
+\contentsline {subsubsection}{\nonumberline Selection Process}{31}{subsubsection*.34}%
+\contentsline {subsubsection}{\nonumberline Genetic operators}{31}{subsubsection*.36}%
+\contentsline {subsection}{\numberline {2.6.2}Greedy Algorithm}{32}{subsection.2.6.2}%
+\contentsline {subsubsection}{\nonumberline Cost function}{33}{subsubsection*.38}%
+\contentsline {subsection}{\numberline {2.6.3}Weighting schemes}{34}{subsection.2.6.3}%
+\contentsline {subsubsection}{\nonumberline Weightings based on the time since last detection ($w_t$)}{35}{subsubsection*.40}%
+\contentsline {subsubsection}{\nonumberline Weightings based on the number of detections ($w_d$)}{35}{subsubsection*.42}%
+\contentsline {subsection}{\numberline {2.6.4}Updated cost function with added weightings}{35}{subsection.2.6.4}%
+\contentsline {chapter}{\numberline {3}Simulation Software}{36}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Introduction to the Sensor Network Tool suite}{36}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Overview of the Program}{36}{subsection.3.1.1}%
+\contentsline {subsubsection}{\nonumberline MWG (Measurement Generation)}{37}{subsubsection*.44}%
+\contentsline {subsubsection}{\nonumberline SMART (Sophisticated Module for Analysis of Radar Tracklets)}{37}{subsubsection*.46}%
+\contentsline {subsubsection}{\nonumberline PROCOR (Process Coordinator)}{38}{subsubsection*.48}%
+\contentsline {subsubsection}{\nonumberline CAT (Catalogue Analysis Tool)}{38}{subsubsection*.50}%
+\contentsline {subsubsection}{\nonumberline CAMP (Catalogue Maintenance and Pass prediction tool)}{38}{subsubsection*.52}%
+\contentsline {subsection}{\numberline {3.1.2}Setup of the Software}{38}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Implementation of the weighting schemes}{39}{subsection.3.1.3}%
+\contentsline {subsubsection}{\nonumberline Implementation of weightings based on the time since last detection:}{39}{subsubsection*.54}%
+\contentsline {subsubsection}{\nonumberline Implementation of Weightings based on the number of detections:}{40}{subsubsection*.56}%
+\contentsline {chapter}{\numberline {4}Results}{42}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Comparison}{42}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Detections recorded in Horizontal coordinate system}{44}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Detections recorded in Equatorial coordinate system}{46}{section.4.3}%
+\contentsline {chapter}{\numberline {5}Summary}{48}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Fazit und Ausblick}{49}{chapter.6}%
+\contentsline {chapter}{Literaturverzeichnis}{50}{chapter.6}%
+\contentsline {chapter}{Abbildungsverzeichnis}{54}{chapter*.57}%
+\contentsline {chapter}{Tabellenverzeichnis}{57}{chapter*.58}%
+\contentsline {chapter}{Symbolverzeichnis}{58}{chapter*.60}%
+\contentsline {chapter}{\numberline {A}Project Management}{59}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Work Breakdown Structure}{59}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Time Schedule}{61}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Work Package Description}{63}{section.A.3}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
