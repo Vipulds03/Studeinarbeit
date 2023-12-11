@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.20)  12 DEC 2023 01:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.20)  12 DEC 2023 04:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2196,20 +2196,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 133--134
 
  (ergebnisse.tex
 chapter 4.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--6
+
+ []
+
 <./graphics//Totdet_det.png, id=752, 632.3625pt x 349.90726pt>
 File: ./graphics//Totdet_det.png Graphic file (type png)
 <use ./graphics//Totdet_det.png>
-Package pdftex.def Info: ./graphics//Totdet_det.png  used on input line 8.
+Package pdftex.def Info: ./graphics//Totdet_det.png  used on input line 11.
 (pdftex.def)             Requested size: 371.02539pt x 205.30624pt.
 <./graphics//UniqueObj_det.png, id=753, 627.5445pt x 353.52075pt>
 File: ./graphics//UniqueObj_det.png Graphic file (type png)
 <use ./graphics//UniqueObj_det.png>
-Package pdftex.def Info: ./graphics//UniqueObj_det.png  used on input line 14.
+Package pdftex.def Info: ./graphics//UniqueObj_det.png  used on input line 17.
 (pdftex.def)             Requested size: 371.02539pt x 209.01236pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 <./graphics//Totdet_time.png, id=754, 627.5445pt x 350.5095pt>
 File: ./graphics//Totdet_time.png Graphic file (type png)
 <use ./graphics//Totdet_time.png>
-Package pdftex.def Info: ./graphics//Totdet_time.png  used on input line 20.
+Package pdftex.def Info: ./graphics//Totdet_time.png  used on input line 23.
 (pdftex.def)             Requested size: 371.02539pt x 207.23203pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -2217,7 +2225,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <./graphics//numbofdet.png, id=755, 628.14674pt x 353.52075pt>
 File: ./graphics//numbofdet.png Graphic file (type png)
 <use ./graphics//numbofdet.png>
-Package pdftex.def Info: ./graphics//numbofdet.png  used on input line 27.
+Package pdftex.def Info: ./graphics//numbofdet.png  used on input line 30.
 (pdftex.def)             Requested size: 371.02539pt x 208.81818pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -2225,7 +2233,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <./graphics//numbofobj.png, id=756, 633.567pt x 355.3275pt>
 File: ./graphics//numbofobj.png Graphic file (type png)
 <use ./graphics//numbofobj.png>
-Package pdftex.def Info: ./graphics//numbofobj.png  used on input line 33.
+Package pdftex.def Info: ./graphics//numbofobj.png  used on input line 36.
 (pdftex.def)             Requested size: 371.02539pt x 208.08533pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -2235,39 +2243,41 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
- <./graphics//Totdet_det.png> <./graphics//UniqueObj_det.png>]
-<./graphics//AltvsAzHCS_1.png, id=765, 1445.4pt x 697.10437pt>
+ <./graphics//Totdet_det.png>]
+<./graphics//AltvsAzHCS_1.png, id=763, 1445.4pt x 697.10437pt>
 File: ./graphics//AltvsAzHCS_1.png Graphic file (type png)
 <use ./graphics//AltvsAzHCS_1.png>
-Package pdftex.def Info: ./graphics//AltvsAzHCS_1.png  used on input line 43.
+Package pdftex.def Info: ./graphics//AltvsAzHCS_1.png  used on input line 46.
 (pdftex.def)             Requested size: 417.39914pt x 201.30412pt.
- [43 <./graphics//Totdet_time.png> <./graphics//numbofdet.png>]
-<./graphics//AltvsAzHCS_8.png, id=775, 1445.4pt x 697.10437pt>
+ [43 <./graphics//UniqueObj_det.png> <./graphics//Totdet_time.png>]
+Overfull \vbox (128.88548pt too high) has occurred while \output is active []
+
+ [44 <./graphics//numbofdet.png> <./graphics//numbofobj.png> <./graphics//AltvsAzHCS_1.png (PNG copy)>]
+<./graphics//AltvsAzHCS_8.png, id=782, 1445.4pt x 697.10437pt>
 File: ./graphics//AltvsAzHCS_8.png Graphic file (type png)
 <use ./graphics//AltvsAzHCS_8.png>
-Package pdftex.def Info: ./graphics//AltvsAzHCS_8.png  used on input line 50.
+Package pdftex.def Info: ./graphics//AltvsAzHCS_8.png  used on input line 53.
 (pdftex.def)             Requested size: 417.39914pt x 201.30412pt.
- [44 <./graphics//numbofobj.png> <./graphics//AltvsAzHCS_1.png (PNG copy)>]
 <./graphics//AltvsAzHCS_comb.png, id=783, 938.5464pt x 498.663pt>
 File: ./graphics//AltvsAzHCS_comb.png Graphic file (type png)
 <use ./graphics//AltvsAzHCS_comb.png>
-Package pdftex.def Info: ./graphics//AltvsAzHCS_comb.png  used on input line 56.
+Package pdftex.def Info: ./graphics//AltvsAzHCS_comb.png  used on input line 59.
 (pdftex.def)             Requested size: 417.39914pt x 221.77118pt.
  [45 <./graphics//AltvsAzHCS_8.png (PNG copy)> <./graphics//AltvsAzHCS_comb.png (PNG copy)>]
 <./graphics//DecvsRAECS_1.png, id=790, 1445.4pt x 697.10437pt>
 File: ./graphics//DecvsRAECS_1.png Graphic file (type png)
 <use ./graphics//DecvsRAECS_1.png>
-Package pdftex.def Info: ./graphics//DecvsRAECS_1.png  used on input line 66.
+Package pdftex.def Info: ./graphics//DecvsRAECS_1.png  used on input line 69.
 (pdftex.def)             Requested size: 417.39914pt x 201.30412pt.
 <./graphics//DecvsRAECS_3.png, id=791, 1445.4pt x 697.10437pt>
 File: ./graphics//DecvsRAECS_3.png Graphic file (type png)
 <use ./graphics//DecvsRAECS_3.png>
-Package pdftex.def Info: ./graphics//DecvsRAECS_3.png  used on input line 72.
+Package pdftex.def Info: ./graphics//DecvsRAECS_3.png  used on input line 75.
 (pdftex.def)             Requested size: 417.39914pt x 201.30412pt.
 <./graphics//DecvsRAvsTiECS_1.png, id=792, 1445.4pt x 697.10437pt>
 File: ./graphics//DecvsRAvsTiECS_1.png Graphic file (type png)
 <use ./graphics//DecvsRAvsTiECS_1.png>
-Package pdftex.def Info: ./graphics//DecvsRAvsTiECS_1.png  used on input line 78.
+Package pdftex.def Info: ./graphics//DecvsRAvsTiECS_1.png  used on input line 81.
 (pdftex.def)             Requested size: 417.39914pt x 201.30412pt.
 
 
@@ -2276,7 +2286,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <./graphics//DecvsRAvsTiECS_3.png, id=793, 1445.4pt x 697.10437pt>
 File: ./graphics//DecvsRAvsTiECS_3.png Graphic file (type png)
 <use ./graphics//DecvsRAvsTiECS_3.png>
-Package pdftex.def Info: ./graphics//DecvsRAvsTiECS_3.png  used on input line 84.
+Package pdftex.def Info: ./graphics//DecvsRAvsTiECS_3.png  used on input line 87.
 (pdftex.def)             Requested size: 417.39914pt x 201.30412pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -2435,7 +2445,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  95i,23n,129p,10698b,2111s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Program Files (x86)/tubslatex/fonts/enc/dvips/Fontshop/a_cbf6z5.enc}{C:/Program Files (x86)/tubslatex/fonts/enc/dvips/Fontshop/a_molob5.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/base/8r.enc}{C:/Program Files (x86)/tubslatex/fonts/enc/dvips/Fontshop/a_4o7za6.enc}{C:/Program Files (x86)/tubslatex/fonts/enc/dvips/Fontshop/a_6g6b3j.enc}{C:/Program Files (x86)/tubslatex/fonts/enc/dvips/Fontshop/a_3cgipr.enc}<C:/Program Files (x86)/tubslatex/fonts/type1/Nexus/NexusSansPro-Bold.pfb><C:/Program Files (x86)/tubslatex/fonts/type1/Nexus/NexusSansPro-Regular.pfb><C:/Program Files (x86)/tubslatex/fonts/type1/Nexus/NexusSerifPro-Bold.pfb><C:/Program Files (x86)/tubslatex/fonts/type1/Nexus/NexusSerifPro-Italic.pfb><C:/Program Files (x86)/tubslatex/fonts/type1/Nexus/NexusSerifPro-Regular.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/mathpazo/fplmbb.pfb><C:/Program Files/MiKTeX/fonts/type1/public/mathpazo/fplmr.pfb><C:/Program Files/MiKTeX/fonts/type1/public/mathpazo/fplmri.pfb><C:/Program Files/MiKTeX/fonts/type1/public/txfonts/t1xtt.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on vorlage.pdf (82 pages, 8365365 bytes).
+Output written on vorlage.pdf (82 pages, 8365948 bytes).
 PDF statistics:
  1307 PDF objects out of 1440 (max. 8388607)
  353 named destinations out of 1000 (max. 500000)
