@@ -51,16 +51,14 @@
 \contentsline {subsubsection}{\nonumberline Implementation of Weightings based on the number of detections:}{40}{subsubsection*.56}%
 \contentsline {chapter}{\numberline {4}Results}{42}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Comparison}{42}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Detections recorded in Horizontal coordinate system}{44}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Detections recorded in Equatorial coordinate system}{46}{section.4.3}%
 \contentsline {chapter}{\numberline {5}Summary}{48}{chapter.5}%
 \contentsline {chapter}{\numberline {6}Fazit und Ausblick}{49}{chapter.6}%
 \contentsline {chapter}{Literaturverzeichnis}{50}{chapter.6}%
 \contentsline {chapter}{Abbildungsverzeichnis}{54}{chapter*.57}%
-\contentsline {chapter}{Tabellenverzeichnis}{57}{chapter*.58}%
-\contentsline {chapter}{Symbolverzeichnis}{58}{chapter*.60}%
-\contentsline {chapter}{\numberline {A}Project Management}{59}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Work Breakdown Structure}{59}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Time Schedule}{61}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Work Package Description}{63}{section.A.3}%
+\contentsline {chapter}{Tabellenverzeichnis}{56}{chapter*.58}%
+\contentsline {chapter}{Symbolverzeichnis}{57}{chapter*.60}%
+\contentsline {chapter}{\numberline {A}Project Management}{58}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Work Breakdown Structure}{58}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Time Schedule}{60}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Work Package Description}{62}{section.A.3}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
