@@ -14,12 +14,12 @@
       edge from parent/.style={->,draw}, level distance=3cm,  >=latex]
 
     % root of the the initial tree, level 1
-    \node[root] {\tb{ Analysis of Tasking Algorithms for \\ Efficiently Operating Sensor Networks}}
+    \node[root] {\tb{ Analysis of Tasking Algorithms for \\ efficiently Operating Sensor Networks}}
     % The first level, as children of the initial tree
     child {node[level 2] (c1) {\tb{WP~1000} \\ Research and Familiarization}}
     child {node[level 2] (c2) {\tb{WP~2000} \\ Tasking Method Selection}}
     child {node[level 2] (c3) {\tb{WP~3000} \\ Sensor \\ Selection}}
-    child {node[level 2] (c4) {\tb{WP~4000} \\ Tasking Method Implementation}}
+    child {node[level 2] (c4) {\tb{WP~4000} \\ Tasking Method with weightings implementation}}
     child {node[level 2] (c5) {\tb{WP~5000} \\ Evaluation of Tasking Method}}
     child {node[level 2] (c6) {\tb{WP~6000} \\ Documentation \\ $~~$}};
 
@@ -30,7 +30,7 @@
       \node [below=of c12] (c13) {\tb{WP~1300} \\ Sensor Tasking Algorithms};
       \node [below=of c13] (c14) {\tb{WP~1400} \\ Software familiarization};
 
-      \node [below=of c2, xshift=10pt] (c21) {\tb{WP~2100} \\ Analysis of Tasking Algorithms};
+      \node [below=of c2, xshift=10pt] (c21) {\tb{WP~2100} \\ Analysis of Tasking Algorithms and weightings};
       \node [below=of c21] (c22) {\tb{WP~2200} \\ Selection criteria and rationale};
 
       \node [below=of c3, xshift=10pt] (c31) {\tb{WP~3100} \\ Identification of relevant sensors};
@@ -40,7 +40,7 @@
       \node [below=of c41] (c42) {\tb{WP~4200} \\ Validation and verification};
 
       \node [below=of c5, xshift=10pt] (c51) {\tb{WP~5100} \\ Simulation setup without tasking};
-      \node [below=of c51] (c52) {\tb{WP~5200} \\ Simulation setupt with tasking};
+      \node [below=of c51] (c52) {\tb{WP~5200} \\ Simulation setupt with tasking and weightings};
       \node [below=of c52] (c53) {\tb{WP~5300} \\ Performance evaluation and analysis};
 
     \end{scope}
@@ -75,7 +75,7 @@
       x unit=0.25cm,	% Zum komprimieren des Charts in x-Richtung
       %y unit chart=0.7cm,
       %compress calendar,	% Komprimiert den Chart in der Breite
-      calendar week text = {Woche~\currentweek},
+      calendar week text = {Week~\currentweek},
       chart element start border = right,
       bar/.append style={fill=blue!40, rounded corners=2pt},
       bar incomplete/.append style={fill=blue!10},
@@ -84,40 +84,40 @@
       milestone label node/.append style={align=left, text width=8cm},
       bar progress label node/.style={right=2mm},
       progress label text = {\pgfmathprintnumber[precision=0, verbatim]{#1}\%},
-    ]{2023-07-03}{2023-10-28}
+    ]{2023-07-03}{2023-12-13}
     \gantttitlecalendar{year, month=shortname, week}\\
     %\gantttitle{2023}{59}\\
-    \ganttgroup{AP 1000: Research and Familiarization}{2023-07-03}{2023-07-20}\\
+    \ganttgroup{AP 1000: Research and Familiarization}{2023-07-03}{2023-07-30}\\
     \ganttbar  {WP 1100: Basics of observation of \\ objects in earth orbit}{2023-07-03}{2023-07-05}\\
     %\ganttbar[progress=50]  {WP 1100: Basics of observation of \\ objects in earth orbit}{2023-07-03}{2023-07-05}\\
     \ganttlinkedbar {WP 1200: Sensor networks and \\ catalogues of space objects}{2023-07-06}{2023-07-10}\\
     \ganttlinkedbar {WP 1300: Sensor tasking algorithms}{2023-07-11}{2023-07-15}\\
-    \ganttlinkedbar {WP 1400: Software familiarization}{2023-07-16}{2023-07-20}\\
+    \ganttlinkedbar {WP 1400: Software familiarization}{2023-07-16}{2023-07-30}\\
     %\ganttbar[progress=100]{AP 1300: TEXT}{2023-01-01}{2023-01-30}\\	% Beispiel für Fortschrittsbalken!
 
-    \ganttgroup{WP 2000: Selection of Tasking Method}{2023-07-21}{2023-08-12}\\
-    \ganttbar{WP 2100: Analysis of tasking \\ algorithms}{2023-07-21}{2023-07-28}\\
-    \ganttlinkedbar[progress=50]  {WP 2200: Selection criteria and \\ rationale}{2023-07-29}{2023-08-12}\\
+    \ganttgroup{WP 2000: Selection of Tasking Method}{2023-07-30}{2023-08-22}\\
+    \ganttbar{WP 2100: Analysis of tasking \\ algorithms}{2023-07-30}{2023-08-12}\\
+    \ganttlinkedbar{WP 2200: Selection criteria and \\ rationale}{2023-08-12}{2023-08-22}\\
     %\ganttbar[progress=5]0{WP 2100: Analysis of tasking \\ algorithms}{2023-07-21}{2023-07-28}\\
 
-    \ganttgroup{WP 3000: Selection of Sensors for Simulation}{2023-08-01}{2023-08-21}\\
-    \ganttbar  {WP 3100: Identification of relevant sensors}{2023-08-01}{2023-08-10}\\
-    \ganttlinkedbar  {WP 3200: Criteria for sensor selection}{2023-08-11}{2023-08-21}\\
+    \ganttgroup{WP 3000: Selection of Sensors for Simulation}{2023-08-22}{2023-09-15}\\
+    \ganttbar  {WP 3100: Identification of relevant sensors}{2023-08-22}{2023-09-10}\\
+    \ganttlinkedbar  {WP 3200: Criteria for sensor selection}{2023-09-10}{2023-09-15}\\
 
-    \ganttgroup{WP 4000: Implementation of Tasking Method}{2023-08-21}{2023-09-15}\\
-    \ganttbar  {WP 4100: Integration with the Sensor Network Simulator}{2023-08-21}{2023-08-30}\\
-    \ganttlinkedbar  {WP 4200: Validation and verification}{2023-08-31}{2023-09-15}\\
+    \ganttgroup{WP 4000: Implementation of Tasking Method}{2023-09-15}{2023-10-15}\\
+    \ganttbar  {WP 4100: Integration with the Sensor Network Simulator}{2023-09-15}{2023-09-30}\\
+    \ganttlinkedbar  {WP 4200: Validation and verification}{2023-09-30}{2023-10-15}\\
 
-    \ganttgroup{WP 5000: Evaluation of Tasking Method}{2023-09-15}{2023-10-15}\\
-    \ganttbar  {WP 5100: Simulation setup without tasking}{2023-09-15}{2023-09-25}\\
-    \ganttlinkedbar  {WP 5200: Simulation setup with tasking}{2023-09-26}{2023-10-05}\\
-    \ganttlinkedbar  {WP 5300: Performance Evaluation and Analysis}{2023-10-06}{2023-10-15}\\
+    \ganttgroup{WP 5000: Evaluation of Tasking Method}{2023-10-15}{2023-11-20}\\
+    \ganttbar  {WP 5100: Simulation setup without tasking}{2023-10-15}{2023-10-30}\\
+    \ganttlinkedbar  {WP 5200: Simulation setup with tasking}{2023-10-30}{2023-11-10}\\
+    \ganttlinkedbar  {WP 5300: Performance Evaluation and Analysis}{2023-11-10}{2023-11-20}\\
 
-    \ganttgroup{WP 6000: Documentation}{2023-10-16}{2023-10-28}\\
-    \ganttbar  {WP 6100: Final submission report}{2023-10-16}{2023-10-28}\\
+    \ganttgroup{WP 6000: Documentation}{2023-11-20}{2023-12-13}\\
+    \ganttbar  {WP 6100: Final submission report}{2023-11-20}{2023-12-13}\\
 
 
-    \ganttmilestone{Meilenstein}{2023-08-18}\\
+    %\ganttmilestone{Meilenstein}{2023-08-18}\\
 
   \end{ganttchart}
   }
@@ -150,7 +150,7 @@
       \hline\hline
       \textbf{Begin}                  & \multicolumn{2}{l||}{T$_0$}                                                                                                                &                         \\
       \hline
-      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 3 Weeks}                                                                                                        & \textbf{Duration}: 3 Weeks \\
+      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 4 Weeks}                                                                                                        & \textbf{Duration}: 3 Weeks \\
       \hline\hline
       \textbf{Editor}              & \multicolumn{3}{l|}{Vipul Dilip Solanke}                                                                                                                              \\
       \hline\hline
@@ -320,9 +320,9 @@
       \hline
       \multicolumn{3}{|l||}{}          & \textbf{Date:} 16.07.2023                                                                                                                                          \\
       \hline\hline
-      \textbf{Begin}                  & \multicolumn{2}{l||}{T$_0$+ 2 Weeks}                                                                                                                &                         \\
+      \textbf{Begin}                  & \multicolumn{2}{l||}{T$_0$+ 3 Weeks}                                                                                                                &                         \\
       \hline
-      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 3 Weeks}                                                                                                        & \textbf{Duration}: 1 Week \\
+      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 4 Weeks}                                                                                                        & \textbf{Duration}: 1 Week \\
       \hline\hline
       \textbf{Editor}              & \multicolumn{3}{l|}{Vipul Dilip Solanke}                                                                                                                              \\
       \hline\hline
@@ -362,11 +362,11 @@
       \hline
       \textbf{Person Responsible}        & \multicolumn{2}{l||}{Vipul Dilip Solanke}                                                                                                   & \textbf{Version:} 1.0   \\
       \hline
-      \multicolumn{3}{|l||}{}          & \textbf{Date:} 21.07.2023                                                                                                                                          \\
+      \multicolumn{3}{|l||}{}          & \textbf{Date:} 30.07.2023                                                                                                                                          \\
       \hline\hline
-      \textbf{Begin}                  & \multicolumn{2}{l||}{T$_0$+ 3 Weeks}                                                                                                                &                         \\
+      \textbf{Begin}                  & \multicolumn{2}{l||}{T$_0$+ 4 Weeks}                                                                                                                &                         \\
       \hline
-      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 6 Weeks}                                                                                                        & \textbf{Duration}: 3 Weeks \\
+      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 7 Weeks}                                                                                                        & \textbf{Duration}: 3 Weeks \\
       \hline\hline
       \textbf{Editor}              & \multicolumn{3}{l|}{Vipul Dilip Solanke}                                                                                                                              \\
       \hline\hline
@@ -406,11 +406,11 @@
       \hline
       \textbf{Person Responsible}        & \multicolumn{2}{l||}{Vipul Dilip Solanke}                                                                                                   & \textbf{Version:} 1.0   \\
       \hline
-      \multicolumn{3}{|l||}{}          & \textbf{Date:} 21.07.2023                                                                                                                                          \\
+      \multicolumn{3}{|l||}{}          & \textbf{Date:} 30.07.2023                                                                                                                                          \\
       \hline\hline
-      \textbf{Begin}                  & \multicolumn{2}{l||}{T$_0$+ 3 Weeks}                                                                                                                &                         \\
+      \textbf{Begin}                  & \multicolumn{2}{l||}{T$_0$+ 4 Weeks}                                                                                                                &                         \\
       \hline
-      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 4 Weeks}                                                                                                        & \textbf{Duration}: 1 Week \\
+      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 6 Weeks}                                                                                                        & \textbf{Duration}: 1 Week \\
       \hline\hline
       \textbf{Editor}              & \multicolumn{3}{l|}{Vipul Dilip Solanke}                                                                                                                              \\
       \hline\hline
@@ -450,11 +450,11 @@
       \hline
       \textbf{Person Responsible}        & \multicolumn{2}{l||}{Vipul Dilip Solanke}                                                                                                   & \textbf{Version:} 1.0   \\
       \hline
-      \multicolumn{3}{|l||}{}          & \textbf{Date:} 29.07.2023                                                                                                                                          \\
+      \multicolumn{3}{|l||}{}          & \textbf{Date:} 12.08.2023                                                                                                                                          \\
       \hline\hline
       \textbf{Begin}                  & \multicolumn{2}{l||}{T$_0$+ 4 Weeks}                                                                                                                &                         \\
       \hline
-      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 6 Weeks}                                                                                                        & \textbf{Duration}: 2 Weeks \\
+      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 7 Weeks}                                                                                                        & \textbf{Duration}: 2 Weeks \\
       \hline\hline
       \textbf{Editor}              & \multicolumn{3}{l|}{Vipul Dilip Solanke}                                                                                                                              \\
       \hline\hline
@@ -497,11 +497,11 @@
       \hline
       \textbf{Person Responsible}        & \multicolumn{2}{l||}{Vipul Dilip Solanke}                                                                                                   & \textbf{Version:} 1.0   \\
       \hline
-      \multicolumn{3}{|l||}{}          & \textbf{Date:} 01.08.2023                                                                                                                                          \\
+      \multicolumn{3}{|l||}{}          & \textbf{Date:} 22.08.2023                                                                                                                                          \\
       \hline\hline
-      \textbf{Begin}                  & \multicolumn{2}{l||}{T$_0$ + 4 Weeks}                                                                                                                &                         \\
+      \textbf{Begin}                  & \multicolumn{2}{l||}{T$_0$ + 7 Weeks}                                                                                                                &                         \\
       \hline
-      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 7 Weeks}                                                                                                        & \textbf{Duration}: 3 Weeks \\
+      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 10 Weeks}                                                                                                        & \textbf{Duration}: 3 Weeks \\
       \hline\hline
       \textbf{Editor}              & \multicolumn{3}{l|}{Vipul Dilip Solanke}                                                                                                                              \\
       \hline\hline
@@ -541,11 +541,11 @@
       \hline
       \textbf{Person Responsible}        & \multicolumn{2}{l||}{Vipul Dilip Solanke}                                                                                                   & \textbf{Version:} 1.0   \\
       \hline
-      \multicolumn{3}{|l||}{}          & \textbf{Date:} 01.08.2023                                                                                                                                          \\
+      \multicolumn{3}{|l||}{}          & \textbf{Date:} 22.08.2023                                                                                                                                          \\
       \hline\hline
-      \textbf{Begin}                  & \multicolumn{2}{l||}{T$_0$ + 4 Weeks}                                                                                                                &                         \\
+      \textbf{Begin}                  & \multicolumn{2}{l||}{T$_0$ + 7 Weeks}                                                                                                                &                         \\
       \hline
-      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 5 Weeks}                                                                                                        & \textbf{Duration}: 1 Week \\
+      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 9 Weeks}                                                                                                        & \textbf{Duration}: 1 Week \\
       \hline\hline
       \textbf{Editor}              & \multicolumn{3}{l|}{Vipul Dilip Solanke}                                                                                                                              \\
       \hline\hline
@@ -584,11 +584,11 @@
       \hline
       \textbf{Person Responsible}        & \multicolumn{2}{l||}{Vipul Dilip Solanke}                                                                                                   & \textbf{Version:} 1.0   \\
       \hline
-      \multicolumn{3}{|l||}{}          & \textbf{Date:} 08.08.2023                                                                                                                                          \\
+      \multicolumn{3}{|l||}{}          & \textbf{Date:} 15.09.2023                                                                                                                                          \\
       \hline\hline
-      \textbf{Begin}                  & \multicolumn{2}{l||}{T$_0$ + 5 Weeks}                                                                                                                &                         \\
+      \textbf{Begin}                  & \multicolumn{2}{l||}{T$_0$ + 9 Weeks}                                                                                                                &                         \\
       \hline
-      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 7 Weeks}                                                                                                        & \textbf{Duration}: 2 Weeks 5 \\
+      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 10 Weeks}                                                                                                        & \textbf{Duration}: 2 Weeks 5 \\
       \hline\hline
       \textbf{Editor}              & \multicolumn{3}{l|}{Vipul Dilip Solanke}                                                                                                                              \\
       \hline\hline
@@ -629,11 +629,11 @@
       \hline
       \textbf{Person Responsible}        & \multicolumn{2}{l||}{Vipul Dilip Solanke}                                                                                                   & \textbf{Version:} 1.0   \\
       \hline
-      \multicolumn{3}{|l||}{}          & \textbf{Date:} 21.08.2023                                                                                                                                          \\
+      \multicolumn{3}{|l||}{}          & \textbf{Date:} 15.09.2023                                                                                                                                          \\
       \hline\hline
-      \textbf{Begin}                  & \multicolumn{2}{l||}{T$_0$ + 7 Weeks}                                                                                                                &                         \\
+      \textbf{Begin}                  & \multicolumn{2}{l||}{T$_0$ + 10 Weeks}                                                                                                                &                         \\
       \hline
-      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 10 Weeks}                                                                                                        & \textbf{Duration}: 3 Weeks \\
+      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 14 Weeks}                                                                                                        & \textbf{Duration}: 3 Weeks \\
       \hline\hline
       \textbf{Editor}              & \multicolumn{3}{l|}{Vipul Dilip Solanke}                                                                                                                              \\
       \hline\hline
@@ -672,11 +672,11 @@
       \hline
       \textbf{Person Responsible}        & \multicolumn{2}{l||}{Vipul Dilip Solanke}                                                                                                   & \textbf{Version:} 1.0   \\
       \hline
-      \multicolumn{3}{|l||}{}          & \textbf{Date:} 21.08.2023                                                                                                                                          \\
+      \multicolumn{3}{|l||}{}          & \textbf{Date:} 15.09.2023                                                                                                                                          \\
       \hline\hline
-      \textbf{Begin}                  & \multicolumn{2}{l||}{T$_0$ + 7 Weeks}                                                                                                                &                         \\
+      \textbf{Begin}                  & \multicolumn{2}{l||}{T$_0$ + 10 Weeks}                                                                                                                &                         \\
       \hline
-      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 9 Weeks}                                                                                                        & \textbf{Duration}: 2 Weeks \\
+      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 12 Weeks}                                                                                                        & \textbf{Duration}: 2 Weeks \\
       \hline\hline
       \textbf{Editor}              & \multicolumn{3}{l|}{Vipul Dilip Solanke}                                                                                                                              \\
       \hline\hline
@@ -716,11 +716,11 @@
       \hline
       \textbf{Person Responsible}        & \multicolumn{2}{l||}{Vipul Dilip Solanke}                                                                                                   & \textbf{Version:} 1.0   \\
       \hline
-      \multicolumn{3}{|l||}{}          & \textbf{Date:} 31.08.2023                                                                                                                                          \\
+      \multicolumn{3}{|l||}{}          & \textbf{Date:} 30.10.2023                                                                                                                                          \\
       \hline\hline
-      \textbf{Begin}                  & \multicolumn{2}{l||}{T$_0$ + 9 Weeks}                                                                                                                &                         \\
+      \textbf{Begin}                  & \multicolumn{2}{l||}{T$_0$ + 12 Weeks}                                                                                                                &                         \\
       \hline
-      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 10 Weeks}                                                                                                        & \textbf{Duration}: 1 Weeks \\
+      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 14 Weeks}                                                                                                        & \textbf{Duration}: 1 Weeks \\
       \hline\hline
       \textbf{Editor}              & \multicolumn{3}{l|}{Vipul Dilip Solanke}                                                                                                                              \\
       \hline\hline
@@ -759,11 +759,11 @@
       \hline
       \textbf{Person Responsible}        & \multicolumn{2}{l||}{Vipul Dilip Solanke}                                                                                                   & \textbf{Version:} 1.0   \\
       \hline
-      \multicolumn{3}{|l||}{}          & \textbf{Date:} 15.09.2023                                                                                                                                          \\
+      \multicolumn{3}{|l||}{}          & \textbf{Date:} 15.10.2023                                                                                                                                          \\
       \hline\hline
-      \textbf{Begin}                  & \multicolumn{2}{l||}{T$_0$ + 10 Weeks}                                                                                                                &                         \\
+      \textbf{Begin}                  & \multicolumn{2}{l||}{T$_0$ + 14 Weeks}                                                                                                                &                         \\
       \hline
-      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 14 Weeks}                                                                                                        & \textbf{Duration}: 4 Weeks \\
+      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 18 Weeks}                                                                                                        & \textbf{Duration}: 4 Weeks \\
       \hline\hline
       \textbf{Editor}              & \multicolumn{3}{l|}{Vipul Dilip Solanke}                                                                                                                              \\
       \hline\hline
@@ -803,11 +803,11 @@
       \hline
       \textbf{Person Responsible}        & \multicolumn{2}{l||}{Vipul Dilip Solanke}                                                                                                   & \textbf{Version:} 1.0   \\
       \hline
-      \multicolumn{3}{|l||}{}          & \textbf{Date:} 15.09.2023                                                                                                                                          \\
+      \multicolumn{3}{|l||}{}          & \textbf{Date:} 15.10.2023                                                                                                                                          \\
       \hline\hline
-      \textbf{Begin}                  & \multicolumn{2}{l||}{T$_0$ + 10 Weeks}                                                                                                                &                         \\
+      \textbf{Begin}                  & \multicolumn{2}{l||}{T$_0$ + 14 Weeks}                                                                                                                &                         \\
       \hline
-      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 11 Weeks}                                                                                                        & \textbf{Duration}: 1 Week \\
+      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 16 Weeks}                                                                                                        & \textbf{Duration}: 1 Week \\
       \hline\hline
       \textbf{Editor}              & \multicolumn{3}{l|}{Vipul Dilip Solanke}                                                                                                                              \\
       \hline\hline
@@ -846,11 +846,11 @@
       \hline
       \textbf{Person Responsible}        & \multicolumn{2}{l||}{Vipul Dilip Solanke}                                                                                                   & \textbf{Version:} 1.0   \\
       \hline
-      \multicolumn{3}{|l||}{}          & \textbf{Date:} 26.09.2023                                                                                                                                          \\
+      \multicolumn{3}{|l||}{}          & \textbf{Date:} 30.10.2023                                                                                                                                          \\
       \hline\hline
-      \textbf{Begin}                  & \multicolumn{2}{l||}{T$_0$ + 11 Weeks}                                                                                                                &                         \\
+      \textbf{Begin}                  & \multicolumn{2}{l||}{T$_0$ + 16 Weeks}                                                                                                                &                         \\
       \hline
-      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 12 Weeks}                                                                                                        & \textbf{Duration}: 1 Week \\
+      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 18 Weeks}                                                                                                        & \textbf{Duration}: 1 Week \\
       \hline\hline
       \textbf{Editor}              & \multicolumn{3}{l|}{Vipul Dilip Solanke}                                                                                                                              \\
       \hline\hline
@@ -889,11 +889,11 @@
       \hline
       \textbf{Person Responsible}        & \multicolumn{2}{l||}{Vipul Dilip Solanke}                                                                                                   & \textbf{Version:} 1.0   \\
       \hline
-      \multicolumn{3}{|l||}{}          & \textbf{Date:} 06.10.2023                                                                                                                                          \\
+      \multicolumn{3}{|l||}{}          & \textbf{Date:} 10.11.2023                                                                                                                                          \\
       \hline\hline
-      \textbf{Begin}                  & \multicolumn{2}{l||}{T$_0$ + 12 Weeks}                                                                                                                &                         \\
+      \textbf{Begin}                  & \multicolumn{2}{l||}{T$_0$ + 18 Weeks}                                                                                                                &                         \\
       \hline
-      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 14 Weeks}                                                                                                        & \textbf{Duration}: 2 Weeks \\
+      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 20 Weeks}                                                                                                        & \textbf{Duration}: 2 Weeks \\
       \hline\hline
       \textbf{Editor}              & \multicolumn{3}{l|}{Vipul Dilip Solanke}                                                                                                                              \\
       \hline\hline
@@ -933,11 +933,11 @@
       \hline
       \textbf{Person Responsible}        & \multicolumn{2}{l||}{Vipul Dilip Solanke}                                                                                                   & \textbf{Version:} 1.0   \\
       \hline
-      \multicolumn{3}{|l||}{}          & \textbf{Date:} 16.10.2023                                                                                                                                          \\
+      \multicolumn{3}{|l||}{}          & \textbf{Date:} 20.11.2023                                                                                                                                          \\
       \hline\hline
-      \textbf{Begin}                  & \multicolumn{2}{l||}{T$_0$ + 14 Weeks}                                                                                                                &                         \\
+      \textbf{Begin}                  & \multicolumn{2}{l||}{T$_0$ + 20 Weeks}                                                                                                                &                         \\
       \hline
-      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 16 Weeks}                                                                                                        & \textbf{Duration}: 2 Weeks \\
+      \textbf{End}                    & \multicolumn{2}{l||}{T$_0$+ 23 Weeks}                                                                                                        & \textbf{Duration}: 2 Weeks \\
       \hline\hline
       \textbf{Editor}              & \multicolumn{3}{l|}{Vipul Dilip Solanke}                                                                                                                              \\
       \hline\hline
@@ -954,7 +954,7 @@
       \multicolumn{4}{|p{150mm}|}{$\bullet$ Write a detailed report on the performed study thesis.}\\
       \multicolumn{4}{|p{150mm}|}{}                                                                                                                                                                           \\
       \multicolumn{4}{|p{150mm}|}{\textbf{Result:}}                                                                                                                                                       \\
-      \multicolumn{4}{|p{150mm}|}{$\bullet$ Final submission report on the effectiveness of new implemented sensor tasking method}                                                                                                                          \\
+      \multicolumn{4}{|p{150mm}|}{$\bullet$ Final submission report on the effectiveness of implemented sensor tasking method with weighting}                                                                                                                          \\
       \hline
     \end{tabular}
   \end{center}

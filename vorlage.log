@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.20)  12 DEC 2023 08:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.20)  12 DEC 2023 09:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1563,7 +1563,7 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 \openout2 = `abstract.aux'.
 
  (abstract.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--14
+Underfull \hbox (badness 10000) in paragraph at lines 3--12
 
  []
 
@@ -1573,21 +1573,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--14
 
 
 ]
-Overfull \hbox (11.10974pt too wide) in paragraph at lines 25--35
-\LY1/NexusProSerif/m/n/10.95 for-ma-tio-nen zur Verbesserung der Um-lauf-bahn benötigt wer-den. An-gesichts der be-gren-zten Beobach-
+Overfull \hbox (17.49132pt too wide) in paragraph at lines 23--24
+\LY1/NexusProSerif/m/n/10.95 lässlich, um geeignete Ma^^Y-nah-men zur Risiko-min-derung in dicht be-siedel-ten Um-lauf-bah-nen umzuset-
  []
 
 
-Overfull \hbox (0.46411pt too wide) in paragraph at lines 25--35
-\LY1/NexusProSerif/m/n/10.95 tungsres-sourcen, ins-beson-dere ins-beson-dere für Wel-traum-müll in der geo-sta-tionären Um-lauf-bahn,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--35
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
 
  []
 
-) [4
+)
+Overfull \hbox (5.58005pt too wide) in paragraph at lines 25--158
+\LY1/NexusProSerif/m/n/10.95 Wel-traum-müll. Sie in-te-gri-ert ver-schiedene Gewich-tungss-chemata in die Kosten-funk-tion des Greedy-
+ []
+
+
+Overfull \hbox (15.37584pt too wide) in paragraph at lines 25--158
+\LY1/NexusProSerif/m/n/10.95 Algorithmus, eines In-stru-ments, das für Um-fra-gen in der SNS-Software ver-wen-det wird. Die Forschung
+ []
+
+
+Overfull \hbox (0.89342pt too wide) in paragraph at lines 25--158
+\LY1/NexusProSerif/m/n/10.95 durchge-führt wur-den. Die Wirk-samkeit des Al-go-rith-mus wird in-ner-halb dieses Rah-mens analysiert. 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--158
+
+ []
+
+[4
 
 ] (vorlage.toc
 LaTeX Font Info:    Trying to load font information for LY1+NexusProSerif-lnum on input line 3.
@@ -2109,7 +2124,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
 
-<./graphics//SNS.png, id=627, 406.51875pt x 263.18324pt>
+<./graphics//SNS.png, id=629, 406.51875pt x 263.18324pt>
 File: ./graphics//SNS.png Graphic file (type png)
 <use ./graphics//SNS.png>
 Package pdftex.def Info: ./graphics//SNS.png  used on input line 32.
@@ -2187,7 +2202,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--11
 
  []
 
-<./graphics//Totdet_det.png, id=750, 632.3625pt x 349.90726pt>
+<./graphics//Totdet_det.png, id=752, 632.3625pt x 349.90726pt>
 File: ./graphics//Totdet_det.png Graphic file (type png)
 <use ./graphics//Totdet_det.png>
 Package pdftex.def Info: ./graphics//Totdet_det.png  used on input line 14.
@@ -2198,7 +2213,7 @@ Package pdftex.def Info: ./graphics//Totdet_det.png  used on input line 14.
 
 
 ]
-<./graphics//UniqueObj_det.png, id=757, 627.5445pt x 353.52075pt>
+<./graphics//UniqueObj_det.png, id=759, 627.5445pt x 353.52075pt>
 File: ./graphics//UniqueObj_det.png Graphic file (type png)
 <use ./graphics//UniqueObj_det.png>
 Package pdftex.def Info: ./graphics//UniqueObj_det.png  used on input line 20.
@@ -2208,7 +2223,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--25
 
  []
 
-<./graphics//Totdet_time.png, id=759, 627.5445pt x 350.5095pt>
+<./graphics//Totdet_time.png, id=761, 627.5445pt x 350.5095pt>
 File: ./graphics//Totdet_time.png Graphic file (type png)
 <use ./graphics//Totdet_time.png>
 Package pdftex.def Info: ./graphics//Totdet_time.png  used on input line 28.
@@ -2222,12 +2237,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 32--33
  []
 
 [43 <./graphics//Totdet_det.png> <./graphics//UniqueObj_det.png>]
-<./graphics//numbofdet.png, id=771, 628.14674pt x 353.52075pt>
+<./graphics//numbofdet.png, id=773, 628.14674pt x 353.52075pt>
 File: ./graphics//numbofdet.png Graphic file (type png)
 <use ./graphics//numbofdet.png>
 Package pdftex.def Info: ./graphics//numbofdet.png  used on input line 36.
 (pdftex.def)             Requested size: 371.02539pt x 208.81818pt.
-<./graphics//numbofobj.png, id=772, 633.567pt x 355.3275pt>
+<./graphics//numbofobj.png, id=774, 633.567pt x 355.3275pt>
 File: ./graphics//numbofobj.png Graphic file (type png)
 <use ./graphics//numbofobj.png>
 Package pdftex.def Info: ./graphics//numbofobj.png  used on input line 42.
@@ -2236,13 +2251,13 @@ Package pdftex.def Info: ./graphics//numbofobj.png  used on input line 42.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./graphics//AltvsAzHCS_1.png, id=773, 1445.4pt x 654.19406pt>
+<./graphics//AltvsAzHCS_1.png, id=775, 1445.4pt x 654.19406pt>
 File: ./graphics//AltvsAzHCS_1.png Graphic file (type png)
 <use ./graphics//AltvsAzHCS_1.png>
 Package pdftex.def Info: ./graphics//AltvsAzHCS_1.png  used on input line 49.
 (pdftex.def)             Requested size: 417.39914pt x 188.91284pt.
 [44 <./graphics//Totdet_time.png> <./graphics//numbofdet.png>]
-<./graphics//AltvsAzHCS_11.png, id=781, 1445.4pt x 654.19406pt>
+<./graphics//AltvsAzHCS_11.png, id=783, 1445.4pt x 654.19406pt>
 File: ./graphics//AltvsAzHCS_11.png Graphic file (type png)
 <use ./graphics//AltvsAzHCS_11.png>
 Package pdftex.def Info: ./graphics//AltvsAzHCS_11.png  used on input line 56.
@@ -2252,12 +2267,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 60--61
 
  []
 
-<./graphics//AltvsAzHCS_comb.png, id=789, 1445.4pt x 630.85687pt>
+<./graphics//AltvsAzHCS_comb.png, id=791, 1445.4pt x 630.85687pt>
 File: ./graphics//AltvsAzHCS_comb.png Graphic file (type png)
 <use ./graphics//AltvsAzHCS_comb.png>
 Package pdftex.def Info: ./graphics//AltvsAzHCS_comb.png  used on input line 65.
 (pdftex.def)             Requested size: 440.58955pt x 192.30035pt.
-<./graphics//AltvsAzObjects.png, id=790, 609.477pt x 314.3745pt>
+<./graphics//AltvsAzObjects.png, id=792, 609.477pt x 314.3745pt>
 File: ./graphics//AltvsAzObjects.png Graphic file (type png)
 <use ./graphics//AltvsAzObjects.png>
 Package pdftex.def Info: ./graphics//AltvsAzObjects.png  used on input line 72.
@@ -2360,7 +2375,7 @@ chapter A.
 ] [60
 
 ]
-Overfull \hbox (32.73312pt too wide) in paragraph at lines 71--124
+Overfull \hbox (32.74168pt too wide) in paragraph at lines 71--124
 [] 
  []
 
@@ -2418,17 +2433,17 @@ Package rerunfilecheck Info: File `vorlage.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 57951 strings out of 478614
- 1302533 string characters out of 2852937
- 2162076 words of memory out of 3000000
- 74625 multiletter control sequences out of 15000+600000
+ 57939 strings out of 478614
+ 1302281 string characters out of 2852937
+ 2162077 words of memory out of 3000000
+ 74611 multiletter control sequences out of 15000+600000
  625816 words of font info for 158 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  95i,23n,129p,10698b,2111s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Program Files (x86)/tubslatex/fonts/enc/dvips/Fontshop/a_cbf6z5.enc}{C:/Program Files (x86)/tubslatex/fonts/enc/dvips/Fontshop/a_molob5.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/base/8r.enc}{C:/Program Files (x86)/tubslatex/fonts/enc/dvips/Fontshop/a_4o7za6.enc}{C:/Program Files (x86)/tubslatex/fonts/enc/dvips/Fontshop/a_6g6b3j.enc}{C:/Program Files (x86)/tubslatex/fonts/enc/dvips/Fontshop/a_3cgipr.enc}<C:/Program Files (x86)/tubslatex/fonts/type1/Nexus/NexusSansPro-Bold.pfb><C:/Program Files (x86)/tubslatex/fonts/type1/Nexus/NexusSansPro-Regular.pfb><C:/Program Files (x86)/tubslatex/fonts/type1/Nexus/NexusSerifPro-Bold.pfb><C:/Program Files (x86)/tubslatex/fonts/type1/Nexus/NexusSerifPro-Italic.pfb><C:/Program Files (x86)/tubslatex/fonts/type1/Nexus/NexusSerifPro-Regular.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/mathpazo/fplmbb.pfb><C:/Program Files/MiKTeX/fonts/type1/public/mathpazo/fplmr.pfb><C:/Program Files/MiKTeX/fonts/type1/public/mathpazo/fplmri.pfb><C:/Program Files/MiKTeX/fonts/type1/public/txfonts/t1xtt.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on vorlage.pdf (81 pages, 8097543 bytes).
+Output written on vorlage.pdf (81 pages, 8098720 bytes).
 PDF statistics:
- 1290 PDF objects out of 1440 (max. 8388607)
- 347 named destinations out of 1000 (max. 500000)
+ 1293 PDF objects out of 1440 (max. 8388607)
+ 349 named destinations out of 1000 (max. 500000)
  566 words of extra memory for PDF output out of 10000 (max. 10000000)
 

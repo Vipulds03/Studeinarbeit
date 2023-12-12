@@ -339,18 +339,18 @@ demand more attention, as their observation results in more substantial informat
 and conjunction assessments, all of which are pivotal for the security of satellites and the sustainable utilization of space \cite{hinze1}.
 
 \section{Sensor Tasking Algorithms}
-Sensor task assignment algorithms are mathematical techniques designed to optimize the allocation and scheduling of space surveillance sensors to monitor and control objects in Earth orbit. These algorithms aim to increase the performance and efficiency of sensor networks with appropriate sensors that it controls the identification of specific areas of the sky. In the following section two sensor tasking algorithms are introduced. First one is Genetic Algorithm (GA) for catalogue-maintenance and second one is Greedy Algorithm for surveying purpose.
+Sensor task assignment algorithms are mathematical techniques designed to optimize the allocation and scheduling of space surveillance sensors to monitor and control objects in Earth orbit. These algorithms aim to increase the performance and efficiency of sensor networks with appropriate sensors that it controls the identification of specific areas of the sky. In the following section two sensor tasking algorithms are introduced. First one is GA for catalogue-maintenance and second one is Greedy Algorithm for surveying purpose.
 Further, various weighting schemes for the cost function are discussed and implemented in the available greedy algorithm, which was implemented by Menglu Gao \cite{gao} based on Frueh et.al \cite{fruh1}.
 
 \subsection{Genetic Algorithm}
 
-Given the NP-class nature of scheduling problems, heuristics, particularly genetic algorithms (GAs), prove to be a practical approach. GAs, inspired by natural evolution, exhibit significant advantages in their ability to address diverse and complex optimization challenges. Their effectiveness arises from parallel searches for solutions in each iteration. However, the risk of converging to a suboptimal solution exists without a well-defined GA development procedure. Rigorous testing and simulations are essential to validate algorithm capabilities \cite{nsga,hinze1}.\\
+Given the NP-class nature of scheduling problems, heuristics, particularly genetic algorithms, prove to be a practical approach. GAs, inspired by natural evolution, exhibit significant advantages in their ability to address diverse and complex optimization challenges. Their effectiveness arises from parallel searches for solutions in each iteration. However, the risk of converging to a suboptimal solution exists without a well-defined GA development procedure. Rigorous testing and simulations are essential to validate algorithm capabilities \cite{nsga,hinze1}.\\
 
 A systematic approach to GA development involves the creation of a population of individuals, where each individual represents a candidate solution to an optimization problem. Selection of individuals based on fitness and the application of key operators lead to the generation of improved solutions. Preserving the solution with the highest fitness from the previous generation can prevent degradation. Termination criteria, such as the number of generations or the highest fitness value, are essential components to conclude the algorithm effectively \cite{hinze1}.\\
 
 \subsubsection{Fitness Function} 
 
-The fitness function signifies whether an optimization problem should be minimized or maximized. Each individual represents a valid schedule for all telescopes, ensuring that each object is observed only once and is visible at the scheduled time. Visibility constraints, such as maximum phase angle, minimum distance to the Moon, and avoidance of the Earth's shadow, are in place. An observation of an object, denoted as j, carries an expected information content (SICj) at the given time according to Eq. (2.5). According to A. Hinze \cite{hinze1}, the fitness value (Fi) for each individual is the sum of all scheduled SICj values,
+The fitness function signifies whether an optimization problem should be minimized or maximized. Each individual represents a valid schedule for all telescopes, ensuring that each object is observed only once and is visible at the scheduled time. Visibility constraints, such as maximum phase angle, minimum distance to the Moon, and avoidance of the Earth's shadow, are in place. An observation of an object, denoted as $j$, carries an expected information content ($SIC_j$) at the given time according to Eq. (2.5). According to A. Hinze \cite{hinze1}, the fitness value ($F_i$) for each individual is the sum of all scheduled $SIC_j$ values,
 \begin{equation}
 	F_i=\sum_{j=1}^{N} SIC_j
 \end{equation} 
@@ -427,14 +427,14 @@ As presented by C. Frueh \cite{fruh3}, following cost function is approximated t
 Following is the breakdown of the key elements present in the cost function.
 
 \begin{itemize}
-	\item \textbf{Cardinality (A):} A represents the cardinality of weighted viewing direction areas. It is the quantity aimed to be maximized \cite{fruh3}.
-	\item \textbf{Sum Over Time Intervals ($r_g$) for a Specific Sensor (g):} The second sum is over single time intervals ($r_g$) for a given sensor (g) within the optimization interval $t_{obs,g,h}$. This considers scenarios where a sensor might not be available for the entire observation interval \cite{fruh3}.
-	\item \textbf{Sum Over All Viewing Directions (mg) for a Given Sensor:} The third sum is over all viewing directions ($m_g$) possible to fit into a specified observation interval for a given sensor. $m_g$ is determined by $m_g = int(t_{obs,g}/t_{frame,g})$, considering time requirements for frames with exposure, readout, and repositioning times \cite{fruh3}.
+	\item \textbf{Cardinality ($A$):} A represents the cardinality of weighted viewing direction areas. It is the quantity aimed to be maximized \cite{fruh3}.
+	\item \textbf{Sum Over Time Intervals ($r_g$) for a Specific Sensor ($g$):} The second sum is over single time intervals ($r_g$) for a given sensor $g$ within the optimization interval $t_{obs,g,h}$. This considers scenarios where a sensor might not be available for the entire observation interval \cite{fruh3}.
+	\item \textbf{Sum Over All Viewing Directions ($m_g$) for a given Sensor:} The third sum is over all viewing directions ($m_g$) possible to fit into a specified observation interval for a given sensor. $m_g$ is determined by $m_g = int(t_{obs,g}/t_{frame,g})$, considering time requirements for frames with exposure, readout, and repositioning times \cite{fruh3}.
 	\item \textbf{Key Time Parameters $(j_g, t_{frame}, t_{frames,g})$:}  $j_g$ represents the fixed number of frames for a specific sensor. $t_{frame} = t_{repos} + j · t_{exp} + (j − 1)· t_{read}$ represents the time for a sensor to complete a fixed number of frames. $t_{frames,g}$ is the time it takes for a specific sensor to complete frames with exposure time $t_{exp}$, readout time $t_{read}$, and repositioning time $t_{repos}$. Repositioning and readout can occur simultaneously for the last frame in a series \cite{fruh3}.
 	\item \textbf{Optimization Scheme:}  The optimization scheme is compartmentalized into single time steps, $t_{f,g}$, corresponding to each of the $j_g$ exposures. Time discretization may vary for each sensor based on the start of observations as soon as the sensor becomes available in continuous time \cite{fruh3}.
 	\item \textbf{$\mu_{past}$ - Orbit Quality Function:} $\mu_{past} ∈ [0, 1]$ is the orbit quality function, acting as a probability function applied as a weighting factor. It evaluates the history of individual objects, assigning a weight of 1 if observations are made without considering prior history. Otherwise, $\mu_{past}$ becomes a periodic function, influenced by the orbital period of the object \cite{fruh3}.
 	\item \textbf{$p$ - Probability of Detection:} The function $p$ represents the probability of detecting a single object at a specific right ascension and declination $(\alpha_i, \delta_i)$ during a given time $(t_{g,f})$. This probability is influenced by various parameters, including astrometric position, distance to the observer and the sun, object characteristics, and more \cite{fruh3}.
-	\item \textbf{$d$ - Sensor to Object Association:}  The function $d$ determines the association between a sensor (g) and an object (i) at a particular time (tg,f) based on specified boundary conditions. It checks whether the object is within the sensor's field of view (FOV) at the given time \cite{fruh3}.
+	\item \textbf{$d$ - Sensor to Object Association:}  The function $d$ determines the association between a sensor $g$ and an object $i$ at a particular time $t_{g,f}$ based on specified boundary conditions. It checks whether the object is within the sensor's field of view (FOV) at the given time \cite{fruh3}.
 	\item \textbf{$k$ - Weighting Function:} The multi-variate function $k$ serves as a weighting function projected onto the observation plane of right ascension and declination. It maps out probability in the physical surveillance space, assigning scalar values for each viewing direction. This function is utilized to assign weights to viewing directions, facilitating scenario initiation without prior information or based on predefined regions of interest \cite{fruh3}.
 
 
@@ -461,4 +461,11 @@ In the earlier subsection \ref{sec:cost}, the optimized cost function for the Gr
 
 \begin{equation}
 	\max\widetilde{A} = \sum_{h=1}^{r_g} \sum_{f=1}^{m_g} \left[ \sum_{i=1}^{n} w_t \cdot w_d \cdot u \cdot \mu_{\text{past}} \cdot p \cdot d + k \right] \quad	\\
+\end{equation}
+
+\begin{equation}
+	\alpha_{f, g} = \{\alpha_1, \alpha_2, \ldots, \alpha_m\}, \quad m \in \mathbb{N} \quad 
+\end{equation}
+\begin{equation}
+	\delta_{f, g} = \{\delta_1, \delta_2, \ldots, \delta_m\}, \quad m \in \mathbb{N} \quad\\
 \end{equation}

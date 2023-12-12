@@ -1,40 +1,25 @@
 \chapter*{Abstract}
 
 The number of artificial objects in the near-Earth space realm is on a consistent rise each year,
-posing a serious threat to the safety of operational space assets. Effective Space Situational Awaren-
-ess (SSA) practices are vital to continuously update our understanding of the space environment.
+posing a serious threat to the safety of operational space assets. Effective Space Situational Awareness (SSA) practices are vital to continuously update our understanding of the space environment.
 This knowledge is essential for implementing appropriate measures to mitigate risks in densely
 populated orbits and to enhance sustainability in the near-space domain. In order to mitigate these
 risks, continuous monitoring of the space region and building space debris object catalogs is
 necessary. To ensure the high accuracy of catalogued objects, the follow-up observations consisting
-orbit improvement information are needed. Given the constraints of observation resources, espe-
-cially for space debris within the geostationary orbit, where observational windows during the night
+orbit improvement information are needed. Given the constraints of observation resources, especially for space debris within the geostationary orbit, where observational windows during the night
 are restricted, and considering telescope capabilities, effective sensor tasking of the available sensor network
 holds significant importance.\\
 
 This thesis delves into the examination of global sensor networks for space debris observations. It integrates various weighting schemes into the cost function of 
-the Greedy algorithm, a tool employed for surveying in the SNS software. The research introduces the application of a genetic algorithm to optimize follow-up observation 
+the Greedy algorithm, a tool employed for surveying in the SNS software. The research also briefly introduces the application of a genetic algorithm to optimize follow-up observation 
 scheduling within a telescope network, with a focal point on catalog maintenance. The primary optimization parameter is the information content associated with the orbit. 
-Emphasis is placed on the significance of utilizing orbit covariance and quantifying information gain for effective optimization.
+Emphasis is placed on the significance of utilizing orbit covariance and quantifying information gain for effective optimization. The implementation of the genetic algorithm is not a component of this study.
 The study concludes with simulations conducted in the Sensor Network Simulator (SNS), a tool suite developed to meticulously study and optimize the performance of existing sensors and their configurations. The effectiveness of the algorithm is analyzed within this framework.
 
 \pagebreak
 
 \chapter*{Kurzfassung}
 
-Die Zahl der künstlichen Objekte im erdnahen Weltraum nimmt jedes Jahr zu,
-Sie stellen eine ernsthafte Bedrohung für die Sicherheit der operativen Weltraumressourcen dar. Effektive SSA ist unerlässlich, um unser Verständnis der Weltraumumgebung ständig zu aktualisieren.
-Dieses Wissen ist entscheidend für die Umsetzung geeigneter Maßnahmen zur Risikominderung in dicht besiedelten
-dicht besiedelten Orbits und zur Verbesserung der Nachhaltigkeit im Nahbereich des Weltraums. Um diese Risiken zu mindern
-Risiken zu mindern, ist eine kontinuierliche Überwachung des Weltraums und die Erstellung von Katalogen von Weltraummüllobjekten
-notwendig. Um die hohe Genauigkeit der katalogisierten Objekte zu gewährleisten, sind Folgebeobachtungen, die
-Informationen zur Verbesserung der Umlaufbahn benötigt werden. Angesichts der begrenzten Beobachtungsressourcen, insbesondere
-insbesondere für Weltraummüll in der geostationären Umlaufbahn, wo die Beobachtungsfenster während der Nacht
-und unter Berücksichtigung der Teleskopkapazitäten ist eine effektive Nutzung des verfügbaren Sensornetzes
-von großer Bedeutung.\\
+Die Anzahl künstlicher Objekte im Bereich des erdnahen Weltraums nimmt jedes Jahr kontinuierlich zu und stellt eine ernsthafte Bedrohung für die Sicherheit operativer Weltraumressourcen dar. Effektive Praktiken zum Space Situational Awareness, (SSA) sind entscheidend, um unser Verständnis der Weltraumumgebung kontinuierlich zu aktualisieren. Dieses Wissen ist unerlässlich, um geeignete Maßnahmen zur Risikominderung in dicht besiedelten Umlaufbahnen umzusetzen und die Nachhaltigkeit im Bereich des erdnahen Weltraums zu fördern. Um diese Risiken zu minimieren, ist eine kontinuierliche Überwachung der Weltraumregion und der Aufbau von Katalogen für Weltraumtrümmerobjekte notwendig. Um die hohe Genauigkeit der katalogisierten Objekte sicherzustellen, sind Nachbeobachtungen mit Informationen zur Verbesserung der Umlaufbahn erforderlich. Angesichts der Einschränkungen der Beobachtungsressourcen, insbesondere für Weltraumtrümmer in der geostationären Umlaufbahn, wo die Beobachtungsfenster während der Nacht eingeschränkt sind, und unter Berücksichtigung der Teleskopfähigkeiten, hat eine effektive Sensorausrichtung des verfügbaren Sensornetzwerks eine erhebliche Bedeutung.\\
 
-Diese Arbeit befasst sich mit der Untersuchung globaler Sensornetzwerke zur Beobachtung von Weltraummüll. Sie integriert verschiedene Gewichtungsschemata in die Kostenfunktion des 
-des Greedy-Algorithmus, der in der SNS-Software zur Vermessung eingesetzt wird. Die Forschung stellt die Anwendung eines genetischen Algorithmus zur Optimierung der Nachbeobachtung 
-Beobachtungsplanung innerhalb eines Teleskopnetzwerks, wobei der Schwerpunkt auf der Katalogpflege liegt. Der primäre Optimierungsparameter ist der mit der Umlaufbahn verbundene Informationsgehalt. 
-Der Schwerpunkt liegt auf der Bedeutung der Nutzung der Orbit-Kovarianz und der Quantifizierung des Informationsgewinns für eine effektive Optimierung.
-Die Studie schließt mit Simulationen, die mit dem Sensor Network Simulator (SNS) durchgeführt wurden, einem Toolpaket, das entwickelt wurde, um die Leistung bestehender Sensoren und ihrer Konfigurationen genau zu untersuchen und zu optimieren. Die Effektivität des Algorithmus wird in diesem Rahmen analysiert.
+Diese Arbeit widmet sich der Untersuchung globaler Sensornetzwerke für die Beobachtung von Weltraummüll. Sie integriert verschiedene Gewichtungsschemata in die Kostenfunktion des Greedy-Algorithmus, eines Instruments, das für Umfragen in der SNS-Software verwendet wird. Die Forschung führt auch kurz die Anwendung eines genetischen Algorithmus zur Optimierung der Terminplanung für Nachbeobachtungen in einem Teleskopnetzwerk ein, wobei der Schwerpunkt auf der Katalogwartung liegt. Der primäre Optimierungsparameter ist der Informationsgehalt, der mit der Umlaufbahn verbunden ist. Betont wird die Bedeutung der Verwendung von Umlaufbahndispersion und der Quantifizierung des Informationsgewinns für eine effektive Optimierung. Die Implementierung des genetischen Algorithmus ist kein Bestandteil dieser Studie. Die Studie schließt mit Simulationen ab, die im Sensor Network Simulator (SNS), einer Tool-Suite zur gründlichen Untersuchung und Optimierung der Leistung bestehender Sensoren und ihrer Konfigurationen, durchgeführt wurden. Die Wirksamkeit des Algorithmus wird innerhalb dieses Rahmens analysiert.\\
